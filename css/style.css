@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_sans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  max-width: 1920px;
+  font-family: "Open Sans";
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+/* Header-top */
+.header {
+  width: 100%;
+  height: 170px;
+  background-color: #000;
+}
+
+.header-top__container {
+  display: flex;
+  height: 60%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-top__icon {
+  width: 173px;
+  height: 40px;
+}
+
+.header-top__list {
+  display: flex;
+  width: 995px;
+  justify-content: flex-start;
+}
+
+.header-top__item:not(:last-child) {
+  margin-right: 62px;
+}
+
+.header-top__link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.7px;
+}
+
+.header-top__btn {
+  width: 75px;
+  height: 21px;
+  padding: 0;
+  border: none;
+  background-color: #000;
+  letter-spacing: 0.3px;
+  font-size: 17px;
+  color: #fff;
+}
+
+.header-top__btn::before {
+  content: url("../img/header_icn.svg");
+  position: relative;
+  margin-right: 7px;
+  width: 11px;
+  height: 11px;
+}
+
+/* Header-bottom */
