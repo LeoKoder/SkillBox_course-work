@@ -232,41 +232,43 @@
 
     <main class="main">
       <section class="hero">
-        <div class="container hero__container swiper-container">
+        <div class="container hero__container">
           <!-- Swiper slider -->
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <picture>
-                <source srcset="" media="" />
-                <img
-                  class="slide__img"
-                  src="img/hero__slide1.jpg"
-                  alt="Первый слайд"
-                />
-              </picture>
-            </div>
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <picture>
-                <source srcset="" media="" />
-                <img
-                  class="slide__img"
-                  src="img/hero__slide2.jpg"
-                  alt="Второй слайд"
-                />
-              </picture>
-            </div>
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <picture>
-                <source srcset="" media="" />
-                <img
-                  class="slide__img"
-                  src="img/hero__slide3.jpg"
-                  alt="Третий слайд"
-                />
-              </picture>
+          <div class="hero__slider">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="" media="" />
+                  <img
+                    class="hero__img"
+                    src="img/hero__slide1.jpg"
+                    alt="Первый слайд"
+                  />
+                </picture>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="" media="" />
+                  <img
+                    class="hero__img"
+                    src="img/hero__slide2.jpg"
+                    alt="Второй слайд"
+                  />
+                </picture>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="" media="" />
+                  <img
+                    class="hero__img"
+                    src="img/hero__slide3.jpg"
+                    alt="Третий слайд"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
           <div class="hero__content">
@@ -300,48 +302,365 @@
       </section>
 
       <section class="gallery">
-        <div class="container">
+        <div class="container gallery__container">
           <div class="gallery__filter">
-            <div class="gallery__block gallery-block__left">
-              <h2 class="gallery__title section__title">Галерея</h2>
-              <label class="gallery__lbl" for="filter__select"
-                >Фильтровать по:</label
-              >
-              <select id="filter__select">
-                <option hidden value="one">Автор</option>
-                <option value="two">Направление</option>
-                <option value="three">Техника</option>
-              </select>
-              <p class="gallery__description">
-                Вам предоставляется 10 бесплатных скачиваний. Для увеличения
-                количества скачиваний <a>авторизуйтесь</a>, либо воспользуйтесь
-                лицензией.
-              </p>
+            <h2 class="gallery__title section__title">Галерея</h2>
+            <label class="gallery__lbl" for="filter__select"
+              >Фильтровать по:</label
+            >
+            <select id="filter__select">
+              <option hidden value="one">Автор</option>
+              <option value="two">Направление</option>
+              <option value="three">Техника</option>
+            </select>
+            <span class="gallery__description">
+              Вам предоставляется 10 бесплатных скачиваний. Для увеличения
+              количества скачиваний
+              <a class="gallery-description__link" href="">авторизуйтесь</a>,
+              либо воспользуйтесь лицензией.
+            </span>
+          </div>
+          <!-- Gallery Slider -->
+          <!-- image-slider -->
+          <div class="gallery-object">
+            <div class="gallery__slider swiper-container">
+              <!-- image-slider__wrapper-->
+              <div class="gallery__wrapper swiper-wrapper">
+                <!-- image-slider__slide-->
+                <!-- Slide 1 -->
+                <div class="gallery__slide swiper-slide">
+                  <!-- image-slider__image -->
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide1_img1.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide1_img2.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide1_img3.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide1_img4.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide1_img5.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide1_img6.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide2_img1.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide2_img2.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide2_img3.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide2_img4.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 11 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide2_img5.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 12 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide2_img6.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 13 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide3_img1.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 14 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide3_img2.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 15 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide3_img3.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 16 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide3_img4.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 17 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide3_img5.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 18 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide3_img6.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 19 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide4_img1.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 20 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide4_img2.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 21 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide4_img3.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 22 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide4_img4.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 23 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide4_img5.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 24 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide4_img6.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 25 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide5_img1.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 26 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide5_img2.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 27 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide5_img3.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 28 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide5_img4.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 29 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide5_img5.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+                <!-- Slide 30 -->
+                <div class="gallery__slide swiper-slide">
+                  <div class="gallery-slider__img">
+                    <img
+                      class="gallery-slide__img"
+                      src="img/slide5_img6.jpg"
+                      alt="Слайд "
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="gallery-pagination swiper-pagination"></div>
             </div>
           </div>
-          <div class="gallery__slider"></div>
         </div>
       </section>
-      <!--
+      <!-- Catalog -->
       <section class="catalog">
-        <h2 class="catalog__title">Каталог</h2>
-        <div class="block__language">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="container">
+          <div class="block__title">
+            <h2 class="catalog__title section__title">Каталог</h2>
+            <div class="block__language">
+              <span class="language__icn lg_icn1"></span>
+              <span class="language__icn lg_icn2"></span>
+              <span class="language__icn lg_icn3"></span>
+              <span class="language__icn lg_icn4"></span>
+              <span class="language__icn lg_icn5"></span>
+            </div>
+          </div>
+          <p class="catalog__description">
+            Акционеры крупнейших компаний, которые представляют собой яркий
+            пример континентально-европейского типа политической культуры, будут
+            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
+            всего лишь частью общей картины, стремящиеся вытеснить традиционное
+            производство, нанотехнологии и по сей день остаются уделом
+            либералов, которые жаждут быть функционально разнесены на
+            независимые элементы.
+          </p>
         </div>
-        <p class="catalog__description">
-          Акционеры крупнейших компаний, которые представляют собой яркий пример
-          континентально-европейского типа политической культуры, будут
-          объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
-          всего лишь частью общей картины, стремящиеся вытеснить традиционное
-          производство, нанотехнологии и по сей день остаются уделом либералов,
-          которые жаждут быть функционально разнесены на независимые элементы.
-        </p>
       </section>
-      <section class="events">
+
+      <!-- <section class="events">
         <h2 class="events__title">События</h2>
         <div class="events__card">
           <img src="" alt="" />
