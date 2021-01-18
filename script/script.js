@@ -1,7 +1,7 @@
-const element = document.querySelector("#filter__select");
-const choice = new Choices(element, {
-  searchEnabled: false,
-  renderChoiceLimit: 2,
-  hideDropdown([{value: one}]);
+window.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".events__btn").addEventListener("click", function () {
+    document.querySelectorAll(".cards-visible").forEach(function (visible) {
+      visible.classList.toggle("events-cards__item_visibled");
+    });
+  });
 });
-
