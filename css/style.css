@@ -450,6 +450,7 @@ input[type="search" i] {
   width: 100%;
   height: 100%;
 }
+
 .gallery__slider .swiper-slide {
   height: calc((100% - 30px) / 2);
   overflow: hidden;
@@ -625,6 +626,9 @@ input[type="search" i] {
 }
 
 /* Events */
+.events {
+  margin-bottom: 80px;
+}
 .events__title {
   margin-bottom: 22px;
 }
@@ -707,4 +711,184 @@ input[type="search" i] {
   color: var(--bg-color-btn);
   padding: 0 33px;
   margin: 0 auto;
+}
+
+/* Edition */
+.edition {
+  margin-bottom: 85px;
+  padding-top: 80px;
+  height: 760px;
+  background-image: url("../img/edition__bg.jpg");
+}
+
+.edition__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edition-category {
+  color: #fff;
+  width: 25%;
+}
+
+.edition-category__title {
+  font-size: 48px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.edition-category__subtitle {
+  margin: 0;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+}
+
+.edition-category__group-checkbox {
+  display: flex;
+  height: 405px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.category__label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.category__el {
+  display: none;
+}
+
+.category__square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  border: 1px solid #fff;
+  transform: translateY(1px);
+}
+
+.category__square::before {
+  content: "\00B7";
+  position: absolute;
+  top: -4px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.category__el:checked + span {
+}
+
+.category__el:checked + span::before {
+  opacity: 1;
+}
+
+.group-price {
+  width: 277px;
+  height: 40px;
+  border: 1px solid #fff;
+  margin-top: 15px;
+  border-radius: 6px;
+}
+
+.group-price__el {
+  height: 100%;
+  padding: 0 8px;
+}
+
+.group-price__input {
+  border: none;
+  width: 70px;
+  background: rgba(157, 92, 208, 0.5);
+}
+
+.edition__object {
+  width: 72%;
+  margin-top: 90px;
+  display: flex;
+  align-items: flex-end;
+  height: 515px;
+  min-width: 0;
+}
+
+.edition__slider {
+  width: 100%;
+  height: 100%;
+}
+
+.edition__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.edition__description {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.edition__price {
+  font-style: italic;
+}
+
+.edition__btn {
+  padding: 0;
+  font-size: 16px;
+  font-weight: normal;
+  width: 120px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid var(--bg-color-btn);
+  border-radius: 100px;
+}
+
+/* Project */
+.projects__title {
+  margin-bottom: 20px;
+}
+
+.projects__description {
+  width: 69%;
+  line-height: 32px;
+}
+
+.projects__tooltip {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: var(--bg-color-btn);
+  border-radius: 50%;
+}
+
+/* Tooltip text */
+.projects__tooltip .projects__popup {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.projects__tooltip:hover .projects__popup {
+  visibility: visible;
 }

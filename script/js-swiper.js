@@ -1,9 +1,9 @@
-var swiper = new Swiper(".hero__slider", {
+var heroSwiper = new Swiper(".hero__slider", {
   direction: "horizontal",
   loop: true,
 });
 
-var swiper = new Swiper(".gallery__slider", {
+var gallerySwiper = new Swiper(".gallery__slider", {
   direction: "horizontal",
   loop: true,
   slidesPerView: 3,
@@ -15,6 +15,20 @@ var swiper = new Swiper(".gallery__slider", {
   },
   pagination: {
     el: ".gallery-pagination",
+    type: "fraction",
+  },
+  autoHeight: false,
+});
+
+var editionSwiper = new Swiper(".edition__slider", {
+  direction: "horizontal",
+  slidesPerView: 3,
+  spaceBetween: 42,
+  wrapperEL: {
+    el: ".edition__wrapper",
+  },
+  pagination: {
+    el: ".edition-pagination",
     type: "fraction",
   },
   autoHeight: false,
