@@ -33,3 +33,17 @@ var editionSwiper = new Swiper(".edition__slider", {
   },
   autoHeight: false,
 });
+
+var projectSwiper = new Swiper(".projects__slider", {
+  direction: "horizontal",
+  slidesPerView: 3,
+  spaceBetween: 39,
+  wrapperEL: {
+    el: ".projects__wrapper",
+  },
+  autoHeight: false,
+  navigation: {
+    nextEl: ".projects-button-next",
+    prevEl: ".projects-button-prev",
+  },
+});

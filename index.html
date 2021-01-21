@@ -31,6 +31,12 @@
     <link rel="stylesheet" href="/resources/demos/style.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Maps -->
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <!-- Header -->
@@ -1406,24 +1412,88 @@
             уникальными данными до степени совершенной неузнаваемости.
             Подробнее: <a href="">blanchard-art.ru/projects/about</a>
           </div>
-          <h3 class="progects__subtitle">Партнеры проектов:</h3>
-          <div class="projects__slider"></div>
+          <h3 class="projects__subtitle">Партнеры проектов:</h3>
+          <!-- Project slider -->
+          <div class="projects__partners">
+            <div class="projects__slider swiper-container">
+              <div class="projects__wrapper swiper-wrapper">
+                <!-- Project slide 1 -->
+                <div class="projects__slide pr__slide1 swiper-slide"></div>
+                <!-- Project slide 2 -->
+                <div class="projects__slide pr__slide2 swiper-slide"></div>
+                <!-- Project slide 3 -->
+                <div class="projects__slide pr__slide3 swiper-slide"></div>
+                <!-- Project slide 4 -->
+                <div class="projects__slide pr__slide4 swiper-slide"></div>
+                <!-- Project slide 5 -->
+                <div class="projects__slide pr__slide5 swiper-slide"></div>
+                <!-- Project slide 6 -->
+                <div class="projects__slide pr__slide6 swiper-slide"></div>
+                <!-- Project slide 7 -->
+                <div class="projects__slide pr__slide7 swiper-slide"></div>
+                <!-- Project slide 8 -->
+                <div class="projects__slide pr__slide8 swiper-slide"></div>
+                <!-- Project slide 9 -->
+                <div class="projects__slide pr__slide9 swiper-slide"></div>
+              </div>
+              <div class="projects-button-next"></div>
+              <div class="projects-button-prev"></div>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- 
-      <section class="contacts"></section> -->
+      <!-- Contacts -->
+      <section class="contacts">
+        <h2 class="contacts__title section__title">Контакты</h2>
+        <div class="contacts__container">
+          <div class="contacts-form">
+            <div class="contacts-form__container">
+              <span class="contacts__name">Шоурум №4</span>
+              <span class="contacts__address"
+                >Леонтьевский переулок, дом 5, строение 1</span
+              >
+              <h3 class="contacts__subtitle">Заказать обратный звонок</h3>
+              <form class="form" action="">
+                <input class="form__input" type="text" placeholder="Имя*" />
+                <input class="form__input" type="tel" placeholder="Телефон*" />
+                <button class="form__btn btn" type="submit">Заказать</button>
+              </form>
+              <h3 class="contacts__subtitle">Связаться в один клик</h3>
+              <div class="contacts__social-group">
+                <span class="social whatsapp">
+                  <a href=""></a>
+                </span>
+                <span class="social telegram">
+                  <a href=""></a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="contacts-maps">
+            <div id="map"></div>
+          </div>
+        </div>
+      </section>
     </main>
-    <!--
+    <!-- Footer -->
     <footer class="footer">
-      <a href="">
-        <img src="" alt="" class="footer__logo" />
-      </a>
-      <div class="footer__social">
-        <span class="category__square"></span>
-        <span class="category__square"></span>
-        <span class="category__square"></span>
+      <div class="container footer__container">
+        <a href="#" class="footer__link">
+          <img src="img/logo.png" alt="" class="footer__logo" />
+        </a>
+        <div class="footer__group">
+          <a href="" class="social__link">
+            <span class="footer__social vk"></span>
+          </a>
+          <a href="" class="social__link">
+            <span class="footer__social inst"></span>
+          </a>
+          <a href="" class="social__link">
+            <span class="footer__social fb"></span>
+          </a>
+        </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

@@ -784,9 +784,6 @@ input[type="search" i] {
   transition: opacity 0.3s ease-in-out;
 }
 
-.category__el:checked + span {
-}
-
 .category__el:checked + span::before {
   opacity: 1;
 }
@@ -852,13 +849,19 @@ input[type="search" i] {
 }
 
 /* Project */
+.projects {
+  margin-bottom: 88px;
+}
+
 .projects__title {
   margin-bottom: 20px;
 }
 
 .projects__description {
   width: 69%;
+  height: auto;
   line-height: 32px;
+  margin-bottom: 23px;
 }
 
 .projects__tooltip {
@@ -876,19 +879,230 @@ input[type="search" i] {
 /* Tooltip text */
 .projects__tooltip .projects__popup {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: 264px;
+  background-color: #cacaca;
+  height: auto;
+  bottom: 150%;
+  left: -130px;
+  font-size: 12px;
   color: #fff;
   text-align: center;
   padding: 5px 0;
-  border-radius: 6px;
-
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+.projects__tooltip .projects__popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #cacaca transparent transparent transparent;
+}
+
 .projects__tooltip:hover .projects__popup {
   visibility: visible;
+}
+
+.projects__subtitle {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+.projects__partners {
+  width: 100%;
+  height: 150px;
+}
+
+.projects__slider {
+  width: 91%;
+  height: 100%;
+}
+
+.projects__slide {
+  border: 1px solid #cacaca;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.pr__slide1 {
+  background-image: url("../img/projects_img1.jpg");
+}
+.pr__slide2 {
+  background-image: url("../img/projects_img2.jpg");
+}
+.pr__slide3 {
+  background-image: url("../img/projects_img3.jpg");
+}
+.pr__slide4 {
+  background-image: url("../img/projects_img4.jpg");
+}
+.pr__slide5 {
+  background-image: url("../img/projects_img5.jpg");
+}
+.pr__slide6 {
+  background-image: url("../img/projects_img6.jpg");
+}
+.pr__slide7 {
+  background-image: url("../img/projects_img7.jpg");
+}
+.pr__slide8 {
+  background-image: url("../img/projects_img8.jpg");
+}
+.pr__slide9 {
+  background-image: url("../img/projects_img9.jpg");
+}
+
+/* Contacts */
+.contacts__title {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.contacts__container {
+  display: flex;
+}
+
+.contacts-form {
+  display: flex;
+  padding-left: 10em;
+  width: 680px;
+  height: 700px;
+  flex-direction: column;
+  border: 1px solid #cacaca;
+}
+
+.contacts-form__container {
+  width: 400px;
+  height: auto;
+  margin: 126px 0;
+}
+
+.contacts__subtitle {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: 1.6px;
+  margin-bottom: 20px;
+}
+
+.contacts__name {
+  display: block;
+  letter-spacing: 1px;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.contacts__address {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.form__input {
+  bottom: 1px solid #333;
+  border-radius: 100px;
+  height: 40px;
+  padding-left: 21px;
+  margin-bottom: 22px;
+}
+
+.form__btn {
+  padding: 1em 0;
+  width: 40%;
+  height: 60px;
+  background-color: #fff;
+  font-weight: bold;
+  color: var(--bg-color-btn);
+}
+
+.contacts__social-group {
+  display: flex;
+}
+
+.social {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.whatsapp {
+  position: relative;
+  background: #30bf39;
+  margin-right: 20px;
+}
+
+.telegram {
+  position: relative;
+  background: linear-gradient(180deg, #2aabee 0%, #229ed9 99.26%);
+}
+
+.whatsapp::after {
+  content: url("../img/whatsapp.svg");
+  position: absolute;
+  top: 22%;
+  left: 22%;
+}
+
+.telegram::after {
+  content: url("../img/telegram.svg");
+  position: absolute;
+  top: 30%;
+  left: 17%;
+}
+
+.contacts-maps {
+  width: 600px;
+  height: 400px;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+.footer {
+  height: 140px;
+  background-color: #000;
+}
+
+.footer__container {
+  display: flex;
+  padding-top: 48px;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  width: 173px;
+  height: 40px;
+}
+
+.footer__social {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+}
+
+.vk {
+  background-image: url("../img/vk.svg");
+}
+
+.inst {
+  margin: 0 15px;
+  background-image: url("../img/instagram.svg");
+}
+
+.fb {
+  background-image: url("../img/fb.svg");
 }
