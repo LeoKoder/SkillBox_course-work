@@ -10,6 +10,13 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/normolize.css" />
 
+    <!-- scrollBar -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link
@@ -48,25 +55,25 @@
         <nav class="header-top__nav">
           <ul class="header-top__list">
             <li class="header-top__item">
-              <a href="" class="header-top__link">О нас</a>
+              <a href="#about" class="header-top__link">О нас</a>
             </li>
             <li class="header-top__item">
-              <a href="" class="header-top__link">Галерея</a>
+              <a href="#gallery" class="header-top__link">Галерея</a>
             </li>
             <li class="header-top__item">
-              <a href="" class="header-top__link">Каталог</a>
+              <a href="#catalog" class="header-top__link">Каталог</a>
             </li>
             <li class="header-top__item">
-              <a href="" class="header-top__link">События</a>
+              <a href="#events" class="header-top__link">События</a>
             </li>
             <li class="header-top__item">
-              <a href="" class="header-top__link">Издания</a>
+              <a href="#edition" class="header-top__link">Издания</a>
             </li>
             <li class="header-top__item">
-              <a href="" class="header-top__link">Проекты</a>
+              <a href="#projects" class="header-top__link">Проекты</a>
             </li>
             <li class="header-top__item">
-              <a href="" class="header-top__link">Контакты</a>
+              <a href="#contacts" class="header-top__link">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -79,7 +86,34 @@
             <div class="dropdown header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Реализм</button>
               <div class="dropdown__content">
-                <div class="dropdown-content__block">
+                <div
+                  class="dropdown-content__block customScroll"
+                  data-simplebar
+                >
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop1__bg1"
+                  >
+                    Тинторетто
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop1__bg2"
+                  >
+                    Фридрих
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop1__bg3"
+                  >
+                    Леонардо
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop1__bg4"
+                  >
+                    Верроккьо
+                  </button>
                   <button
                     type="button"
                     class="dropdown__btn drop__btn drop1__bg1"
@@ -110,7 +144,34 @@
             <div class="dropdown header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Импрессионизм</button>
               <div class="dropdown__content">
-                <div class="dropdown-content__block">
+                <div
+                  class="dropdown-content__block customScroll"
+                  data-simplebar
+                >
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop2__bg1"
+                  >
+                    Моне
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop2__bg2"
+                  >
+                    Сислей
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop2__bg3"
+                  >
+                    Мане
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop2__bg4"
+                  >
+                    Ренуар
+                  </button>
                   <button
                     type="button"
                     class="dropdown__btn drop__btn drop2__bg1"
@@ -141,7 +202,34 @@
             <div class="dropdown header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Постимпрессионизм</button>
               <div class="dropdown__content">
-                <div class="dropdown-content__block customScroll" simplebar>
+                <div
+                  class="dropdown-content__block customScroll"
+                  data-simplebar
+                >
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop3__bg1"
+                  >
+                    Ван Гог
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop3__bg2"
+                  >
+                    Сезан
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop3__bg3"
+                  >
+                    Гоген
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop3__bg4"
+                  >
+                    Сёра
+                  </button>
                   <button
                     type="button"
                     class="dropdown__btn drop__btn drop3__bg1"
@@ -172,7 +260,34 @@
             <div class="dropdown header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Авангард</button>
               <div class="dropdown__content">
-                <div class="dropdown-content__block customScroll" simplebar>
+                <div
+                  class="dropdown-content__block customScroll"
+                  data-simplebar
+                >
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop4__bg1"
+                  >
+                    Кадинский
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop4__bg2"
+                  >
+                    Маринетти
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop4__bg3"
+                  >
+                    Малевич
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop4__bg4"
+                  >
+                    Пикассо
+                  </button>
                   <button
                     type="button"
                     class="dropdown__btn drop__btn drop4__bg1"
@@ -203,7 +318,34 @@
             <div class="dropdown header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Футуризм</button>
               <div class="dropdown__content">
-                <div class="dropdown-content__block customScroll" simplebar>
+                <div
+                  class="dropdown-content__block customScroll"
+                  data-simplebar
+                >
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop5__bg1"
+                  >
+                    Карра
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop5__bg2"
+                  >
+                    Прателла
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop5__bg3"
+                  >
+                    Северини
+                  </button>
+                  <button
+                    type="button"
+                    class="dropdown__btn drop__btn drop5__bg4"
+                  >
+                    Балла
+                  </button>
                   <button
                     type="button"
                     class="dropdown__btn drop__btn drop5__bg1"
@@ -297,7 +439,7 @@
         </div>
       </section>
       <!-- About -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <h2 class="about__title section__title">О нас</h2>
           <p class="about__description">
@@ -317,7 +459,7 @@
         </div>
       </section>
       <!-- Gallery -->
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="container gallery__container">
           <div class="gallery__filter">
             <h2 class="gallery__title section__title">Галерея</h2>
@@ -648,7 +790,7 @@
         </div>
       </section>
       <!-- Catalog -->
-      <section class="catalog">
+      <section class="catalog" id="catalog">
         <div class="container">
           <div class="block__title">
             <h2 class="catalog__title section__title">Каталог</h2>
@@ -1011,7 +1153,7 @@
         </div>
       </section>
       <!-- Events -->
-      <section class="events">
+      <section class="events" id="events">
         <div class="container">
           <h2 class="events__title section__title">События</h2>
           <ul class="events-cards">
@@ -1119,7 +1261,7 @@
         </div>
       </section>
       <!-- Edition -->
-      <section class="edition">
+      <section class="edition" id="edition">
         <div class="container edition__container">
           <!-- Категории -->
           <div class="edition-category">
@@ -1373,7 +1515,7 @@
         </div>
       </section>
       <!-- Project -->
-      <section class="projects">
+      <section class="projects" id="projects">
         <div class="container project__container">
           <h2 class="projects__title section__title">Проекты</h2>
           <div class="projects__description">
@@ -1443,7 +1585,7 @@
         </div>
       </section>
       <!-- Contacts -->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <h2 class="contacts__title section__title">Контакты</h2>
         <div class="contacts__container">
           <div class="contacts-form">
@@ -1469,8 +1611,8 @@
               </div>
             </div>
           </div>
-          <div class="contacts-maps">
-            <div id="map"></div>
+          <div class="maps__container">
+            <div id="map" class="contacts__map"></div>
           </div>
         </div>
       </section>
