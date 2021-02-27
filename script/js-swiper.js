@@ -14,8 +14,12 @@ var gallerySwiper = new Swiper(".gallery__slider", {
     el: ".gallery__wrapper",
   },
   pagination: {
-    el: ".gallery-pagination",
+    el: ".gallery__pagination",
     type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   autoHeight: false,
 });

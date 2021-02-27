@@ -18,17 +18,19 @@
     <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    /> -->
 
     <!-- Select -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"
+      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
 
     <!-- Jquery -->
     <link
@@ -39,6 +41,9 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <!-- Slick slider -->
+    <script src="script/slick.min.js"></script>
+
     <!-- Maps -->
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
@@ -48,340 +53,356 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="container header-top">
-        <a href="#" class="logo__link">
-          <img src="img/logo.png" alt="Логотип" class="header-top__logo" />
-        </a>
-        <nav class="header-top__nav">
-          <ul class="header-top__list">
-            <li class="header-top__item">
-              <a href="#about" class="header-top__link">О нас</a>
-            </li>
-            <li class="header-top__item">
-              <a href="#gallery" class="header-top__link">Галерея</a>
-            </li>
-            <li class="header-top__item">
-              <a href="#catalog" class="header-top__link">Каталог</a>
-            </li>
-            <li class="header-top__item">
-              <a href="#events" class="header-top__link">События</a>
-            </li>
-            <li class="header-top__item">
-              <a href="#edition" class="header-top__link">Издания</a>
-            </li>
-            <li class="header-top__item">
-              <a href="#projects" class="header-top__link">Проекты</a>
-            </li>
-            <li class="header-top__item">
-              <a href="#contacts" class="header-top__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="" class="header-top__log-in drop__btn">Войти</a>
+      <div class="header-top">
+        <div class="container header-top__container">
+          <!-- logo -->
+          <div id="burger__menu">
+            <button class="burger__btn" type="button"></button>
+            <div class="burger__block"></div>
+          </div>
+          <div class="header-top__logo">
+            <a href="#" class="logo__link">
+              <img src="img/logo.png" alt="Логотип" class="logo__img" />
+            </a>
+          </div>
+          <nav class="header-top__nav">
+            <ul class="header-top__list">
+              <li class="header-top__item">
+                <a href="#about" class="header-top__link">О нас</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#gallery" class="header-top__link">Галерея</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#catalog" class="header-top__link">Каталог</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#events" class="header-top__link">События</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#edition" class="header-top__link">Издания</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#projects" class="header-top__link">Проекты</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#contacts" class="header-top__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="" class="header-top__log-in">Войти</a>
+        </div>
       </div>
       <!-- Header bottom -->
       <div class="header-bottom">
-        <div class="container">
+        <div class="container header-bottom__container">
           <nav class="header-bottom__nav">
-            <div class="dropdown header-bottom__dropdown">
+            <div class="header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Реализм</button>
               <div class="dropdown__content">
                 <div
                   class="dropdown-content__block customScroll"
                   data-simplebar
+                  data-simplebar-auto-hide="false"
+                  data-simplebar-forceVisible="true"
                 >
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg1"
+                    class="dropdown-content__btn drop1__bg1"
                   >
                     Тинторетто
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg2"
+                    class="dropdown-content__btn drop1__bg2"
                   >
                     Фридрих
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg3"
+                    class="dropdown-content__btn drop1__bg3"
                   >
                     Леонардо
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg4"
+                    class="dropdown-content__btn drop1__bg4"
                   >
                     Верроккьо
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg1"
+                    class="dropdown-content__btn drop1__bg1"
                   >
                     Тинторетто
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg2"
+                    class="dropdown-content__btn drop1__bg2"
                   >
                     Фридрих
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg3"
+                    class="dropdown-content__btn drop1__bg3"
                   >
                     Леонардо
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop1__bg4"
+                    class="dropdown-content__btn drop1__bg4"
                   >
                     Верроккьо
                   </button>
                 </div>
               </div>
             </div>
-            <div class="dropdown header-bottom__dropdown">
+            <div class="header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Импрессионизм</button>
               <div class="dropdown__content">
                 <div
                   class="dropdown-content__block customScroll"
                   data-simplebar
+                  data-simplebar-auto-hide="false"
                 >
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg1"
+                    class="dropdown-content__btn drop2__bg1"
                   >
                     Моне
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg2"
+                    class="dropdown-content__btn drop2__bg2"
                   >
                     Сислей
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg3"
+                    class="dropdown-content__btn drop2__bg3"
                   >
                     Мане
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg4"
+                    class="dropdown-content__btn drop2__bg4"
                   >
                     Ренуар
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg1"
+                    class="dropdown-content__btn drop2__bg1"
                   >
                     Моне
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg2"
+                    class="dropdown-content__btn drop2__bg2"
                   >
                     Сислей
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg3"
+                    class="dropdown-content__btn drop2__bg3"
                   >
                     Мане
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop2__bg4"
+                    class="dropdown-content__btn drop2__bg4"
                   >
                     Ренуар
                   </button>
                 </div>
               </div>
             </div>
-            <div class="dropdown header-bottom__dropdown">
+            <div class="header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Постимпрессионизм</button>
               <div class="dropdown__content">
                 <div
                   class="dropdown-content__block customScroll"
                   data-simplebar
+                  data-simplebar-auto-hide="false"
                 >
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg1"
+                    class="dropdown-content__btn drop3__bg1"
                   >
                     Ван Гог
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg2"
+                    class="dropdown-content__btn drop3__bg2"
                   >
                     Сезан
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg3"
+                    class="dropdown-content__btn drop3__bg3"
                   >
                     Гоген
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg4"
+                    class="dropdown-content__btn drop3__bg4"
                   >
                     Сёра
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg1"
+                    class="dropdown-content__btn drop3__bg1"
                   >
                     Ван Гог
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg2"
+                    class="dropdown-content__btn drop3__bg2"
                   >
                     Сезан
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg3"
+                    class="dropdown-content__btn drop3__bg3"
                   >
                     Гоген
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop3__bg4"
+                    class="dropdown-content__btn drop3__bg4"
                   >
                     Сёра
                   </button>
                 </div>
               </div>
             </div>
-            <div class="dropdown header-bottom__dropdown">
+            <div class="header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Авангард</button>
               <div class="dropdown__content">
                 <div
                   class="dropdown-content__block customScroll"
                   data-simplebar
+                  data-simplebar-auto-hide="false"
                 >
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg1"
+                    class="dropdown-content__btn drop4__bg1"
                   >
                     Кадинский
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg2"
+                    class="dropdown-content__btn drop4__bg2"
                   >
                     Маринетти
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg3"
+                    class="dropdown-content__btn drop4__bg3"
                   >
                     Малевич
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg4"
+                    class="dropdown-content__btn drop4__bg4"
                   >
                     Пикассо
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg1"
+                    class="dropdown-content__btn drop4__bg1"
                   >
                     Кадинский
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg2"
+                    class="dropdown-content__btn drop4__bg2"
                   >
                     Маринетти
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg3"
+                    class="dropdown-content__btn drop4__bg3"
                   >
                     Малевич
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop4__bg4"
+                    class="dropdown-content__btn drop4__bg4"
                   >
                     Пикассо
                   </button>
                 </div>
               </div>
             </div>
-            <div class="dropdown header-bottom__dropdown">
+            <div class="header-bottom__dropdown">
               <button class="header-bottom__dropbtn">Футуризм</button>
               <div class="dropdown__content">
                 <div
                   class="dropdown-content__block customScroll"
                   data-simplebar
+                  data-simplebar-auto-hide="false"
                 >
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg1"
+                    class="dropdown-content__btn drop5__bg1"
                   >
                     Карра
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg2"
+                    class="dropdown-content__btn drop5__bg2"
                   >
                     Прателла
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg3"
+                    class="dropdown-content__btn drop5__bg3"
                   >
                     Северини
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg4"
+                    class="dropdown-content__btn drop5__bg4"
                   >
                     Балла
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg1"
+                    class="dropdown-content__btn drop5__bg1"
                   >
                     Карра
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg2"
+                    class="dropdown-content__btn drop5__bg2"
                   >
                     Прателла
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg3"
+                    class="dropdown-content__btn drop5__bg3"
                   >
                     Северини
                   </button>
                   <button
                     type="button"
-                    class="dropdown__btn drop__btn drop5__bg4"
+                    class="dropdown-content__btn drop5__bg4"
                   >
                     Балла
                   </button>
                 </div>
               </div>
             </div>
-            <form action="" method="get" class="header-bottom__form">
-              <button class="header-bottom__search"></button>
-              <input
-                class="search__input"
-                type="search"
-                placeholder="Поиск по сайту"
-              />
-            </form>
           </nav>
+          <!-- Поиск по сайту -->
+          <form action="" method="get" class="header-bottom__form">
+            <button class="header-bottom__search"></button>
+            <input
+              class="search__input"
+              type="search"
+              placeholder="Поиск по сайту"
+            />
+          </form>
         </div>
       </div>
     </header>
@@ -389,43 +410,74 @@
     <main class="main">
       <!-- Hero -->
       <section class="hero">
-        <div class="container hero__container">
+        <div class="hero__container">
           <!-- Swiper slider -->
           <div class="hero__slider">
-            <div class="swiper-wrapper">
-              <!-- Slide 1 -->
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="" media="" />
-                  <img
-                    class="hero__img"
-                    src="img/hero__slide1.jpg"
-                    alt="Первый слайд"
-                  />
-                </picture>
-              </div>
-              <!-- Slide 2 -->
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="" media="" />
-                  <img
-                    class="hero__img"
-                    src="img/hero__slide2.jpg"
-                    alt="Второй слайд"
-                  />
-                </picture>
-              </div>
-              <!-- Slide 3 -->
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="" media="" />
-                  <img
-                    class="hero__img"
-                    src="img/hero__slide3.jpg"
-                    alt="Третий слайд"
-                  />
-                </picture>
-              </div>
+            <!-- Slide 1 -->
+            <div class="slider__item">
+              <picture>
+                <source
+                  srcset="img/hero__slide1-1024.jpg"
+                  media="(max-width: 1024px)"
+                />
+                <source
+                  srcset="img/hero__slide1-768.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="img/hero__slide1-320.jpg"
+                  media="(max-width: 320px)"
+                />
+                <img
+                  class="hero__img"
+                  src="img/hero__slide1.jpg"
+                  alt="Первый слайд"
+                />
+              </picture>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slider__item">
+              <picture>
+                <source
+                  srcset="img/hero__slide2-1024.jpg"
+                  media="(max-width: 1024px)"
+                />
+                <source
+                  srcset="img/hero__slide2-768.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="img/hero__slide2-320.jpg"
+                  media="(max-width: 320px)"
+                />
+                <img
+                  class="hero__img"
+                  src="img/hero__slide2.jpg"
+                  alt="Второй слайд"
+                />
+              </picture>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slider__item">
+              <picture>
+                <source
+                  srcset="img/hero__slide3-1024.jpg"
+                  media="(max-width: 1024px)"
+                />
+                <source
+                  srcset="img/hero__slide3-768.jpg"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="img/hero__slide3-320.jpg"
+                  media="(max-width: 320px)"
+                />
+                <img
+                  class="hero__img"
+                  src="img/hero__slide3.jpg"
+                  alt="Третий слайд"
+                />
+              </picture>
             </div>
           </div>
           <div class="hero__content">
@@ -440,7 +492,7 @@
       </section>
       <!-- About -->
       <section class="about" id="about">
-        <div class="container">
+        <div class="container about__container">
           <h2 class="about__title section__title">О нас</h2>
           <p class="about__description">
             Ясность нашей позиции очевидна: семантический разбор внешних
@@ -461,345 +513,344 @@
       <!-- Gallery -->
       <section class="gallery" id="gallery">
         <div class="container gallery__container">
-          <div class="gallery__filter">
+          <!-- gallery left section -->
+          <div class="gallery-filter gallery__left">
             <h2 class="gallery__title section__title">Галерея</h2>
-            <label class="gallery__lbl" for="filter__select"
+            <label class="gallery-filter__lbl" for="gallery-filter__select"
               >Фильтровать по:</label
             >
-            <select id="filter__select">
-              <option hidden value="one">Автор</option>
-              <option value="two">Направление</option>
-              <option value="three">Техника</option>
+            <!-- select -->
+            <select name="select" class="gallery-filter__select">
+              <option class="gallery-filter__option" value="one">Автор</option>
+              <option class="gallery-filter__option" value="two">
+                Направление
+              </option>
+              <option class="gallery-filter__option" value="three">
+                Техника
+              </option>
             </select>
-            <span class="gallery__description">
+            <span class="gallery-filter__description">
               Вам предоставляется 10 бесплатных скачиваний. Для увеличения
               количества скачиваний
-              <a class="gallery-description__link" href="">авторизуйтесь</a>,
-              либо воспользуйтесь лицензией.
+              <a class="gallery-filter__link" href="">авторизуйтесь</a>, либо
+              воспользуйтесь лицензией.
             </span>
           </div>
-          <!-- Gallery Slider -->
-          <div class="gallery-object">
-            <div class="gallery__slider swiper-container">
-              <div class="gallery__wrapper swiper-wrapper">
+          <!-- gallery right section -->
+          <div class="gallery__right">
+            <!-- Gallery Slider -->
+            <div class="gallery__slider">
+              <!-- column 1 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 1 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide1_img1.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide1_img1.jpg"
+                    alt="Слайд 1"
+                  />
                 </div>
                 <!-- Slide 2 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide1_img2.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide1_img2.jpg"
+                    alt="Слайд 2"
+                  />
                 </div>
+              </div>
+              <!-- column 2 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 3 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide1_img3.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide1_img3.jpg"
+                    alt="Слайд 3"
+                  />
                 </div>
                 <!-- Slide 4 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide1_img4.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide1_img4.jpg"
+                    alt="Слайд 4"
+                  />
                 </div>
+              </div>
+              <!-- column 3 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 5 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide1_img5.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide1_img5.jpg"
+                    alt="Слайд 5"
+                  />
                 </div>
                 <!-- Slide 6 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide1_img6.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide1_img6.jpg"
+                    alt="Слайд 6"
+                  />
                 </div>
+              </div>
+              <!-- column 4 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 7 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide2_img1.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide2_img1.jpg"
+                    alt="Слайд 7"
+                  />
                 </div>
                 <!-- Slide 8 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide2_img2.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide2_img2.jpg"
+                    alt="Слайд 8"
+                  />
                 </div>
+              </div>
+              <!-- column 5 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 9 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide2_img3.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide2_img3.jpg"
+                    alt="Слайд 9"
+                  />
                 </div>
                 <!-- Slide 10 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide2_img4.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide2_img4.jpg"
+                    alt="Слайд 10"
+                  />
                 </div>
+              </div>
+              <!-- column 6 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 11 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide2_img5.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide2_img5.jpg"
+                    alt="Слайд 11"
+                  />
                 </div>
                 <!-- Slide 12 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide2_img6.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide2_img6.jpg"
+                    alt="Слайд 12"
+                  />
                 </div>
+              </div>
+              <!-- column 7 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 13 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide3_img1.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide3_img1.jpg"
+                    alt="Слайд 13"
+                  />
                 </div>
                 <!-- Slide 14 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide3_img2.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide3_img2.jpg"
+                    alt="Слайд 14"
+                  />
                 </div>
+              </div>
+              <!-- column 8 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 15 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide3_img3.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide3_img3.jpg"
+                    alt="Слайд 15"
+                  />
                 </div>
                 <!-- Slide 16 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide3_img4.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide3_img4.jpg"
+                    alt="Слайд 16"
+                  />
                 </div>
+              </div>
+              <!-- column 9 -->
+
+              <div class="slider__item-column">
                 <!-- Slide 17 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide3_img5.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide3_img5.jpg"
+                    alt="Слайд 17"
+                  />
                 </div>
                 <!-- Slide 18 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide3_img6.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide3_img6.jpg"
+                    alt="Слайд 18"
+                  />
                 </div>
+              </div>
+              <!-- column 10 -->
+              <div class="slider__item-column">
                 <!-- Slide 19 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide4_img1.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide4_img1.jpg"
+                    alt="Слайд 19"
+                  />
                 </div>
                 <!-- Slide 20 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide4_img2.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide4_img2.jpg"
+                    alt="Слайд 20"
+                  />
                 </div>
+              </div>
+              <!-- column 11 -->
+              <div class="slider__item-column">
                 <!-- Slide 21 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide4_img3.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide4_img3.jpg"
+                    alt="Слайд 21"
+                  />
                 </div>
                 <!-- Slide 22 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide4_img4.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide4_img4.jpg"
+                    alt="Слайд 22"
+                  />
                 </div>
+              </div>
+              <!-- column 12 -->
+              <div class="slider__item-column">
                 <!-- Slide 23 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide4_img5.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide4_img5.jpg"
+                    alt="Слайд 23"
+                  />
                 </div>
                 <!-- Slide 24 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide4_img6.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide4_img6.jpg"
+                    alt="Слайд 24"
+                  />
                 </div>
+              </div>
+              <!-- column 13 -->
+              <div class="slider__item-column">
                 <!-- Slide 25 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide5_img1.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide5_img1.jpg"
+                    alt="Слайд 25"
+                  />
                 </div>
                 <!-- Slide 26 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide5_img2.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide5_img2.jpg"
+                    alt="Слайд 26"
+                  />
                 </div>
+              </div>
+              <!-- column 14 -->
+              <div class="slider__item-column">
                 <!-- Slide 27 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide5_img3.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide5_img3.jpg"
+                    alt="Слайд 27"
+                  />
                 </div>
                 <!-- Slide 28 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide5_img4.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide5_img4.jpg"
+                    alt="Слайд 28"
+                  />
                 </div>
+              </div>
+              <!-- column 15 -->
+              <div class="slider__item-column">
                 <!-- Slide 29 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide5_img5.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide5_img5.jpg"
+                    alt="Слайд 29"
+                  />
                 </div>
                 <!-- Slide 30 -->
-                <div class="gallery__slide swiper-slide">
-                  <div class="gallery-slider__img">
-                    <img
-                      class="gallery-slide__img"
-                      src="img/slide5_img6.jpg"
-                      alt="Слайд "
-                    />
-                  </div>
+                <div class="slider__item">
+                  <img
+                    class="gallery__img"
+                    src="img/slide5_img6.jpg"
+                    alt="Слайд 30"
+                  />
                 </div>
               </div>
               <!-- Add Pagination -->
-              <div class="gallery-pagination swiper-pagination"></div>
             </div>
+            <div class="gallery__pagination"></div>
           </div>
         </div>
       </section>
       <!-- Catalog -->
       <section class="catalog" id="catalog">
         <div class="container">
-          <div class="block__title">
+          <div class="catalog-block__title">
             <h2 class="catalog__title section__title">Каталог</h2>
-            <div class="block__language">
-              <span class="language__icn lg_icn1"></span>
-              <span class="language__icn lg_icn2"></span>
-              <span class="language__icn lg_icn3"></span>
-              <span class="language__icn lg_icn4"></span>
-              <span class="language__icn lg_icn5"></span>
+            <div class="catalog-block__language">
+              <button class="language__icn lg_icn1"></button>
+              <button class="language__icn lg_icn2"></button>
+              <button class="language__icn lg_icn3"></button>
+              <button class="language__icn lg_icn4"></button>
+              <button class="language__icn lg_icn5"></button>
             </div>
           </div>
           <p class="catalog__description">
@@ -811,13 +862,19 @@
             либералов, которые жаждут быть функционально разнесены на
             независимые элементы.
           </p>
-
-          <div class="catalog-block">
-            <div class="catalog-block__content author__info">
-              <img class="author__img" src="img/author_img1.jpg" alt="" />
-              <h3 class="author__title">Доменико Гирандайо</h3>
-              <small class="author__date">2 июня 1448 - 11 января 1494,</small>
-              <p class="author__description">
+          <!-- info__author -->
+          <div class="catalog-author">
+            <div class="catalog-author__content">
+              <img
+                class="catalog-author__img"
+                src="img/author_img1.jpg"
+                alt="Автор"
+              />
+              <h3 class="catalog-author__title">Доменико Гирландайо</h3>
+              <small class="catalog-author__date"
+                >2 июня 1448 - 11 января 1494,</small
+              >
+              <p class="catalog-author__description">
                 Один из ведущих флорентийских художников Кватроченто, основатель
                 художественной династии, которую продолжили его брат Давид и сын
                 Ридольфо. Глава художественной мастерской, где юный Микеланджело
@@ -828,9 +885,8 @@
                 времени).
               </p>
             </div>
-
-            <div class="catalog-block__content diapazon">
-              <!-- Accordion -->
+            <!-- accordion -->
+            <div class="catalog-diapason">
               <div id="accordion">
                 <!-- Первая секция аккардиона -->
                 <div class="accordion__section">
@@ -838,42 +894,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -883,42 +969,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -928,42 +1044,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -973,42 +1119,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -1018,42 +1194,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -1063,42 +1269,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -1108,42 +1344,72 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="diapazon__list">
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Бенедетто ди Биндо</a>
-                      <a href="" class="diapazon__link">Бергоньоне, Амброджо</a>
-                      <a href="" class="diapazon__link">Биссоло, Франческо</a>
-                      <a href="" class="diapazon__link"
+                  <ul class="catalog-diapason__list">
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Бенедетто ди Биндо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Бергоньоне, Амброджо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Биссоло, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Больтраффио, Джованни</a
                       >
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
                         >Бонсиньори, Франческо</a
                       >
-                      <a href="" class="diapazon__link">Боттичини, Рафаэлло</a>
-                      <a href="" class="diapazon__link">Брамантино</a>
-                      <a href="" class="diapazon__link">Бреа, Людовико</a>
-                      <a href="" class="diapazon__link"
+                      <a href="" class="catalog-diapason__link"
+                        >Боттичини, Рафаэлло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Брамантино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Бреа, Людовико</a
+                      >
+                      <a href="" class="catalog-diapason__link"
                         >Бьяджо д’Антонио Туччи</a
                       >
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Веккьетта</a>
-                      <a href="" class="diapazon__link">Андреа Верроккьо</a>
-                      <a href="" class="diapazon__link">Доменико Гирландайо</a>
-                      <a href="" class="diapazon__link">Беноццо Гоццоли</a>
-                      <a href="" class="diapazon__link">Граначчи, Франческо</a>
-                      <a href="" class="diapazon__link">Грегорио ди Чекко</a>
-                      <a href="" class="diapazon__link">Джованни да Удине</a>
-                      <a href="" class="diapazon__link">Джованни ди Паоло</a>
-                      <a href="" class="diapazon__link">Джорджоне</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link">Веккьетта</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Андреа Верроккьо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Доменико Гирландайо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Беноццо Гоццоли</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Граначчи, Франческо</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Грегорио ди Чекко</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни да Удине</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Джованни ди Паоло</a
+                      >
+                      <a href="" class="catalog-diapason__link">Джорджоне</a>
                     </li>
-                    <li class="diapazon__item">
-                      <a href="" class="diapazon__link">Парентино, Бернардо</a>
-                      <a href="" class="diapazon__link">Пезеллино</a>
-                      <a href="" class="diapazon__link">Пьетро Перуджино</a>
-                      <a href="" class="diapazon__link">Перуцци, Бальдассаре</a>
-                      <a href="" class="diapazon__link">Пизанелло</a>
-                      <a href="" class="diapazon__link">Пинтуриккьо</a>
+                    <li class="catalog-diapason__item">
+                      <a href="" class="catalog-diapason__link"
+                        >Парентино, Бернардо</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пезеллино</a>
+                      <a href="" class="catalog-diapason__link"
+                        >Пьетро Перуджино</a
+                      >
+                      <a href="" class="catalog-diapason__link"
+                        >Перуцци, Бальдассаре</a
+                      >
+                      <a href="" class="catalog-diapason__link">Пизанелло</a>
+                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
                     </li>
                   </ul>
                 </div>
@@ -1160,60 +1426,76 @@
             <!-- Карточка 1-->
             <li class="events-cards__item">
               <img class="events-cards__img" src="img/events_img1.jpg" alt="" />
-              <div class="events-cards__description">
-                <small class="events-description__date"
+              <div class="events-cards__content">
+                <small class="events-cards__date"
                   >Музей им. Щусева<br />с 20 марта по 30 апреля</small
                 >
-                <h3 class="events-description__subtitle">
-                  Книжная гравюра в живом восприятии
-                </h3>
-                <p class="events-description__description">
-                  Один из ведущих флорентийских художников Кватроченто,
-                  основатель художественной династии, которую продолжили его
-                  брат Давид и сын Ридольфо. Глава художественной мастерской,
-                  где юный Микеланджело.
-                </p>
-                <a href="" class="events-description__detailed">Подробнее</a>
+                <div class="events-cards__block">
+                  <h3 class="events-cards__subtitle">
+                    Книжная гравюра в живом восприятии
+                  </h3>
+                  <p class="events-cards__description">
+                    Один из ведущих флорентийских художников Кватроченто,
+                    основатель художественной династии, которую продолжили его
+                    брат Давид и сын Ридольфо. Глава художественной мастерской,
+                    где юный Микеланджело.
+                  </p>
+
+                  <button type="button" class="events-cards__detailed">
+                    Подробнее
+                  </button>
+                </div>
               </div>
             </li>
             <!-- Карточка 2-->
             <li class="events-cards__item">
               <img class="events-cards__img" src="img/events_img2.jpg" alt="" />
-              <div class="events-cards__description">
-                <small class="events-description__date"
+              <div class="events-cards__content">
+                <small class="events-cards__date"
                   >ММОМА<br />24 марта 19:00</small
                 >
-                <h3 class="events-description__subtitle">
-                  «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                </h3>
-                <p class="events-description__description">
-                  Высокий уровень вовлечения представителей целевой аудитории
-                  является четким доказательством простого факта: постоянный
-                  количественный рост и сфера нашей активности представляет
-                  собой интересный эксперимент проверки новых принципов
-                  формирования...
-                </p>
-                <a href="" class="events-description__detailed">Подробнее</a>
+                <div class="events-cards__block">
+                  <h3 class="events-cards__subtitle">
+                    «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                  </h3>
+                  <p class="events-cards__description">
+                    Высокий уровень вовлечения представителей целевой аудитории
+                    является четким доказательством простого факта: постоянный
+                    количественный рост и сфера нашей активности представляет
+                    собой интересный эксперимент проверки новых принципов
+                    формирования...
+                  </p>
+
+                  <button type="button" class="events-cards__detailed">
+                    Подробнее
+                  </button>
+                </div>
               </div>
             </li>
             <!-- Карточка 3-->
             <li class="events-cards__item">
               <img class="events-cards__img" src="img/events_img3.jpg" alt="" />
-              <div class="events-cards__description">
-                <small class="events-description__date"
+              <div class="events-cards__content">
+                <small class="events-cards__date"
                   >Еврейский музей<br />с 31 марта по 21 апреля</small
                 >
-                <h3 class="events-description__subtitle">
-                  Выставка «Формация 2020»
-                </h3>
-                <p class="events-description__description">
-                  Идейные соображения высшего порядка, а также современная
-                  методология разработки играет важную роль в формировании
-                  глубокомысленных рассуждений. Также как перспективное
-                  планирование играет определяющее значение для новых принципов
-                  формирования материально-технической и кадровой базы.
-                </p>
-                <a href="" class="events-description__detailed">Подробнее</a>
+                <div class="events-cards__block">
+                  <h3 class="events-cards__subtitle">
+                    Выставка «Формация 2020»
+                  </h3>
+                  <p class="events-cards__description">
+                    Идейные соображения высшего порядка, а также современная
+                    методология разработки играет важную роль в формировании
+                    глубокомысленных рассуждений. Также как перспективное
+                    планирование играет определяющее значение для новых
+                    принципов формирования материально-технической и кадровой
+                    базы.
+                  </p>
+
+                  <button type="button" class="events-cards__detailed">
+                    Подробнее
+                  </button>
+                </div>
               </div>
             </li>
             <!-- Карточка 4-->
@@ -1221,19 +1503,24 @@
               class="events-cards__item cards-visible events-cards__item_visibled"
             >
               <img class="events-cards__img" src="img/events_img4.jpg" alt="" />
-              <div class="events-cards__description">
-                <small class="events-description__date"
+              <div class="events-cards__content">
+                <small class="events-cards__date"
                   >Третьяковка на Крымском валу<br />с 30 марта по 30
                   апреля</small
                 >
-                <h3 class="events-description__subtitle">
-                  Выставка «Формация 2020»
-                </h3>
-                <p class="events-description__description">
-                  Внезапно, реплицированные с зарубежных источников, современные
-                  исследования представляют собой не...
-                </p>
-                <a href="" class="events-description__detailed">Подробнее</a>
+                <div class="events-cards__block">
+                  <h3 class="events-cards__subtitle">
+                    Выставка «Формация 2020»
+                  </h3>
+                  <p class="events-cards__description">
+                    Внезапно, реплицированные с зарубежных источников,
+                    современные исследования представляют собой не...
+                  </p>
+
+                  <button type="button" class="events-cards__detailed">
+                    Подробнее
+                  </button>
+                </div>
               </div>
             </li>
             <!-- Карточка 5-->
@@ -1241,23 +1528,28 @@
               class="events-cards__item cards-visible events-cards__item_visibled"
             >
               <img class="events-cards__img" src="img/events_img5.jpg" alt="" />
-              <div class="events-cards__description">
-                <small class="events-description__date"
+              <div class="events-cards__content">
+                <small class="events-cards__date"
                   >ММАМ<br />с 8 апреля по 20 мая</small
                 >
-                <h3 class="events-description__subtitle">
-                  Выставка «Формация 2020»
-                </h3>
-                <p class="events-description__description">
-                  Один из ведущих флорентийских художников Кватроченто,
-                  основатель художественной династии, которую продолжили его
-                  брат Давид и сын...
-                </p>
-                <a href="" class="events-description__detailed">Подробнее</a>
+                <div class="events-cards__block">
+                  <h3 class="events-cards__subtitle">
+                    Выставка «Формация 2020»
+                  </h3>
+                  <p class="events-cards__description">
+                    Один из ведущих флорентийских художников Кватроченто,
+                    основатель художественной династии, которую продолжили его
+                    брат Давид и сын...
+                  </p>
+
+                  <button type="button" class="events-cards__detailed">
+                    Подробнее
+                  </button>
+                </div>
               </div>
             </li>
           </ul>
-          <button class="events__btn btn">Все события</button>
+          <button class="events-cards__btn btn">Все события</button>
         </div>
       </section>
       <!-- Edition -->
@@ -1269,254 +1561,282 @@
             <div class="edition-category__group-checkbox">
               <h3 class="edition-category__subtitle">Категории</h3>
               <!-- Checkbox 1 -->
-              <label class="category__label" for="category__checkbox1">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox1"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="bestsellers"
-                  id="category__checkbox1"
+                  id="edition-category__checkbox1"
                 />
                 Бестселлеры
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 2 -->
-              <label class="category__label" for="category__checkbox2">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox2"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="art"
-                  id="category__checkbox2"
+                  id="edition-category__checkbox2"
                 />
                 Искусство
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 3 -->
-              <label class="category__label" for="category__checkbox3">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox3"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="architecture"
-                  id="category__checkbox3"
+                  id="edition-category__checkbox3"
                 />
                 Архитектура
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 4 -->
-              <label class="category__label" for="category__checkbox4">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox4"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="design"
-                  id="category__checkbox4"
+                  id="edition-category__checkbox4"
                 />
                 Дизайн
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 5 -->
-              <label class="category__label" for="category__checkbox5">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox5"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="fasion"
-                  id="category__checkbox5"
+                  id="edition-category__checkbox5"
                 />
                 Мода
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 6 -->
-              <label class="category__label" for="category__checkbox6">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox6"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="children"
-                  id="category__checkbox6"
+                  id="edition-category__checkbox6"
                 />
                 Детям
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 7 -->
-              <label class="category__label" for="category__checkbox7">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox7"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="fiction"
-                  id="category__checkbox7"
+                  id="edition-category__checkbox7"
                 />
                 Художественная литература
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 8 -->
-              <label class="category__label" for="category__checkbox8">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox8"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="journalism"
-                  id="category__checkbox8"
+                  id="edition-category__checkbox8"
                 />
                 Публицистика
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 9 -->
-              <label class="category__label" for="category__checkbox9">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox9"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="travel-guides"
-                  id="category__checkbox9"
+                  id="edition-category__checkbox9"
                 />
                 Путеводители
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 10 -->
-              <label class="category__label" for="category__checkbox10">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox10"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="philosophy"
-                  id="category__checkbox10"
+                  id="edition-category__checkbox10"
                 />
                 Философия
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 11 -->
-              <label class="category__label" for="category__checkbox11">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox11"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="educational-literature"
-                  id="category__checkbox11"
+                  id="edition-category__checkbox11"
                 />
                 Учебная литература
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
               <!-- Checkbox 12 -->
-              <label class="category__label" for="category__checkbox12">
+              <label
+                class="edition-category__lbl"
+                for="edition-category__checkbox12"
+              >
                 <input
-                  class="category__el"
+                  class="edition-category__el"
                   type="checkbox"
                   name="magazines-newspappers"
-                  id="category__checkbox12"
+                  id="edition-category__checkbox12"
                 />
                 Журналы и газеты
-                <span class="category__square"></span>
+                <span class="edition-category__square"></span>
               </label>
             </div>
             <!-- Цена -->
             <div class="edition-category__group-price">
               <h3 class="edition-category__subtitle">Цена</h3>
               <div class="group-price">
-                <span class="group-price__el">От</span>
+                <span class="group-price__el group-price__sing">От</span>
                 <input
                   class="group-price__el group-price__input"
                   type="number"
                   placeholder="50"
                 />
-                <span class="group-price__el">до</span>
+                <span class="group-price__el group-price__sing">до</span>
                 <input
                   class="group-price__el group-price__input"
                   type="number"
                   placeholder="25 000"
                 />
-                <span class="group-price__el">руб.</span>
+                <span class="group-price__el group-price__sing">рублей</span>
               </div>
             </div>
           </div>
           <!-- Edition Slider -->
-          <div class="edition__object">
-            <div class="edition__slider swiper-container">
-              <div class="edition__wrapper swiper-wrapper">
-                <!-- Edition slide 1 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img1.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Искусство цвета<br /><i>Иттен, Иоханнес</i></span
-                    >
-                    <span class="edition__price">620 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
+          <div class="edition__right">
+            <div class="edition__slider">
+              <!-- Edition slide 1 -->
+              <div class="slider__item">
+                <img src="img/edition_img1.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Искусство цвета<br /><i>Иттен, Иоханнес</i></span
+                  >
+                  <span class="edition__price">620 руб</span>
                 </div>
-                <!-- Edition slide 2 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img2.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Типографика<br /><i>Рудер, Эмиль</i></span
-                    >
-                    <span class="edition__price">2 450 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
-                </div>
-                <!-- Edition slide 3 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img3.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Книга про буквы<br /><i>Гордон, Юрий</i></span
-                    >
-                    <span class="edition__price">2 200 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
-                </div>
-                <!-- Edition slide 4 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img4.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Николай Ильин<br /><i>Кричевский, Владимир</i></span
-                    >
-                    <span class="edition__price">1 100 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
-                </div>
-                <!-- Edition slide 5 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img5.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Модульные сетки в граф...<br /><i
-                        >Мюллер-Брокманн, Йозеф</i
-                      ></span
-                    >
-                    <span class="edition__price">1 450 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
-                </div>
-                <!-- Edition slide 6 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img6.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Эволюция графических ст...<br /><i
-                        >Хеллер, Чваст</i
-                      ></span
-                    >
-                    <span class="edition__price">3 200 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
-                </div>
-                <!-- Edition slide 7 -->
-                <div class="edition__slide swiper-slide">
-                  <img src="img/edition_img7.jpg" alt="" class="edition__img" />
-                  <div class="edition__description">
-                    <span class="edition__subtitle"
-                      >Искусство и визуальное в...<br /><i
-                        >Арнхейм, Рудольф</i
-                      ></span
-                    >
-                    <span class="edition__price">2 200 руб</span>
-                  </div>
-                  <button class="edition__btn btn">Заказать</button>
-                </div>
+                <button class="edition__btn btn">Заказать</button>
               </div>
-              <div class="edition-pagination swiper-pagination"></div>
+              <!-- Edition slide 2 -->
+              <div class="slider__item">
+                <img src="img/edition_img2.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Типографика<br /><i>Рудер, Эмиль</i></span
+                  >
+                  <span class="edition__price">2 450 руб</span>
+                </div>
+                <button class="edition__btn btn">Заказать</button>
+              </div>
+              <!-- Edition slide 3 -->
+              <div class="slider__item">
+                <img src="img/edition_img3.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Книга про буквы<br /><i>Гордон, Юрий</i></span
+                  >
+                  <span class="edition__price">2 200 руб</span>
+                </div>
+                <button class="edition__btn btn">Заказать</button>
+              </div>
+              <!-- Edition slide 4 -->
+              <div class="slider__item">
+                <img src="img/edition_img4.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Николай Ильин<br /><i>Кричевский, Владимир</i></span
+                  >
+                  <span class="edition__price">1 100 руб</span>
+                </div>
+                <button class="edition__btn btn">Заказать</button>
+              </div>
+              <!-- Edition slide 5 -->
+              <div class="slider__item">
+                <img src="img/edition_img5.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Модульные сет...<br /><i>Мюллер-Брокманн, Йозеф</i></span
+                  >
+                  <span class="edition__price">1 450 руб</span>
+                </div>
+                <button class="edition__btn btn">Заказать</button>
+              </div>
+              <!-- Edition slide 6 -->
+              <div class="slider__item">
+                <img src="img/edition_img6.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Эволюция граф...<br /><i>Хеллер, Чваст</i></span
+                  >
+                  <span class="edition__price">3 200 руб</span>
+                </div>
+                <button class="edition__btn btn">Заказать</button>
+              </div>
+              <!-- Edition slide 7 -->
+              <div class="slider__item">
+                <img src="img/edition_img7.jpg" alt="" class="edition__img" />
+                <div class="edition__content">
+                  <span class="edition__subtitle"
+                    >Искусство и ви...<br /><i>Арнхейм, Рудольф</i></span
+                  >
+                  <span class="edition__price">2 200 руб</span>
+                </div>
+                <button class="edition__btn btn">Заказать</button>
+              </div>
             </div>
+            <div class="edition__pagination"></div>
           </div>
         </div>
       </section>
       <!-- Project -->
       <section class="projects" id="projects">
-        <div class="container project__container">
+        <div class="container projects__container">
           <h2 class="projects__title section__title">Проекты</h2>
           <div class="projects__description">
             Предварительные выводы: постоянное информационно-пропагандистское
@@ -1552,34 +1872,51 @@
             представители современных социальных резервов призывают нас к новым
             свершениям, которые, в свою очередь, должны быть смешаны с не
             уникальными данными до степени совершенной неузнаваемости.
-            Подробнее: <a href="">blanchard-art.ru/projects/about</a>
+            Подробнее:
+            <a class="projects__link" href="blanchard-art.ru/projects/about"
+              >blanchard-art.ru/projects/about</a
+            >
           </div>
           <h3 class="projects__subtitle">Партнеры проектов:</h3>
           <!-- Project slider -->
           <div class="projects__partners">
-            <div class="projects__slider swiper-container">
-              <div class="projects__wrapper swiper-wrapper">
-                <!-- Project slide 1 -->
-                <div class="projects__slide pr__slide1 swiper-slide"></div>
-                <!-- Project slide 2 -->
-                <div class="projects__slide pr__slide2 swiper-slide"></div>
-                <!-- Project slide 3 -->
-                <div class="projects__slide pr__slide3 swiper-slide"></div>
-                <!-- Project slide 4 -->
-                <div class="projects__slide pr__slide4 swiper-slide"></div>
-                <!-- Project slide 5 -->
-                <div class="projects__slide pr__slide5 swiper-slide"></div>
-                <!-- Project slide 6 -->
-                <div class="projects__slide pr__slide6 swiper-slide"></div>
-                <!-- Project slide 7 -->
-                <div class="projects__slide pr__slide7 swiper-slide"></div>
-                <!-- Project slide 8 -->
-                <div class="projects__slide pr__slide8 swiper-slide"></div>
-                <!-- Project slide 9 -->
-                <div class="projects__slide pr__slide9 swiper-slide"></div>
+            <div class="projects__slider">
+              <!-- Project slide 1 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img1.jpg" alt="" />
               </div>
-              <div class="projects-button-next"></div>
-              <div class="projects-button-prev"></div>
+              <!-- Project slide 2 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img2.jpg" alt="" />
+              </div>
+              <!-- Project slide 3 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img3.jpg" alt="" />
+              </div>
+              <!-- Project slide 4 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img4.jpg" alt="" />
+              </div>
+              <!-- Project slide 5 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img5.jpg" alt="" />
+              </div>
+              <!-- Project slide 6 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img6.jpg" alt="" />
+              </div>
+              <!-- Project slide 7 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img7.jpg" alt="" />
+              </div>
+              <!-- Project slide 8 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img8.jpg" alt="" />
+              </div>
+              <!-- Project slide 9 -->
+              <div class="slider__item">
+                <img class="projects__img" src="img/projects_img9.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -1590,8 +1927,8 @@
         <div class="contacts__container">
           <div class="contacts-form">
             <div class="contacts-form__container">
-              <span class="contacts__name">Шоурум №4</span>
-              <span class="contacts__address"
+              <span class="contacts-form__name">Шоурум №4</span>
+              <span class="contacts-form__address"
                 >Леонтьевский переулок, дом 5, строение 1</span
               >
               <h3 class="contacts__subtitle">Заказать обратный звонок</h3>
@@ -1602,17 +1939,17 @@
               </form>
               <h3 class="contacts__subtitle">Связаться в один клик</h3>
               <div class="contacts__social-group">
-                <span class="social whatsapp">
-                  <a href=""></a>
-                </span>
-                <span class="social telegram">
-                  <a href=""></a>
-                </span>
+                <a href="">
+                  <span class="social whatsapp"></span>
+                </a>
+                <a href="">
+                  <span class="social telegram"></span>
+                </a>
               </div>
             </div>
           </div>
-          <div class="maps__container">
-            <div id="map" class="contacts__map"></div>
+          <div class="contacts-maps__container">
+            <div id="map" class="contacts-maps"></div>
           </div>
         </div>
       </section>
@@ -1636,13 +1973,8 @@
         </div>
       </div>
     </footer>
-
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <script src="script/script.js"></script>
-    <script src="script/js-swiper.js"></script>
+    <script src="script/slider-slick.js"></script>
     <script src="script/accordion.js"></script>
 
     <!-- Select -->

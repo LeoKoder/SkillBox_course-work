@@ -1,9 +1,17 @@
 window.addEventListener("DOMContentLoaded", function () {
-  document.querySelector(".events__btn").addEventListener("click", function () {
-    document.querySelectorAll(".cards-visible").forEach(function (visible) {
-      visible.classList.toggle("events-cards__item_visibled");
-    });
+  // select
+  const element = document.querySelector(".gallery-filter__select");
+  const choice = new Choices(element, {
+    searchEnabled: false,
   });
+  // CLick
+  document
+    .querySelector(".events-cards__btn")
+    .addEventListener("click", function () {
+      document.querySelectorAll(".cards-visible").forEach(function (visible) {
+        visible.classList.toggle("events-cards__item_visibled");
+      });
+    });
 
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
