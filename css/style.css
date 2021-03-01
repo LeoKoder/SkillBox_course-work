@@ -148,11 +148,6 @@ input:focus,
   background-repeat: no-repeat;
 }
 
-.header-top__logo {
-  display: flex;
-  flex: 0 1 10%;
-}
-
 .logo__img {
   transform: translateY(4px);
   width: 173px;
@@ -689,6 +684,10 @@ input[type="search" i] {
   background-image: url(../img/flag_icn5.svg);
 }
 
+.tab-content {
+  display: none;
+}
+
 .catalog__description {
   height: 160px;
   margin: 0;
@@ -702,7 +701,7 @@ input[type="search" i] {
 }
 
 .catalog-author__content {
-  display: flex;
+  display: none;
   flex: 0 1 47%;
   height: 780px;
   flex-direction: column;
@@ -797,8 +796,17 @@ input[type="search" i] {
   margin-left: 70px;
 }
 
-.catalog-diapason__link:not(:last-child) {
-  margin-bottom: 11px;
+.catalog-diapason__btn {
+  width: auto;
+  border: none;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.catalog-diapason__btn:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 /* Events */
@@ -1365,7 +1373,6 @@ input[type="search" i] {
 /* Адаптивность */
 /* mw1680 */
 @media (max-width: 1680px) {
-  #catalog,
   #events,
   #edition,
   #projects,
@@ -1856,4 +1863,8 @@ input[type="search" i] {
     left: auto;
     right: 28%;
   }
+}
+
+.active {
+  display: flex;
 }

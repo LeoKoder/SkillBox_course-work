@@ -13,6 +13,18 @@ window.addEventListener("DOMContentLoaded", function () {
       });
     });
 
+  // tab
+  document.querySelectorAll(".tabs__btn").forEach(function (tabsBtn) {
+    tabsBtn.addEventListener("click", function (event) {
+      const path = event.currentTarget.dataset.path;
+
+      document.querySelectorAll(".tab-content").forEach(function (tabContent) {
+        tabContent.classList.remove("active");
+      });
+      document.querySelector(`[data-target="${path}"]`).classList.add("active");
+    });
+  });
+
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
   ymaps.ready(init);

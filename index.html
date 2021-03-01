@@ -60,11 +60,9 @@
             <button class="burger__btn" type="button"></button>
             <div class="burger__block"></div>
           </div>
-          <div class="header-top__logo">
-            <a href="#" class="logo__link">
-              <img src="img/logo.png" alt="Логотип" class="logo__img" />
-            </a>
-          </div>
+          <a href="#" class="logo__link">
+            <img src="img/logo.png" alt="Логотип" class="logo__img" />
+          </a>
           <nav class="header-top__nav">
             <ul class="header-top__list">
               <li class="header-top__item">
@@ -846,25 +844,89 @@
           <div class="catalog-block__title">
             <h2 class="catalog__title section__title">Каталог</h2>
             <div class="catalog-block__language">
-              <button class="language__icn lg_icn1"></button>
-              <button class="language__icn lg_icn2"></button>
-              <button class="language__icn lg_icn3"></button>
-              <button class="language__icn lg_icn4"></button>
-              <button class="language__icn lg_icn5"></button>
+              <button
+                class="language__icn tabs__btn lg_icn1"
+                data-path="fr"
+              ></button>
+              <button
+                class="language__icn tabs__btn lg_icn2"
+                data-path="de"
+              ></button>
+              <button
+                class="language__icn tabs__btn lg_icn3"
+                data-path="it"
+              ></button>
+              <button
+                class="language__icn tabs__btn lg_icn4"
+                data-path="ru"
+              ></button>
+              <button
+                class="language__icn tabs__btn lg_icn5"
+                data-path="bn"
+              ></button>
             </div>
           </div>
-          <p class="catalog__description">
-            Акционеры крупнейших компаний, которые представляют собой яркий
-            пример континентально-европейского типа политической культуры, будут
-            объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
-            всего лишь частью общей картины, стремящиеся вытеснить традиционное
-            производство, нанотехнологии и по сей день остаются уделом
-            либералов, которые жаждут быть функционально разнесены на
-            независимые элементы.
-          </p>
+          <div class="tab-content" data-target="fr">
+            <p class="catalog__description">
+              Actionnaires des plus grandes entreprises qui représentent un
+              brillant Un exemple de culture politique de type européen
+              continental, Sera déclarée violant les normes universelles
+              d'éthique et de moralité. Faire partie de la vue d'ensemble,
+              chercher à déplacer Production traditionnelle, les
+              nanotechnologies restent à ce jour Le sort des libéraux qui
+              aspirent à être fonctionnellement Éléments indépendants.
+            </p>
+          </div>
+          <div class="tab-content" data-target="de">
+            <p class="catalog__description">
+              Aktionäre der größten Unternehmen, die eine helle vertreten Ein
+              Beispiel für eine kontinentaleuropäische Art politischer Kultur,
+              Wird als Verstoß gegen die universellen Normen der Ethik und Moral
+              erklärt. Nur ein Teil des Gesamtbildes zu sein und zu verdrängen
+              Traditionelle Produktion, Nanotechnologie bis heute erhalten Die
+              Menge der Liberalen, die sich danach sehnen, funktional zu sein
+              Unabhängige Elemente.
+            </p>
+          </div>
+          <div class="tab-content" data-target="it">
+            <p class="catalog__description">
+              Azionisti delle più grandi aziende che rappresentano un brillante
+              Un esempio di un tipo di cultura politica dell'Europa
+              continentale, Saranno dichiarate violazioni delle norme universali
+              di etica e moralità. Essere solo una parte del quadro generale,
+              cercando di spiazzare Produzione tradizionale, le nanotecnologie
+              rimangono ancora oggi Il sacco di liberali che desiderano essere
+              funzionalmente Elementi indipendenti
+            </p>
+          </div>
+          <div class="tab-content active" data-target="ru">
+            <p class="catalog__description">
+              Акционеры крупнейших компаний, которые представляют собой яркий
+              пример континентально-европейского типа политической культуры,
+              будут объявлены нарушающими общечеловеческие нормы этики и морали.
+              Являясь всего лишь частью общей картины, стремящиеся вытеснить
+              традиционное производство, нанотехнологии и по сей день остаются
+              уделом либералов, которые жаждут быть функционально разнесены на
+              независимые элементы.
+            </p>
+          </div>
+          <div class="tab-content" data-target="bn">
+            <p class="catalog__description">
+              Actionnaires des plus grandes entreprises qui représentent un
+              brillant Un exemple de culture politique de type européen
+              continental, Sera déclarée violant les normes universelles
+              d'éthique et de moralité. Faire partie de la vue d'ensemble,
+              chercher à déplacer Production traditionnelle, les
+              nanotechnologies restent à ce jour Le sort des libéraux qui
+              aspirent à être fonctionnellement Éléments indépendants.
+            </p>
+          </div>
           <!-- info__author -->
           <div class="catalog-author">
-            <div class="catalog-author__content">
+            <div
+              class="catalog-author__content tab-content active"
+              data-target="Domenico-Grillandayo"
+            >
               <img
                 class="catalog-author__img"
                 src="img/author_img1.jpg"
@@ -885,6 +947,33 @@
                 времени).
               </p>
             </div>
+            <div
+              class="catalog-author__content tab-content"
+              data-target="Benedetto-di-Bindo"
+            >
+              <img
+                class="catalog-author__img"
+                src="img/author_img2.jpg"
+                alt="Автор"
+              />
+              <h3 class="catalog-author__title">Бенедетто ди Биндо</h3>
+              <small class="catalog-author__date"
+                >2 июня 1380 - 11 января 1417,</small
+              >
+              <p class="catalog-author__description">
+                Бенедетто ди Биндо остался в истории искусства как сиенский
+                художник, так сказать, «второго ряда», несмотря на то, что за
+                свою короткую жизнь он выполнил ряд весьма престижных заказов,
+                включая работы в Сиенском соборе (работы в главном соборе
+                республики второстепенным художникам не поручались). Обучение он
+                прошёл у Таддео ди Бартоло, крупного сиенского мастера поздней
+                готики, в боттеге которого Бенедетто трудился вместе с Грегорио
+                ди Чекко. Наибольшее влияние на его творчество оказали работы
+                Симоне Мартини, в частности в выборе колорита, а тонко
+                проработанные лица его персонажей напоминают произведения
+                Джованни да Милано.
+              </p>
+            </div>
             <!-- accordion -->
             <div class="catalog-diapason">
               <div id="accordion">
@@ -896,70 +985,156 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                        data-path="Benedetto-di-Bindo"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn tabs__btn"
+                        data-path="Domenico-Grillandayo"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -971,70 +1146,154 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -1046,70 +1305,154 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -1121,70 +1464,154 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -1196,70 +1623,154 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -1271,70 +1782,154 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -1346,70 +1941,154 @@
                 <div class="accordion__cards">
                   <ul class="catalog-diapason__list">
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Бенедетто ди Биндо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бергоньоне, Амброджо</a
+                        Бенедетто ди Биндо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Биссоло, Франческо</a
+                        Бергоньоне, Амброджо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Больтраффио, Джованни</a
+                        Биссоло, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бонсиньори, Франческо</a
+                        Больтраффио, Джованни
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Боттичини, Рафаэлло</a
+                        Бонсиньори, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Брамантино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Бреа, Людовико</a
+                        Боттичини, Рафаэлло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Бьяджо д’Антонио Туччи</a
+                        Брамантино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
+                        Бреа, Людовико
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Бьяджо д’Антонио Туччи
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link">Веккьетта</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Андреа Верроккьо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Доменико Гирландайо</a
+                        Веккьетта
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Беноццо Гоццоли</a
+                        Андреа Верроккьо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Граначчи, Франческо</a
+                        Доменико Гирландайо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Грегорио ди Чекко</a
+                        Беноццо Гоццоли
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни да Удине</a
+                        Граначчи, Франческо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Джованни ди Паоло</a
+                        Грегорио ди Чекко
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Джорджоне</a>
+                        Джованни да Удине
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джованни ди Паоло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Джорджоне
+                      </button>
                     </li>
                     <li class="catalog-diapason__item">
-                      <a href="" class="catalog-diapason__link"
-                        >Парентино, Бернардо</a
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пезеллино</a>
-                      <a href="" class="catalog-diapason__link"
-                        >Пьетро Перуджино</a
+                        Парентино, Бернардо
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link"
-                        >Перуцци, Бальдассаре</a
+                        Пезеллино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
                       >
-                      <a href="" class="catalog-diapason__link">Пизанелло</a>
-                      <a href="" class="catalog-diapason__link">Пинтуриккьо</a>
+                        Пьетро Перуджино
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Перуцци, Бальдассаре
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пизанелло
+                      </button>
+                      <button
+                        type="button"
+                        class="catalog-diapason__btn tabs__btn"
+                      >
+                        Пинтуриккьо
+                      </button>
                     </li>
                   </ul>
                 </div>
