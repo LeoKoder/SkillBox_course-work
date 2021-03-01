@@ -11,11 +11,8 @@
     <link type="text/css" rel="stylesheet" href="css/normolize.css" />
 
     <!-- scrollBar -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
-    />
-    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <link rel="stylesheet" href="css/simplebar.css" />
+    <script src="script/simplebar.min.js"></script>
 
     <!-- Swiper -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -25,30 +22,19 @@
     /> -->
 
     <!-- Select -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+    <link rel="stylesheet" href="css/choices.min.css" />
 
     <!-- Jquery -->
-    <link
-      rel="stylesheet"
-      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
     <link rel="stylesheet" href="/resources/demos/style.css" />
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script/jquery-1.12.4.js"></script>
+    <script src="script/jquery-ui.js"></script>
 
     <!-- Slick slider -->
     <script src="script/slick.min.js"></script>
 
     <!-- Maps -->
-    <script
-      src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
   </head>
   <body>
     <!-- Header -->
@@ -56,7 +42,7 @@
       <div class="header-top">
         <div class="container header-top__container">
           <!-- logo -->
-          <div id="burger__menu">
+          <div class="burger__menu">
             <button class="burger__btn" type="button"></button>
             <div class="burger__block"></div>
           </div>
@@ -95,305 +81,309 @@
       <div class="header-bottom">
         <div class="container header-bottom__container">
           <nav class="header-bottom__nav">
-            <div class="header-bottom__dropdown">
-              <button class="header-bottom__dropbtn">Реализм</button>
-              <div class="dropdown__content">
-                <div
-                  class="dropdown-content__block customScroll"
-                  data-simplebar
-                  data-simplebar-auto-hide="false"
-                  data-simplebar-forceVisible="true"
-                >
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg1"
+            <ul class="header-bottom__list">
+              <li class="header-bottom__dropdown">
+                <button class="header-bottom__dropbtn">Реализм</button>
+                <div class="dropdown__content">
+                  <div
+                    class="dropdown-content__block customScroll"
+                    data-simplebar
+                    data-simplebar-auto-hide="false"
+                    data-simplebar-forceVisible="true"
                   >
-                    Тинторетто
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg2"
-                  >
-                    Фридрих
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg3"
-                  >
-                    Леонардо
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg4"
-                  >
-                    Верроккьо
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg1"
-                  >
-                    Тинторетто
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg2"
-                  >
-                    Фридрих
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg3"
-                  >
-                    Леонардо
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop1__bg4"
-                  >
-                    Верроккьо
-                  </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg1"
+                    >
+                      Тинторетто
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg2"
+                    >
+                      Фридрих
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg3"
+                    >
+                      Леонардо
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg4"
+                    >
+                      Верроккьо
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg1"
+                    >
+                      Тинторетто
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg2"
+                    >
+                      Фридрих
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg3"
+                    >
+                      Леонардо
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop1__bg4"
+                    >
+                      Верроккьо
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-bottom__dropdown">
-              <button class="header-bottom__dropbtn">Импрессионизм</button>
-              <div class="dropdown__content">
-                <div
-                  class="dropdown-content__block customScroll"
-                  data-simplebar
-                  data-simplebar-auto-hide="false"
-                >
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg1"
+              </li>
+              <li class="header-bottom__dropdown">
+                <button class="header-bottom__dropbtn">Импрессионизм</button>
+                <div class="dropdown__content">
+                  <div
+                    class="dropdown-content__block customScroll"
+                    data-simplebar
+                    data-simplebar-auto-hide="false"
                   >
-                    Моне
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg2"
-                  >
-                    Сислей
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg3"
-                  >
-                    Мане
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg4"
-                  >
-                    Ренуар
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg1"
-                  >
-                    Моне
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg2"
-                  >
-                    Сислей
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg3"
-                  >
-                    Мане
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop2__bg4"
-                  >
-                    Ренуар
-                  </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg1"
+                    >
+                      Моне
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg2"
+                    >
+                      Сислей
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg3"
+                    >
+                      Мане
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg4"
+                    >
+                      Ренуар
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg1"
+                    >
+                      Моне
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg2"
+                    >
+                      Сислей
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg3"
+                    >
+                      Мане
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop2__bg4"
+                    >
+                      Ренуар
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-bottom__dropdown">
-              <button class="header-bottom__dropbtn">Постимпрессионизм</button>
-              <div class="dropdown__content">
-                <div
-                  class="dropdown-content__block customScroll"
-                  data-simplebar
-                  data-simplebar-auto-hide="false"
-                >
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg1"
+              </li>
+              <li class="header-bottom__dropdown">
+                <button class="header-bottom__dropbtn">
+                  Постимпрессионизм
+                </button>
+                <div class="dropdown__content">
+                  <div
+                    class="dropdown-content__block customScroll"
+                    data-simplebar
+                    data-simplebar-auto-hide="false"
                   >
-                    Ван Гог
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg2"
-                  >
-                    Сезан
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg3"
-                  >
-                    Гоген
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg4"
-                  >
-                    Сёра
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg1"
-                  >
-                    Ван Гог
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg2"
-                  >
-                    Сезан
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg3"
-                  >
-                    Гоген
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop3__bg4"
-                  >
-                    Сёра
-                  </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg1"
+                    >
+                      Ван Гог
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg2"
+                    >
+                      Сезан
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg3"
+                    >
+                      Гоген
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg4"
+                    >
+                      Сёра
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg1"
+                    >
+                      Ван Гог
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg2"
+                    >
+                      Сезан
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg3"
+                    >
+                      Гоген
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop3__bg4"
+                    >
+                      Сёра
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-bottom__dropdown">
-              <button class="header-bottom__dropbtn">Авангард</button>
-              <div class="dropdown__content">
-                <div
-                  class="dropdown-content__block customScroll"
-                  data-simplebar
-                  data-simplebar-auto-hide="false"
-                >
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg1"
+              </li>
+              <li class="header-bottom__dropdown">
+                <button class="header-bottom__dropbtn">Авангард</button>
+                <div class="dropdown__content">
+                  <div
+                    class="dropdown-content__block customScroll"
+                    data-simplebar
+                    data-simplebar-auto-hide="false"
                   >
-                    Кадинский
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg2"
-                  >
-                    Маринетти
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg3"
-                  >
-                    Малевич
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg4"
-                  >
-                    Пикассо
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg1"
-                  >
-                    Кадинский
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg2"
-                  >
-                    Маринетти
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg3"
-                  >
-                    Малевич
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop4__bg4"
-                  >
-                    Пикассо
-                  </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg1"
+                    >
+                      Кадинский
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg2"
+                    >
+                      Маринетти
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg3"
+                    >
+                      Малевич
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg4"
+                    >
+                      Пикассо
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg1"
+                    >
+                      Кадинский
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg2"
+                    >
+                      Маринетти
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg3"
+                    >
+                      Малевич
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop4__bg4"
+                    >
+                      Пикассо
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="header-bottom__dropdown">
-              <button class="header-bottom__dropbtn">Футуризм</button>
-              <div class="dropdown__content">
-                <div
-                  class="dropdown-content__block customScroll"
-                  data-simplebar
-                  data-simplebar-auto-hide="false"
-                >
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg1"
+              </li>
+              <li class="header-bottom__dropdown">
+                <button class="header-bottom__dropbtn">Футуризм</button>
+                <div class="dropdown__content">
+                  <div
+                    class="dropdown-content__block customScroll"
+                    data-simplebar
+                    data-simplebar-auto-hide="false"
                   >
-                    Карра
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg2"
-                  >
-                    Прателла
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg3"
-                  >
-                    Северини
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg4"
-                  >
-                    Балла
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg1"
-                  >
-                    Карра
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg2"
-                  >
-                    Прателла
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg3"
-                  >
-                    Северини
-                  </button>
-                  <button
-                    type="button"
-                    class="dropdown-content__btn drop5__bg4"
-                  >
-                    Балла
-                  </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg1"
+                    >
+                      Карра
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg2"
+                    >
+                      Прателла
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg3"
+                    >
+                      Северини
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg4"
+                    >
+                      Балла
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg1"
+                    >
+                      Карра
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg2"
+                    >
+                      Прателла
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg3"
+                    >
+                      Северини
+                    </button>
+                    <button
+                      type="button"
+                      class="dropdown-content__btn drop5__bg4"
+                    >
+                      Балла
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </nav>
           <!-- Поиск по сайту -->
-          <form action="" method="get" class="header-bottom__form">
+          <form method="get" class="header-bottom__form">
             <button class="header-bottom__search"></button>
             <input
               class="search__input"
@@ -484,7 +474,9 @@
               Мы вынуждены отталкиваться от того, что реализация намеченных
               плановых заданий создаёт предпосылки для новых предложений.
             </p>
-            <a href="" class="hero__link btn">Подписаться на рассылку</a>
+            <button type="button" class="hero__btn btn">
+              Подписаться на рассылку
+            </button>
           </div>
         </div>
       </section>
@@ -514,11 +506,15 @@
           <!-- gallery left section -->
           <div class="gallery-filter gallery__left">
             <h2 class="gallery__title section__title">Галерея</h2>
-            <label class="gallery-filter__lbl" for="gallery-filter__select"
+            <label class="gallery-filter__lbl" for="gallery-filter"
               >Фильтровать по:</label
             >
             <!-- select -->
-            <select name="select" class="gallery-filter__select">
+            <select
+              name="select"
+              id="gallery-filter"
+              class="gallery-filter__select"
+            >
               <option class="gallery-filter__option" value="one">Автор</option>
               <option class="gallery-filter__option" value="two">
                 Направление
@@ -2611,7 +2607,7 @@
                 >Леонтьевский переулок, дом 5, строение 1</span
               >
               <h3 class="contacts__subtitle">Заказать обратный звонок</h3>
-              <form class="form" action="">
+              <form class="form">
                 <input class="form__input" type="text" placeholder="Имя*" />
                 <input class="form__input" type="tel" placeholder="Телефон*" />
                 <button class="form__btn btn" type="submit">Заказать</button>
@@ -2657,6 +2653,6 @@
     <script src="script/accordion.js"></script>
 
     <!-- Select -->
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="script/choices.min.js"></script>
   </body>
 </html>
