@@ -10,25 +10,21 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/normolize.css" />
 
+    <!-- Jquery -->
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="script/jquery-1.12.4.js"></script>
+    <script src="script/jquery-ui.js"></script>
+
     <!-- scrollBar -->
     <link rel="stylesheet" href="css/simplebar.css" />
     <script src="script/simplebar.min.js"></script>
 
     <!-- Swiper -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    /> -->
+    <script src="script/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
     <!-- Select -->
     <link rel="stylesheet" href="css/choices.min.css" />
-
-    <!-- Jquery -->
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    <link rel="stylesheet" href="/resources/demos/style.css" />
-    <script src="script/jquery-1.12.4.js"></script>
-    <script src="script/jquery-ui.js"></script>
 
     <!-- Slick slider -->
     <script src="script/slick.min.js"></script>
@@ -401,71 +397,73 @@
         <div class="hero__container">
           <!-- Swiper slider -->
           <div class="hero__slider">
-            <!-- Slide 1 -->
-            <div class="slider__item">
-              <picture>
-                <source
-                  srcset="img/hero__slide1-1024.jpg"
-                  media="(max-width: 1024px)"
-                />
-                <source
-                  srcset="img/hero__slide1-768.jpg"
-                  media="(max-width: 768px)"
-                />
-                <source
-                  srcset="img/hero__slide1-320.jpg"
-                  media="(max-width: 320px)"
-                />
-                <img
-                  class="hero__img"
-                  src="img/hero__slide1.jpg"
-                  alt="Первый слайд"
-                />
-              </picture>
-            </div>
-            <!-- Slide 2 -->
-            <div class="slider__item">
-              <picture>
-                <source
-                  srcset="img/hero__slide2-1024.jpg"
-                  media="(max-width: 1024px)"
-                />
-                <source
-                  srcset="img/hero__slide2-768.jpg"
-                  media="(max-width: 768px)"
-                />
-                <source
-                  srcset="img/hero__slide2-320.jpg"
-                  media="(max-width: 320px)"
-                />
-                <img
-                  class="hero__img"
-                  src="img/hero__slide2.jpg"
-                  alt="Второй слайд"
-                />
-              </picture>
-            </div>
-            <!-- Slide 3 -->
-            <div class="slider__item">
-              <picture>
-                <source
-                  srcset="img/hero__slide3-1024.jpg"
-                  media="(max-width: 1024px)"
-                />
-                <source
-                  srcset="img/hero__slide3-768.jpg"
-                  media="(max-width: 768px)"
-                />
-                <source
-                  srcset="img/hero__slide3-320.jpg"
-                  media="(max-width: 320px)"
-                />
-                <img
-                  class="hero__img"
-                  src="img/hero__slide3.jpg"
-                  alt="Третий слайд"
-                />
-              </picture>
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="img/hero__slide1-1024.jpg"
+                    media="(max-width: 1024px)"
+                  />
+                  <source
+                    srcset="img/hero__slide1-768.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <source
+                    srcset="img/hero__slide1-320.jpg"
+                    media="(max-width: 320px)"
+                  />
+                  <img
+                    class="hero__img"
+                    src="img/hero__slide1.jpg"
+                    alt="Первый слайд"
+                  />
+                </picture>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="img/hero__slide2-1024.jpg"
+                    media="(max-width: 1024px)"
+                  />
+                  <source
+                    srcset="img/hero__slide2-768.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <source
+                    srcset="img/hero__slide2-320.jpg"
+                    media="(max-width: 320px)"
+                  />
+                  <img
+                    class="hero__img"
+                    src="img/hero__slide2.jpg"
+                    alt="Второй слайд"
+                  />
+                </picture>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="img/hero__slide3-1024.jpg"
+                    media="(max-width: 1024px)"
+                  />
+                  <source
+                    srcset="img/hero__slide3-768.jpg"
+                    media="(max-width: 768px)"
+                  />
+                  <source
+                    srcset="img/hero__slide3-320.jpg"
+                    media="(max-width: 320px)"
+                  />
+                  <img
+                    class="hero__img"
+                    src="img/hero__slide3.jpg"
+                    alt="Третий слайд"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
           <div class="hero__content">
@@ -533,12 +531,28 @@
           <!-- gallery right section -->
           <div class="gallery__right">
             <!-- Gallery Slider -->
-            <div class="gallery__slider">
-              <!-- column 1 -->
 
-              <div class="slider__item-column">
+            <!-- Slider navigation -->
+            <div class="gallery__navigation">
+              <!-- arrow_l -->
+              <button
+                type="button"
+                class="gallery-prev gallery__arrows"
+              ></button>
+              <!-- Pagination -->
+              <div class="swiper-pagination gallery__pagination"></div>
+              <!-- arrow_r -->
+              <button
+                type="button"
+                class="gallery-next gallery__arrows"
+              ></button>
+            </div>
+            <!-- row 1-->
+            <div class="gallery__slider_top">
+              <!-- slider container -->
+              <div class="swiper-wrapper">
                 <!-- Slide 1 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide1_img1.jpg"
@@ -546,19 +560,15 @@
                   />
                 </div>
                 <!-- Slide 2 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide1_img2.jpg"
                     alt="Слайд 2"
                   />
                 </div>
-              </div>
-              <!-- column 2 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 3 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide1_img3.jpg"
@@ -566,19 +576,15 @@
                   />
                 </div>
                 <!-- Slide 4 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide1_img4.jpg"
                     alt="Слайд 4"
                   />
                 </div>
-              </div>
-              <!-- column 3 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 5 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide1_img5.jpg"
@@ -586,19 +592,15 @@
                   />
                 </div>
                 <!-- Slide 6 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide1_img6.jpg"
                     alt="Слайд 6"
                   />
                 </div>
-              </div>
-              <!-- column 4 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 7 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide2_img1.jpg"
@@ -606,19 +608,15 @@
                   />
                 </div>
                 <!-- Slide 8 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide2_img2.jpg"
                     alt="Слайд 8"
                   />
                 </div>
-              </div>
-              <!-- column 5 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 9 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide2_img3.jpg"
@@ -626,19 +624,15 @@
                   />
                 </div>
                 <!-- Slide 10 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide2_img4.jpg"
                     alt="Слайд 10"
                   />
                 </div>
-              </div>
-              <!-- column 6 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 11 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide2_img5.jpg"
@@ -646,19 +640,15 @@
                   />
                 </div>
                 <!-- Slide 12 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide2_img6.jpg"
                     alt="Слайд 12"
                   />
                 </div>
-              </div>
-              <!-- column 7 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 13 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide3_img1.jpg"
@@ -666,39 +656,36 @@
                   />
                 </div>
                 <!-- Slide 14 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide3_img2.jpg"
                     alt="Слайд 14"
                   />
                 </div>
-              </div>
-              <!-- column 8 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 15 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide3_img3.jpg"
                     alt="Слайд 15"
                   />
                 </div>
+              </div>
+            </div>
+            <!-- row 2-->
+            <div class="gallery__slider_bottom">
+              <div class="swiper-wrapper">
                 <!-- Slide 16 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide3_img4.jpg"
                     alt="Слайд 16"
                   />
                 </div>
-              </div>
-              <!-- column 9 -->
-
-              <div class="slider__item-column">
                 <!-- Slide 17 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide3_img5.jpg"
@@ -706,18 +693,15 @@
                   />
                 </div>
                 <!-- Slide 18 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide3_img6.jpg"
                     alt="Слайд 18"
                   />
                 </div>
-              </div>
-              <!-- column 10 -->
-              <div class="slider__item-column">
                 <!-- Slide 19 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide4_img1.jpg"
@@ -725,18 +709,15 @@
                   />
                 </div>
                 <!-- Slide 20 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide4_img2.jpg"
                     alt="Слайд 20"
                   />
                 </div>
-              </div>
-              <!-- column 11 -->
-              <div class="slider__item-column">
                 <!-- Slide 21 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide4_img3.jpg"
@@ -744,18 +725,15 @@
                   />
                 </div>
                 <!-- Slide 22 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide4_img4.jpg"
                     alt="Слайд 22"
                   />
                 </div>
-              </div>
-              <!-- column 12 -->
-              <div class="slider__item-column">
                 <!-- Slide 23 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide4_img5.jpg"
@@ -763,18 +741,15 @@
                   />
                 </div>
                 <!-- Slide 24 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide4_img6.jpg"
                     alt="Слайд 24"
                   />
                 </div>
-              </div>
-              <!-- column 13 -->
-              <div class="slider__item-column">
                 <!-- Slide 25 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide5_img1.jpg"
@@ -782,18 +757,15 @@
                   />
                 </div>
                 <!-- Slide 26 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide5_img2.jpg"
                     alt="Слайд 26"
                   />
                 </div>
-              </div>
-              <!-- column 14 -->
-              <div class="slider__item-column">
                 <!-- Slide 27 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide5_img3.jpg"
@@ -801,18 +773,15 @@
                   />
                 </div>
                 <!-- Slide 28 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide5_img4.jpg"
                     alt="Слайд 28"
                   />
                 </div>
-              </div>
-              <!-- column 15 -->
-              <div class="slider__item-column">
                 <!-- Slide 29 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide5_img5.jpg"
@@ -820,7 +789,7 @@
                   />
                 </div>
                 <!-- Slide 30 -->
-                <div class="slider__item">
+                <div class="swiper-slide gallery__slide">
                   <img
                     class="gallery__img"
                     src="img/slide5_img6.jpg"
@@ -828,9 +797,7 @@
                   />
                 </div>
               </div>
-              <!-- Add Pagination -->
             </div>
-            <div class="gallery__pagination"></div>
           </div>
         </div>
       </section>
@@ -920,7 +887,7 @@
           <!-- info__author -->
           <div class="catalog-author">
             <div
-              class="catalog-author__content tab-content active"
+              class="catalog-author__content tab-author active"
               data-target="Domenico-Grillandayo"
             >
               <img
@@ -944,7 +911,7 @@
               </p>
             </div>
             <div
-              class="catalog-author__content tab-content"
+              class="catalog-author__content tab-author"
               data-target="Benedetto-di-Bindo"
             >
               <img
@@ -972,7 +939,7 @@
             </div>
             <!-- accordion -->
             <div class="catalog-diapason">
-              <div id="accordion">
+              <div id="accordion" class="accordion">
                 <!-- Первая секция аккардиона -->
                 <div class="accordion__section">
                   <h3 class="accordion__title">С 1400 по 1499 гг.</h3>
@@ -983,56 +950,56 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                         data-path="Benedetto-di-Bindo"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1040,56 +1007,56 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                         data-path="Domenico-Grillandayo"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -1097,37 +1064,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -1144,55 +1111,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1200,55 +1167,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -1256,37 +1223,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -1303,55 +1270,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1359,55 +1326,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -1415,37 +1382,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -1462,55 +1429,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1518,55 +1485,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -1574,37 +1541,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -1621,55 +1588,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1677,55 +1644,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -1733,37 +1700,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -1780,55 +1747,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1836,55 +1803,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -1892,37 +1859,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -1939,55 +1906,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бенедетто ди Биндо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бергоньоне, Амброджо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Биссоло, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Больтраффио, Джованни
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бонсиньори, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Боттичини, Рафаэлло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Брамантино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бреа, Людовико
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Бьяджо д’Антонио Туччи
                       </button>
@@ -1995,55 +1962,55 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Веккьетта
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Андреа Верроккьо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Доменико Гирландайо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Беноццо Гоццоли
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Граначчи, Франческо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Грегорио ди Чекко
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни да Удине
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джованни ди Паоло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Джорджоне
                       </button>
@@ -2051,37 +2018,37 @@
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Парентино, Бернардо
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пезеллино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пьетро Перуджино
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Перуцци, Бальдассаре
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пизанелло
                       </button>
                       <button
                         type="button"
-                        class="catalog-diapason__btn tabs__btn"
+                        class="catalog-diapason__btn author__btn"
                       >
                         Пинтуриккьо
                       </button>
@@ -2426,86 +2393,102 @@
           </div>
           <!-- Edition Slider -->
           <div class="edition__right">
+            <!-- Slider navigation -->
+            <div class="edition__navigation">
+              <!-- arrow_l -->
+              <button
+                type="button"
+                class="swiper-button-prev edition-prev edition__arrows"
+              ></button>
+              <!-- Pagination -->
+              <div class="swiper-pagination edition__pagination"></div>
+              <!-- arrow_r -->
+              <button
+                type="button"
+                class="swiper-button-next edition-next edition__arrows"
+              ></button>
+            </div>
             <div class="edition__slider">
-              <!-- Edition slide 1 -->
-              <div class="slider__item">
-                <img src="img/edition_img1.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Искусство цвета<br /><i>Иттен, Иоханнес</i></span
-                  >
-                  <span class="edition__price">620 руб</span>
+              <div class="swiper-wrapper">
+                <!-- Edition slide 1 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img1.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Искусство цвета<br /><i>Иттен, Иоханнес</i></span
+                    >
+                    <span class="edition__price">620 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
-              </div>
-              <!-- Edition slide 2 -->
-              <div class="slider__item">
-                <img src="img/edition_img2.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Типографика<br /><i>Рудер, Эмиль</i></span
-                  >
-                  <span class="edition__price">2 450 руб</span>
+                <!-- Edition slide 2 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img2.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Типографика<br /><i>Рудер, Эмиль</i></span
+                    >
+                    <span class="edition__price">2 450 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
-              </div>
-              <!-- Edition slide 3 -->
-              <div class="slider__item">
-                <img src="img/edition_img3.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Книга про буквы<br /><i>Гордон, Юрий</i></span
-                  >
-                  <span class="edition__price">2 200 руб</span>
+                <!-- Edition slide 3 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img3.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Книга про буквы<br /><i>Гордон, Юрий</i></span
+                    >
+                    <span class="edition__price">2 200 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
-              </div>
-              <!-- Edition slide 4 -->
-              <div class="slider__item">
-                <img src="img/edition_img4.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Николай Ильин<br /><i>Кричевский, Владимир</i></span
-                  >
-                  <span class="edition__price">1 100 руб</span>
+                <!-- Edition slide 4 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img4.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Николай Ильин<br /><i>Кричевский, Владимир</i></span
+                    >
+                    <span class="edition__price">1 100 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
-              </div>
-              <!-- Edition slide 5 -->
-              <div class="slider__item">
-                <img src="img/edition_img5.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Модульные сет...<br /><i>Мюллер-Брокманн, Йозеф</i></span
-                  >
-                  <span class="edition__price">1 450 руб</span>
+                <!-- Edition slide 5 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img5.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Модульные сет...<br /><i>Мюллер-Брокманн, Йозеф</i></span
+                    >
+                    <span class="edition__price">1 450 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
-              </div>
-              <!-- Edition slide 6 -->
-              <div class="slider__item">
-                <img src="img/edition_img6.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Эволюция граф...<br /><i>Хеллер, Чваст</i></span
-                  >
-                  <span class="edition__price">3 200 руб</span>
+                <!-- Edition slide 6 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img6.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Эволюция граф...<br /><i>Хеллер, Чваст</i></span
+                    >
+                    <span class="edition__price">3 200 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
-              </div>
-              <!-- Edition slide 7 -->
-              <div class="slider__item">
-                <img src="img/edition_img7.jpg" alt="" class="edition__img" />
-                <div class="edition__content">
-                  <span class="edition__subtitle"
-                    >Искусство и ви...<br /><i>Арнхейм, Рудольф</i></span
-                  >
-                  <span class="edition__price">2 200 руб</span>
+                <!-- Edition slide 7 -->
+                <div class="swiper-slide edition__slide">
+                  <img src="img/edition_img7.jpg" alt="" class="edition__img" />
+                  <div class="edition__content">
+                    <span class="edition__subtitle"
+                      >Искусство и ви...<br /><i>Арнхейм, Рудольф</i></span
+                    >
+                    <span class="edition__price">2 200 руб</span>
+                  </div>
+                  <button class="edition__btn btn">Заказать</button>
                 </div>
-                <button class="edition__btn btn">Заказать</button>
               </div>
             </div>
-            <div class="edition__pagination"></div>
           </div>
         </div>
       </section>
@@ -2554,42 +2537,50 @@
           </div>
           <h3 class="projects__subtitle">Партнеры проектов:</h3>
           <!-- Project slider -->
-          <div class="projects__partners">
-            <div class="projects__slider">
+          <div class="projects__slider">
+            <button
+              type="button"
+              class="swiper-button-prev projects-prev projects__arrows"
+            ></button>
+            <button
+              type="button"
+              class="swiper-button-next projects-next projects__arrows"
+            ></button>
+            <div class="swiper-wrapper">
               <!-- Project slide 1 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img1.jpg" alt="" />
               </div>
               <!-- Project slide 2 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img2.jpg" alt="" />
               </div>
               <!-- Project slide 3 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img3.jpg" alt="" />
               </div>
               <!-- Project slide 4 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img4.jpg" alt="" />
               </div>
               <!-- Project slide 5 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img5.jpg" alt="" />
               </div>
               <!-- Project slide 6 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img6.jpg" alt="" />
               </div>
               <!-- Project slide 7 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img7.jpg" alt="" />
               </div>
               <!-- Project slide 8 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img8.jpg" alt="" />
               </div>
               <!-- Project slide 9 -->
-              <div class="slider__item">
+              <div class="swiper-slide projects__slide">
                 <img class="projects__img" src="img/projects_img9.jpg" alt="" />
               </div>
             </div>
@@ -2598,7 +2589,9 @@
       </section>
       <!-- Contacts -->
       <section class="contacts" id="contacts">
-        <h2 class="contacts__title section__title">Контакты</h2>
+        <div class="container">
+          <h2 class="contacts__title section__title">Контакты</h2>
+        </div>
         <div class="contacts__container">
           <div class="contacts-form">
             <div class="contacts-form__container">
@@ -2623,6 +2616,7 @@
               </div>
             </div>
           </div>
+
           <div class="contacts-maps__container">
             <div id="map" class="contacts-maps"></div>
           </div>
