@@ -47,6 +47,18 @@ window.addEventListener("DOMContentLoaded", function () {
       enabled: true,
       onlyInViewport: false,
     },
+    breakpoints: {
+      319: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 35,
+      },
+      1367: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+      },
+    },
   });
 
   // swiper gallery bottom
@@ -69,6 +81,17 @@ window.addEventListener("DOMContentLoaded", function () {
       enabled: true,
       onlyInViewport: false,
       pageUpDown: true,
+    },
+    breakpoints: {
+      319: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 35,
+      },
+      1367: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+      },
     },
   });
 
