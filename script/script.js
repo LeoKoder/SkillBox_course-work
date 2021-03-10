@@ -48,7 +48,11 @@ window.addEventListener("DOMContentLoaded", function () {
       onlyInViewport: false,
     },
     breakpoints: {
-      319: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      700: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 35,
@@ -83,7 +87,11 @@ window.addEventListener("DOMContentLoaded", function () {
       pageUpDown: true,
     },
     breakpoints: {
-      319: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+      700: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 35,
