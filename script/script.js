@@ -8,18 +8,22 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var swiperProjects = document.querySelector(".projects__slider");
 
+  var eventsCards = document.querySelector(".events-cards");
+
   // select
   const element = document.querySelector(".gallery-filter__select");
   const choice = new Choices(element, {
     searchEnabled: false,
   });
-  // CLick
+  // Скрытие/показ Все события
   document
     .querySelector(".events-cards__btn")
     .addEventListener("click", function () {
-      document.querySelectorAll(".cards-visible").forEach(function (visible) {
-        visible.classList.toggle("events-cards__item_visibled");
-      });
+      if (eventsCards.style.height <= "705px") {
+        eventsCards.style.height = "auto";
+      } else {
+        eventsCards.style.height = "705px";
+      }
     });
 
   // Swiper hero
@@ -103,6 +107,33 @@ window.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  // Swiper events
+  if (window.innerWidth <= 767) {
+    var swiper6 = new Swiper(eventsCards, {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 10,
+      pagination: {
+        el: ".events__pagination",
+        type: "bullets",
+        clickable: true,
+        slideToClickedSlide: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        550: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      },
+    });
+  } else {
+    swiper.destroy();
+  }
+
   // Swiper edition
   var swiper4 = new Swiper(swiperEdition, {
     slidesPerView: 3,
@@ -120,6 +151,7 @@ window.addEventListener("DOMContentLoaded", function () {
       prevEl: ".edition-prev",
     },
   });
+
   // Swiper projects
   var swiper5 = new Swiper(swiperProjects, {
     slidesPerView: 3,
