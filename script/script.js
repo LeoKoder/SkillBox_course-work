@@ -108,48 +108,95 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   // Swiper events
-  if (window.innerWidth <= 767) {
-    var swiper6 = new Swiper(eventsCards, {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 10,
-      pagination: {
-        el: ".events__pagination",
-        type: "bullets",
-        clickable: true,
-        slideToClickedSlide: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
+  var swiper4,
+    swiper6 = undefined;
+  function initSwiper6() {
+    if ($(window).width() <= 767 && swiper6 === undefined) {
+      swiper6 = new Swiper(eventsCards, {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 10,
+        pagination: {
+          el: ".events__pagination",
+          type: "bullets",
+          clickable: true,
+          slideToClickedSlide: true,
         },
-        550: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          550: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
         },
-      },
-    });
-  } else {
-    swiper.destroy();
+      });
+    } else if ($(window).width() > 768 && swiper6 !== undefined) {
+      swiper6.destroy();
+      swiper6 = undefined;
+      $(".swiper-wrapper").removeAttr("style");
+      $(".swiper-slide").removeAttr("style");
+    }
   }
 
+  initSwiper6();
+
+  $(window).resize(function () {
+    initSwiper6();
+  });
+
   // Swiper edition
-  var swiper4 = new Swiper(swiperEdition, {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 50,
-    pagination: {
-      el: ".edition__pagination",
-      type: "fraction",
-      clickable: true,
-      slideToClickedSlide: true,
-    },
-    loop: true,
-    navigation: {
-      nextEl: ".edition-next",
-      prevEl: ".edition-prev",
-    },
+  function initSwiper4() {
+    if ($(window).width() >= 319 && swiper4 === undefined) {
+      swiper4 = new Swiper(swiperEdition, {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+        pagination: {
+          el: ".edition__pagination",
+          type: "fraction",
+          clickable: true,
+          slideToClickedSlide: true,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".edition-next",
+          prevEl: ".edition-prev",
+        },
+        breakpoints: {
+          321: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          600: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 34,
+          },
+          767: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1197: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+        },
+      });
+    } else if ($(window).width() < 321 && swiper4 !== undefined) {
+      swiper4.destroy();
+      swiper4 = undefined;
+      $(".swiper-wrapper").removeAttr("style");
+      $(".swiper-slide").removeAttr("style");
+    }
+  }
+
+  initSwiper4();
+
+  $(window).resize(function () {
+    initSwiper4();
   });
 
   // Swiper projects
