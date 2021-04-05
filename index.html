@@ -2512,179 +2512,224 @@
           <!-- Категории -->
           <div class="edition-category">
             <h2 class="edition-category__title section__title">Издания</h2>
-            <details open class="details">
-              <summary class="edition-category__subtitle">Категории</summary>
-              <div class="edition-category__group-checkbox">
-                <!-- Checkbox 1 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox1"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="bestsellers"
-                    id="edition-category__checkbox1"
-                  />
-                  Бестселлеры
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 2 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox2"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="art"
-                    id="edition-category__checkbox2"
-                  />
-                  Искусство
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 3 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox3"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="architecture"
-                    id="edition-category__checkbox3"
-                  />
-                  Архитектура
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 4 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox4"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="design"
-                    id="edition-category__checkbox4"
-                  />
-                  Дизайн
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 5 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox5"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="fasion"
-                    id="edition-category__checkbox5"
-                  />
-                  Мода
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 6 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox6"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="children"
-                    id="edition-category__checkbox6"
-                  />
-                  Детям
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 7 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox7"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="fiction"
-                    id="edition-category__checkbox7"
-                  />
-                  Художественная литература
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 8 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox8"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="journalism"
-                    id="edition-category__checkbox8"
-                  />
-                  Публицистика
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 9 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox9"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="travel-guides"
-                    id="edition-category__checkbox9"
-                  />
-                  Путеводители
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 10 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox10"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="philosophy"
-                    id="edition-category__checkbox10"
-                  />
-                  Философия
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 11 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox11"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="educational-literature"
-                    id="edition-category__checkbox11"
-                  />
-                  Учебная литература
-                  <span class="edition-category__square"></span>
-                </label>
-                <!-- Checkbox 12 -->
-                <label
-                  class="edition-category__lbl"
-                  for="edition-category__checkbox12"
-                >
-                  <input
-                    class="edition-category__el"
-                    type="checkbox"
-                    name="magazines-newspappers"
-                    id="edition-category__checkbox12"
-                  />
-                  Журналы и газеты
-                  <span class="edition-category__square"></span>
-                </label>
+            <!-- <select
+              name="select"
+              id="edition__select"
+              class="edition-category__select"
+            > -->
+            <form>
+              <div class="multiselect">
+                <div class="selectBox">
+                  <select class="edition-category__select" name="" id="">
+                    <option
+                      value="title"
+                      class="edition-category__option edition-category__subtitle"
+                    >
+                      Категории
+                    </option>
+                  </select>
+                  <div class="overSelect"></div>
+                </div>
+                <div class="checkboxes">
+                  <!-- Checkbox 1 -->
+                  <!-- <option class="edition-category__option" value="Bestsellers"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox1"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="bestsellers"
+                      id="edition-category__checkbox1"
+                    />
+                    Бестселлеры
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 2 -->
+                  <!-- <option class="edition-category__option" value="Art"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox2"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="art"
+                      id="edition-category__checkbox2"
+                    />
+                    Искусство
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 3 -->
+                  <!-- <option class="edition-category__option" value="Architecture"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox3"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="architecture"
+                      id="edition-category__checkbox3"
+                    />
+                    Архитектура
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 4 -->
+                  <!-- <option class="edition-category__option" value="Design"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox4"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="design"
+                      id="edition-category__checkbox4"
+                    />
+                    Дизайн
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 5 -->
+                  <!-- <option class="edition-category__option" value="Fashion"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox5"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="fasion"
+                      id="edition-category__checkbox5"
+                    />
+                    Мода
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 6 -->
+                  <!-- <option class="edition-category__option" value="Kids"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox6"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="children"
+                      id="edition-category__checkbox6"
+                    />
+                    Детям
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 7 -->
+                  <!-- <option class="edition-category__option" value="Fiction"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox7"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="fiction"
+                      id="edition-category__checkbox7"
+                    />
+                    Художественная литература
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 8 -->
+                  <!-- <option class="edition-category__option" value="Publicism"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox8"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="journalism"
+                      id="edition-category__checkbox8"
+                    />
+                    Публицистика
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 9 -->
+                  <!-- <option class="edition-category__option" value="Guides"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox9"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="travel-guides"
+                      id="edition-category__checkbox9"
+                    />
+                    Путеводители
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 10 -->
+                  <!-- <option class="edition-category__option" value="Philosophy"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox10"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="philosophy"
+                      id="edition-category__checkbox10"
+                    />
+                    Философия
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 11 -->
+                  <!-- <option
+                class="edition-category__option"
+                value="Educational-literature"
+              > -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox11"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="educational-literature"
+                      id="edition-category__checkbox11"
+                    />
+                    Учебная литература
+                    <span class="edition-category__square"></span>
+                  </label>
+                  <!-- </option> -->
+                  <!-- Checkbox 12 -->
+                  <!-- <option class="edition-category__option" value="newspapers"> -->
+                  <label
+                    class="edition-category__lbl"
+                    for="edition-category__checkbox12"
+                  >
+                    <input
+                      class="edition-category__el"
+                      type="checkbox"
+                      name="magazines-newspappers"
+                      id="edition-category__checkbox12"
+                    />
+                    Журналы и газеты
+                    <span class="edition-category__square"></span>
+                  </label>
+                </div>
               </div>
-            </details>
+            </form>
+            <!-- </option> -->
+            <!-- </select> -->
             <!-- Цена -->
             <div class="edition-category__group-price">
               <h3 class="edition-category__subtitle price__subtitle">Цена</h3>
@@ -2701,7 +2746,7 @@
                   type="number"
                   placeholder="25 000"
                 />
-                <span class="group-price__el group-price__sing">руб.</span>
+                <span class="group-price__el group-price__sing">руб</span>
               </div>
             </div>
           </div>

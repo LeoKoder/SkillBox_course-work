@@ -11,10 +11,33 @@ window.addEventListener("DOMContentLoaded", function () {
   var eventsCards = document.querySelector(".events-cards");
 
   // select
-  const element = document.querySelector(".gallery-filter__select");
-  const choice = new Choices(element, {
+  const element1 = document.querySelector(".gallery-filter__select");
+  const choice1 = new Choices(element1, {
     searchEnabled: false,
   });
+
+  // const element2 = document.querySelector(".edition-category__select");
+  // const choice2 = new Choices(element2, {
+  //   searchEnabled: false,
+  // });
+
+  //
+  if ($(window).width() <= 320) {
+    var expanded = false;
+
+    document.querySelector(".selectBox").addEventListener("click", function () {
+      var checkboxes = document.querySelector(".checkboxes");
+      if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+      } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+      }
+    });
+  }
+  //
+
   // Скрытие/показ Все события
   document
     .querySelector(".events-cards__btn")
@@ -202,12 +225,28 @@ window.addEventListener("DOMContentLoaded", function () {
   // Swiper projects
   var swiper5 = new Swiper(swiperProjects, {
     slidesPerView: 3,
-    slidesPerGroup: 3,
-    spaceBetween: 80,
+    slidesPerGroup: 1,
+    spaceBetween: 76,
     loop: true,
     navigation: {
       nextEl: ".projects-next",
       prevEl: ".projects-prev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 50,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 50,
+      },
+      1024: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
     },
   });
 
