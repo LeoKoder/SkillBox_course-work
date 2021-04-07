@@ -1261,7 +1261,7 @@ input[type="search" i] {
 .contacts-form {
   display: flex;
   height: 700px;
-  flex: 0 1 35.5%;
+  width: 35.5%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -1282,6 +1282,10 @@ input[type="search" i] {
   margin-bottom: 20px;
 }
 
+.contacts-form__block {
+  margin-bottom: 40px;
+}
+
 .contacts-form__name {
   display: block;
   font-size: 23px;
@@ -1290,7 +1294,6 @@ input[type="search" i] {
 
 .contacts-form__address {
   display: block;
-  margin-bottom: 40px;
 }
 
 .form {
@@ -1300,7 +1303,7 @@ input[type="search" i] {
 }
 
 .form__input {
-  bottom: 1px solid #333;
+  border: 1px solid #333;
   border-radius: 100px;
   height: 40px;
   padding-left: 21px;
@@ -1340,22 +1343,32 @@ input[type="search" i] {
 }
 
 .whatsapp::after {
-  content: url("../img/whatsapp.svg");
+  content: "";
+  background-image: url("../img/whatsapp.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-  top: 22%;
-  left: 22%;
+  width: 22px;
+  height: 22px;
+  top: 25%;
+  left: 26%;
 }
 
 .telegram::after {
-  content: url("../img/telegram.svg");
+  content: "";
+  background-image: url("../img/telegram.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   position: absolute;
-  top: 30%;
-  left: 17%;
+  width: 20px;
+  height: 20px;
+  top: 26%;
+  left: 23%;
 }
 
 .contacts-maps__container {
   display: flex;
-  flex: 0 1 64.5%;
+  width: 64.5%;
 }
 
 .contacts-maps {
@@ -1375,7 +1388,8 @@ input[type="search" i] {
 
 .footer__container {
   display: flex;
-  padding-top: 48px;
+  height: 100%;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -1386,6 +1400,8 @@ input[type="search" i] {
 
 .footer__social {
   display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 45px;
   height: 45px;
 }
@@ -1410,11 +1426,6 @@ input[type="search" i] {
 /* Адаптивность */
 /* mw1680 */
 @media (max-width: 1680px) {
-  #contacts,
-  .footer {
-    display: none;
-  }
-
   .container {
     max-width: 1360px;
   }
@@ -1591,6 +1602,10 @@ input[type="search" i] {
   .edition__img {
     margin-bottom: 6px;
   }
+  .contacts-form__container {
+    width: 335px;
+    margin-left: 4%;
+  }
 }
 /* mw1196 -> 876*/
 @media (max-width: 1196px) {
@@ -1757,6 +1772,56 @@ input[type="search" i] {
 
   .multiselect {
     width: 100%;
+  }
+  .contacts-form {
+    width: 47.5%;
+    align-items: flex-start;
+    padding-left: 50px;
+  }
+
+  .contacts-form__name {
+    margin-bottom: 32px;
+  }
+
+  .contacts-form__container {
+    margin-left: 0;
+  }
+
+  .contacts-maps__container {
+    width: 52.5%;
+  }
+
+  .form__btn {
+    width: 47%;
+  }
+  .social {
+    width: 60px;
+    height: 60px;
+  }
+
+  .whatsapp {
+    margin-right: 30px;
+  }
+
+  .whatsapp::after {
+    width: 33px;
+    height: 31px;
+    top: 18%;
+    left: 23%;
+  }
+
+  .telegram::after {
+    width: 30px;
+    height: 27px;
+    left: 20%;
+  }
+  .footer__social {
+    width: 60px;
+    height: 60px;
+  }
+
+  .inst {
+    margin: 0 28px;
   }
 }
 /* mw1023 -> 925 */
@@ -1949,6 +2014,14 @@ input[type="search" i] {
     flex-wrap: wrap;
     height: 130px;
   }
+
+  .contacts-form {
+    width: 56.5%;
+  }
+
+  .contacts-maps__container {
+    width: 43.5%;
+  }
 }
 /* 768 -> 660 */
 @media (max-width: 767px) {
@@ -2128,6 +2201,54 @@ input[type="search" i] {
 
   .checkboxes {
     height: 243px;
+  }
+
+  .projects {
+    margin-bottom: 53px;
+  }
+
+  .contacts__container {
+    padding-top: 110px;
+    flex-direction: column-reverse;
+    position: relative;
+  }
+
+  .contacts-form {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .contacts-form__container {
+    margin: 0 auto;
+  }
+
+  .contacts-maps__container {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 20px;
+  }
+
+  .contacts-form__block {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+  .contacts-form__name {
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+
+  .contacts-form__address {
+    font-size: 13px;
+  }
+  .footer__container {
+    flex-wrap: wrap;
   }
 }
 /* 320 -> 290 */
@@ -2434,5 +2555,66 @@ input[type="search" i] {
 
   .multiselect {
     margin-bottom: 45px;
+  }
+
+  .contacts__container {
+    padding-top: 57px;
+  }
+
+  .contacts-form__container {
+    width: 290px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .contacts__subtitle {
+    font-size: 18px;
+    margin-bottom: 17px;
+  }
+  .form__btn {
+    font-size: 13px;
+    width: 44%;
+    height: 40px;
+  }
+  .form {
+    margin-bottom: 25px;
+  }
+
+  .footer {
+    padding-top: 20px;
+  }
+
+  .footer__container {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .footer__logo {
+    width: 95px;
+    height: 23px;
+  }
+
+  .footer__group {
+    margin-bottom: 15px;
+  }
+
+  .footer__social {
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp {
+    margin-right: 23px;
+  }
+
+  .whatsapp::after {
+    width: 29px;
+    height: 29px;
+    top: 12%;
+    left: 21%;
+  }
+  .telegram::after {
+    top: 23%;
+    left: 11%;
   }
 }
