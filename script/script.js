@@ -21,7 +21,39 @@ window.addEventListener("DOMContentLoaded", function () {
   //   searchEnabled: false,
   // });
 
-  //
+  // burger
+  document.querySelector(".burger__btn").addEventListener("click", function () {
+    document.querySelector(".header-top__nav").style.display = "block";
+    document.querySelector(".header-top__container").style.alignItems =
+      "flex-start";
+    document.querySelector(".header").classList.add("header__position");
+    document.querySelector(".logo__link").classList.add("burger__show");
+    document
+      .querySelector(".header-bottom__search")
+      .classList.add("burger__show");
+    document.querySelector(".header-top__log-in").style.display = "block";
+    document.querySelector(".burger__close").style.display = "block";
+    document.querySelector(".burger__btn").style.display = "none";
+  });
+
+  // burger close
+  document
+    .querySelector(".burger__close")
+    .addEventListener("click", function () {
+      document.querySelector(".header-top__nav").style.display = "none";
+      document.querySelector(".header-top__container").style.alignItems =
+        "center";
+      document.querySelector(".header").classList.remove("header__position");
+      document.querySelector(".logo__link").classList.remove("burger__show");
+      document
+        .querySelector(".header-bottom__search")
+        .classList.remove("burger__show");
+      document.querySelector(".header-top__log-in").style.display = "none";
+      document.querySelector(".burger__close").style.display = "none";
+      document.querySelector(".burger__btn").style.display = "block";
+    });
+
+  //custom checkbox
   if ($(window).width() <= 320) {
     var expanded = false;
 
