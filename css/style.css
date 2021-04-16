@@ -389,7 +389,7 @@ input[type="search" i] {
 /* Main */
 /* Hero */
 .hero {
-  height: 730px;
+  height: 695px;
   margin-bottom: 85px;
   margin-top: -70px;
 }
@@ -417,7 +417,7 @@ input[type="search" i] {
 }
 
 .hero__title {
-  margin: 40px 0 17px 0;
+  margin: 15px 0 17px 0;
   font-size: 78px;
   font-weight: 700;
   color: #fff;
@@ -1745,6 +1745,7 @@ input[type="search" i] {
 
   .hero__title {
     width: 500px;
+    margin-top: 20px;
     margin-bottom: 10px;
     font-size: 68px;
   }
@@ -2433,7 +2434,7 @@ input[type="search" i] {
   }
 
   .hero__btn {
-    width: 70%;
+    width: 80%;
     font-size: 14px;
     padding: 0.9em 0;
     margin: 0 auto;
