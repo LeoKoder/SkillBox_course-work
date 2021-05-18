@@ -256,10 +256,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Swiper projects
   var swiper5 = new Swiper(swiperProjects, {
-    slidesPerView: 3,
+    slidesPerView: "auto",
     slidesPerGroup: 1,
-    spaceBetween: 76,
-    loop: true,
     navigation: {
       nextEl: ".projects-next",
       prevEl: ".projects-prev",

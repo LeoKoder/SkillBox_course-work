@@ -9,10 +9,16 @@
 @font-face {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans.woff2") format("woff2"),
-    url("../fonts/OpenSans.woff") format("woff"),
-    url("../fonts/OpenSans.ttf") format("opentype"),
-    url("../fonts/OpenSans.eot") format("embedded-opentype");
-  font-weight: 400;
+    url("../fonts/OpenSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenBold";
+  src: url("../fonts/OpenSansBold.woff2") format("woff2"),
+    url("../fonts/OpenSansBold.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -60,7 +66,7 @@ a {
   border: none;
   color: #fff;
   text-align: center;
-  font-weight: 700;
+  font-family: "OpenBold";
   border-radius: 100px;
   background-color: var(--bg-color-btn);
 }
@@ -145,9 +151,9 @@ input:focus,
 }
 
 .header-top__nav {
-  flex: 0 1 56%;
+  flex: 0 1 60%;
   display: flex;
-  margin-right: 7%;
+  margin-right: 2%;
 }
 
 .header-top__list {
@@ -156,21 +162,20 @@ input:focus,
 }
 
 .header-top__item:not(:last-child) {
-  margin-right: 75px;
+  margin-right: 65px;
 }
 
 .header-top__link {
   color: #fff;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .header-top__log-in {
   padding: 0;
   border: none;
   background-color: #000;
-
-  font-size: 17px;
+  font-size: 18px;
   color: #fff;
 }
 
@@ -210,9 +215,10 @@ input:focus,
 .header-bottom__dropbtn {
   background: rgba(0, 0, 0, 0);
   color: white;
-  font-size: 17px;
+  font-size: 18px;
   border: none;
   cursor: pointer;
+  padding-left: 7px;
 }
 
 .header-bottom__dropbtn::after {
@@ -229,7 +235,7 @@ input:focus,
 }
 
 .header-bottom__dropdown:not(:last-child) {
-  margin-right: 88px;
+  margin-right: 80px;
 }
 
 .header-bottom__dropdown:hover .dropdown__content {
@@ -359,7 +365,7 @@ input:focus,
   transform: rotate(90deg) translateX(7px);
   width: 22px;
   height: 22px;
-  margin-right: 12px;
+  margin-right: 5px;
 }
 
 input[type="search" i] {
@@ -372,7 +378,7 @@ input[type="search" i] {
   background: rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 2px solid #fff;
-  font-family: "Open Sans";
+  font-family: "OpenSans";
   font-size: 18px;
 }
 
@@ -411,31 +417,31 @@ input[type="search" i] {
   top: 17.2%;
   left: 8.2%;
   display: flex;
-  width: 597px;
+  width: 565px;
   height: 70%;
   flex-direction: column;
 }
 
 .hero__title {
-  margin: 15px 0 17px 0;
-  font-size: 78px;
-  font-weight: 700;
+  margin: 15px 0 20px 0;
+  font-size: 72px;
+  font-family: "OpenBold";
   color: #fff;
   line-height: 83.3px;
 }
 
 .hero__description {
   margin-top: 0;
-  margin-bottom: 90px;
-  font-weight: 700;
+  margin-bottom: 94px;
+  font-family: "OpenBold";
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
 }
 
 .hero__btn {
-  font-size: 17px;
-  padding: 1.6em 0;
+  font-size: 18px;
+  padding: 1.5em 0;
   width: 315px;
 }
 
@@ -655,7 +661,7 @@ input[type="search" i] {
 
 /* Catalog */
 .catalog {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .catalog-block__title {
@@ -771,8 +777,8 @@ input[type="search" i] {
   border: none;
   border-bottom: 3px solid #cacaca;
   background-color: #fff;
-  height: 110px;
   margin: 0;
+  padding: 30px 0;
 }
 
 .accordion .ui-accordion-header-active {
@@ -801,7 +807,7 @@ input[type="search" i] {
 }
 
 .accordion .accordion__cards.ui-accordion-content {
-  padding: 1.2em 0;
+  padding: 2.2em 0;
   border: none;
 }
 
@@ -885,7 +891,7 @@ input[type="search" i] {
   font-size: 12px;
   line-height: 16px;
   margin-bottom: 5px;
-  font-weight: 700;
+  font-family: "OpenBold";
   color: #999;
 }
 
@@ -1154,7 +1160,7 @@ input[type="search" i] {
   width: 69%;
   height: auto;
   line-height: 32px;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 
 .projects__tooltip {
@@ -1205,22 +1211,26 @@ input[type="search" i] {
 
 .projects__subtitle {
   margin: 0;
-  font-size: 23px;
+  font-size: 24px;
   margin-bottom: 25px;
 }
 
 /* project__slider */
-.projects__slider {
-  position: relative;
-  overflow: hidden;
+.projects__block {
   width: 100%;
-  padding: 0 75px;
+  position: relative;
+}
+.projects__slider {
+  overflow: hidden;
+  width: 90%;
   height: auto;
+  margin: 0 auto;
 }
 
 .projects__slider .swiper-slide.projects__slide {
   display: flex;
-  width: 450px;
+  width: 450px !important;
+  margin-right: 50px;
   align-items: center;
   justify-content: center;
   height: 150px;
@@ -1283,6 +1293,7 @@ input[type="search" i] {
 }
 
 .contacts__subtitle {
+  font-weight: 400;
   margin: 0;
   font-size: 24px;
   margin-bottom: 20px;
