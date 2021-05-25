@@ -69,14 +69,17 @@ a {
 }
 
 .dropdown-content__btn {
-  width: 90%;
-  height: 40px;
+  width: 92%;
+  height: 41px;
   background-color: #000;
   color: #fff;
   text-align: left;
-  padding: 3px 0 0 12px;
+  padding-left: 13px;
   font-weight: 600;
   font-size: 14px;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .btn {
@@ -142,12 +145,15 @@ input:focus,
 
 /* header-top */
 .header-top {
+  display: flex;
   width: 100%;
-  padding: 27px 0 33px 0;
+  height: 102px;
   background-color: #000;
+  padding-bottom: 0px;
 }
 
 .header-top__container {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -171,6 +177,7 @@ input:focus,
   flex: 0 1 60%;
   display: flex;
   margin-right: 2%;
+  padding-bottom: 4px;
 }
 
 .header-top__list {
@@ -194,6 +201,7 @@ input:focus,
   background-color: #000;
   font-size: 18px;
   color: #fff;
+  padding-bottom: 4px;
 }
 
 .header-top__log-in::before {
@@ -209,7 +217,6 @@ input:focus,
   width: 100%;
   z-index: 3;
   background: rgba(0, 0, 0, 0.4);
-  margin-top: -3px;
 }
 
 .header-bottom__container {
@@ -243,7 +250,7 @@ input:focus,
   content: url("../img/header-dropicn.svg");
   width: 7px;
   height: 7px;
-  margin-left: 4px;
+  margin-left: 3px;
 }
 
 /* dropdown */
@@ -262,9 +269,9 @@ input:focus,
 
 .dropdown__content {
   display: none;
-  padding: 2.3em 2.5em;
+  padding: 40px;
   position: absolute;
-  top: 69px;
+  top: 68px;
   background-color: #000;
   width: 300px;
   background: rgba(0, 0, 0, 0.4);
@@ -346,7 +353,7 @@ input:focus,
 
 /* customscroll */
 .customScroll {
-  width: 245px;
+  width: 240px;
   height: 222px;
   display: flex;
   flex-direction: column;
@@ -357,7 +364,7 @@ input:focus,
 }
 
 .customScroll .simplebar-track.simplebar-vertical {
-  width: 5px;
+  width: 2px;
   background-color: #000;
 }
 
@@ -404,6 +411,7 @@ input[type="search" i] {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
+  padding-left: -1px;
 }
 
 .burger__show {
@@ -415,7 +423,7 @@ input[type="search" i] {
 .hero {
   height: 695px;
   margin-bottom: 92px;
-  margin-top: -70px;
+  margin-top: -68px;
 }
 
 .hero__container {
@@ -441,7 +449,7 @@ input[type="search" i] {
 }
 
 .hero__title {
-  margin: 15px 0 20px 0;
+  margin: 15px 0 17px 0;
   font-size: 72px;
   font-weight: 700;
   color: #fff;
@@ -450,7 +458,7 @@ input[type="search" i] {
 
 .hero__description {
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 90px;
   font-weight: 700;
   color: #fff;
   font-size: 18px;
@@ -496,7 +504,7 @@ input[type="search" i] {
 }
 
 .about__description {
-  width: 68.1em;
+  width: 67.9em;
   line-height: 32px;
 }
 
@@ -523,7 +531,7 @@ input[type="search" i] {
 
 .gallery__title {
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .gallery-filter__lbl {
@@ -584,8 +592,8 @@ input[type="search" i] {
   width: 20%;
   display: block;
   color: #fff;
-  bottom: 66px;
-  line-height: 33px;
+  bottom: 72px;
+  line-height: 32px;
   font-weight: 600;
   font-size: 16px;
 }
@@ -682,7 +690,7 @@ input[type="search" i] {
 
 /* Catalog */
 .catalog {
-  margin-bottom: 88px;
+  margin-bottom: 97px;
 }
 
 .catalog-block__title {
@@ -776,7 +784,7 @@ input[type="search" i] {
 }
 
 .catalog-author__date {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   color: #999;
   font-size: 12px;
 }
@@ -830,7 +838,7 @@ input[type="search" i] {
 }
 
 .accordion .accordion__cards.ui-accordion-content {
-  padding: 2.2em 0;
+  padding: 1.8em 0;
   border: none;
 }
 
@@ -1089,7 +1097,7 @@ input[type="search" i] {
   align-items: center;
   height: 40px;
   border: 1px solid #fff;
-  margin-top: 18px;
+  margin-top: 15px;
   border-radius: 6px;
 }
 
