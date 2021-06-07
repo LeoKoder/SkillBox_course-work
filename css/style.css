@@ -90,6 +90,12 @@ a {
   border-radius: 100px;
   background-color: var(--bg-color-btn);
 }
+
+.main__title {
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
 /* общие параметры слайдеров */
 /* Ограничивающая оболочка */
 .slick-list {
@@ -348,7 +354,7 @@ input:focus,
 }
 
 .dropdown-content__btn:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 /* customscroll */
@@ -368,11 +374,13 @@ input:focus,
   background-color: #000;
 }
 
-.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+.customScroll .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   background-color: #fff;
   opacity: 1;
   height: 28px;
   width: 2px;
+  top: 0;
+  left: 0;
 }
 
 /* Поиск по сайту */
