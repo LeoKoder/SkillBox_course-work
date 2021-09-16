@@ -53,6 +53,18 @@ window.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".burger__btn").style.display = "block";
     });
 
+  // выпадающее меню
+  document
+    .querySelectorAll(".header-bottom__dropbtn")
+    .forEach(function (dropdown) {
+      dropdown.addEventListener("click", function (even) {
+        even.target.nextElementSibling.classList.toggle(
+          "dropdown__content_active"
+        );
+        even.target.classList.toggle("header-bottom__dropbtn_rotate");
+      });
+    });
+
   //custom checkbox
   if ($(window).width() <= 320) {
     var expanded = false;
