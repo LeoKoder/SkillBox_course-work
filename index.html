@@ -486,20 +486,44 @@
             <label class="gallery-filter__lbl" for="gallery-filter"
               >Фильтровать по:</label
             >
+            <!-- custom select -->
+            <div class="custom-select">
+              <div class="custom-select__container">
+                <div class="custom-select__option">
+                  <input
+                    type="radio"
+                    class="radio"
+                    id="automobiles"
+                    name="category"
+                  />
+                  <label for="automobiles">Направление</label>
+                </div>
+
+                <div class="custom-select__option">
+                  <input type="radio" class="radio" id="film" name="category" />
+                  <label for="film">Техника</label>
+                </div>
+              </div>
+
+              <div class="custom-select_selected">Автор</div>
+            </div>
+            <!-- end custom select -->
             <!-- select -->
-            <select
+            <!-- <select
               name="select"
               id="gallery-filter"
               class="gallery-filter__select"
             >
-              <option class="gallery-filter__option" value="one">Автор</option>
+              <option class="gallery-filter__option" selected disabled>
+                Автор
+              </option>
               <option class="gallery-filter__option" value="two">
                 Направление
               </option>
               <option class="gallery-filter__option" value="three">
                 Техника
               </option>
-            </select>
+            </select> -->
             <span class="gallery-filter__description">
               Вам предоставляется 10 бесплатных скачиваний. Для увеличения
               количества скачиваний

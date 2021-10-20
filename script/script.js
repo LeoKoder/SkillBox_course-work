@@ -11,11 +11,27 @@ window.addEventListener("DOMContentLoaded", function () {
   var eventsCards = document.querySelector(".events-cards");
 
   // select
-  const element1 = document.querySelector(".gallery-filter__select");
-  const choice1 = new Choices(element1, {
-    searchEnabled: false,
+  // const element1 = document.querySelector(".gallery-filter__select");
+  // const choice1 = new Choices(element1, {
+  //   searchEnabled: false,
+  // });
+
+  // custom select
+  const selected = document.querySelector(".custom-select_selected");
+  const optionsContainer = document.querySelector(".custom-select__container");
+
+  const optionsList = document.querySelectorAll(".custom-select__option");
+
+  selected.addEventListener("click", () => {
+    optionsContainer.classList.toggle("active");
   });
 
+  optionsList.forEach((o) => {
+    o.addEventListener("click", () => {
+      selected.innerHTML = o.querySelector("label").innerHTML;
+      optionsContainer.classList.remove("active");
+    });
+  });
   // const element2 = document.querySelector(".edition-category__select");
   // const choice2 = new Choices(element2, {
   //   searchEnabled: false,
