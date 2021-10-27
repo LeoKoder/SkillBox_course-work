@@ -323,22 +323,33 @@ window.addEventListener("DOMContentLoaded", function () {
   // tab
   document.querySelectorAll(".tabs__btn").forEach(function (tabsBtn) {
     tabsBtn.addEventListener("click", function (event) {
+      document.querySelectorAll(".tabs__btn").forEach(function (tabsBtnOpen) {
+        tabsBtnOpen.classList.remove("open");
+      });
       const path = event.currentTarget.dataset.path;
-
+      console.log(path);
       document.querySelectorAll(".tab-content").forEach(function (tabContent) {
         tabContent.classList.remove("active");
       });
+
+      document.querySelector(`[data-path="${path}"]`).classList.add("open");
       document.querySelector(`[data-target="${path}"]`).classList.add("active");
     });
   });
 
   document.querySelectorAll(".author__btn").forEach(function (tabsBtn) {
+    tabsBtn.addEventListener("click", function (e) {
+      document.querySelectorAll(".author__btn").forEach(function (tabsBtnOpen) {
+        tabsBtnOpen.classList.remove("active");
+      });
+    });
     tabsBtn.addEventListener("click", function (event) {
       const path = event.currentTarget.dataset.path;
 
       document.querySelectorAll(".tab-author").forEach(function (tabContent) {
         tabContent.classList.remove("active");
       });
+      document.querySelector(`[data-path="${path}"]`).classList.add("active");
       document.querySelector(`[data-target="${path}"]`).classList.add("active");
     });
   });

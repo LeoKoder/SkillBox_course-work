@@ -66,6 +66,16 @@ a {
   text-decoration: none;
 }
 
+a,
+a::after,
+a::before,
+button,
+button::after,
+button::before {
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
 a:hover,
 a:hover::after,
 a:hover::before,
@@ -536,6 +546,7 @@ input[type="search" i] {
   font-weight: 400;
   font-size: 18px;
   caret-color: var(--hover-color);
+  transition-duration: 0.5s;
 }
 
 .search__input:active,
@@ -832,6 +843,7 @@ input[type="search" i] {
   top: 0;
   opacity: 0;
   cursor: pointer;
+  transition-duration: 0.5s;
 }
 
 .gallery__wrap-icon {
@@ -894,7 +906,7 @@ input[type="search" i] {
   border-radius: 50%;
   outline: none;
   margin-top: 0px;
-  margin-right: 20px;
+  margin-right: 22px;
   left: 4px;
 }
 
@@ -945,7 +957,7 @@ input[type="search" i] {
 
 .gallery__navigation .swiper-pagination-fraction,
 .edition__navigation .swiper-pagination-fraction {
-  margin-right: 20px;
+  margin-right: 17px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -1016,7 +1028,7 @@ input[type="search" i] {
   outline: none;
 }
 
-.language__icn:focus::after {
+.language__icn.open::after {
   content: "";
   position: relative;
   display: block;
@@ -1112,6 +1124,7 @@ input[type="search" i] {
   background-color: #fff;
   margin: 0;
   padding: 30px 0 32px 0;
+  transition-duration: 0.5s;
 }
 
 .accordion > .accordion__section_last {
@@ -1150,6 +1163,7 @@ input[type="search" i] {
   display: block;
   border-radius: 50%;
   background-color: #ececec;
+  transition-duration: 0.5s;
 }
 
 .accordion .accordion__section.ui-accordion-header:hover .accordion__icon {
@@ -1164,6 +1178,14 @@ input[type="search" i] {
   background-image: url("../img/accordion_icn-w.svg");
 }
 
+.accordion
+  .accordion__section.ui-accordion-header.ui-state-active
+  .accordion__icon {
+  background-color: var(--active-color);
+  background-image: url("../img/accordion_icn-w.svg");
+  border: 2px solid #d1a9f0;
+}
+
 .accordion .ui-accordion-header-active .accordion__icon {
   transform: rotate(180deg);
 }
@@ -1171,6 +1193,8 @@ input[type="search" i] {
 .accordion .accordion__cards.ui-accordion-content {
   padding: 2.1em 0 1.5em;
   border: none;
+  border-top: 1px solid var(--decor-color);
+  border-bottom: 1px solid var(--decor-color);
 }
 
 .catalog-diapason__list {
@@ -1204,7 +1228,7 @@ input[type="search" i] {
   color: var(--decor-color);
 }
 
-.catalog-diapason__btn:active {
+.catalog-diapason__btn.active {
   border-bottom: none;
   color: var(--active-color);
   outline: none;
@@ -1453,6 +1477,7 @@ input[type="search" i] {
 
 .checkboxes label {
   display: block;
+  transition-duration: 0.5s;
 }
 
 .checkboxes label:hover {
