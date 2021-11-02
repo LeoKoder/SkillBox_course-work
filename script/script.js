@@ -402,4 +402,16 @@ window.addEventListener("DOMContentLoaded", function () {
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myPlacemark);
   }
+
+  // валидация поля телефон
+  var phone = document.querySelector("input[type='tel']");
+  var validate = document.querySelector(".form__validate");
+  phone.addEventListener("input", function () {
+    if (!phone.value.replace(/[^0-9\.]/g, "")) {
+      validate.style.opacity = 1;
+    } else {
+      validate.style.opacity = 0;
+      return true;
+    }
+  });
 });
