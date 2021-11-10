@@ -1061,13 +1061,14 @@ input[type="search" i] {
 
 .tab-content {
   display: none;
-  margin-bottom: 40px;
+  flex-direction: column;
 }
 
 .catalog__description {
   margin: 0;
   width: 69%;
   line-height: 32px;
+  margin-bottom: 40px;
 }
 
 .catalog-author {
@@ -1129,6 +1130,10 @@ input[type="search" i] {
   margin: 0;
   padding: 30px 0 32px 0;
   transition-duration: 0.5s;
+}
+
+.accordion .accordion__section.ui-accordion-header .ui-accordion-header-icon {
+  display: none;
 }
 
 .accordion > .accordion__section_last {
@@ -1522,16 +1527,28 @@ input[type="search" i] {
   bottom: 0;
 }
 
+.overSelect:focus,
+.overSelect:active {
+  outline: 0;
+  outline-offset: 0;
+}
+
 .checkboxes {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .checkboxes label {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   transition-duration: 0.5s;
 }
 
-.checkboxes label:hover {
+.edition-category__text {
+  transition-duration: 0.5s;
+}
+
+.edition-category__text:hover {
   transition-duration: 0.5s;
   color: var(--hover-color);
 }
@@ -1539,12 +1556,12 @@ input[type="search" i] {
 /*  */
 
 .edition-category__el {
-  display: none;
+  opacity: 0;
+  width: 0;
 }
 
 .edition-category__square {
   position: absolute;
-  top: 0;
   left: 0;
   width: 12px;
   height: 12px;
@@ -1556,20 +1573,27 @@ input[type="search" i] {
 .edition-category__square::before {
   content: "\00B7";
   position: absolute;
-  top: -5px;
-  right: 0;
+  top: -4px;
+  right: -1px;
   bottom: 0;
   left: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
-.edition-category__lbl:hover .edition-category__square {
+.edition-category__text:hover + .edition-category__square,
+.edition-category__square:hover {
   border-color: var(--hover-color);
+  transition-duration: 0.3s;
 }
 
-.edition-category__el:checked + span::before {
+.edition-category__el:checked + .edition-category__square::before {
   opacity: 1;
+  transition-duration: 0.3s;
+}
+
+.edition-category__el:focus + .edition-category__square::before {
+  border-color: var(--hover-color);
 }
 
 .group-price {
@@ -2496,9 +2520,7 @@ input[type="tel"].form__input {
   .catalog__description {
     width: 100%;
   }
-  .tab-content {
-    margin-bottom: 40px;
-  }
+
   .catalog-author__content {
     flex-basis: 48%;
   }

@@ -334,8 +334,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
       document.querySelector(`[data-path="${path}"]`).classList.add("open");
       document.querySelector(`[data-target="${path}"]`).classList.add("active");
+
+      $(".accordion").accordion("refresh");
     });
   });
+
+  $(".accordion").accordion();
 
   document.querySelectorAll(".author__btn").forEach(function (tabsBtn) {
     tabsBtn.addEventListener("click", function (e) {
