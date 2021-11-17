@@ -324,18 +324,25 @@ window.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".tabs__btn").forEach(function (tabsBtn) {
     tabsBtn.addEventListener("click", function (event) {
       document.querySelectorAll(".tabs__btn").forEach(function (tabsBtnOpen) {
-        tabsBtnOpen.classList.remove("open");
+        tabsBtnOpen.classList.remove("active");
       });
       const path = event.currentTarget.dataset.path;
-      console.log(path);
-      document.querySelectorAll(".tab-content").forEach(function (tabContent) {
-        tabContent.classList.remove("active");
+      const lang = event.currentTarget.dataset.language;
+
+      let tabContent = document.querySelectorAll(".tab-content");
+      tabOpen(tabContent, path);
+      let tabAuthor = document.querySelectorAll(".author__btn");
+      let tabPhoto = document.querySelectorAll(".tab-author");
+
+      tabAuthor.forEach(function (author) {
+        author.classList.remove("active");
       });
+      document.querySelector(`[data-author="${lang}"]`).classList.add("active");
 
-      document.querySelector(`[data-path="${path}"]`).classList.add("open");
-      document.querySelector(`[data-target="${path}"]`).classList.add("active");
-
-      $(".accordion").accordion("refresh");
+      tabPhoto.forEach(function (photo) {
+        photo.classList.remove("active");
+      });
+      document.querySelector(`[data-photo="${lang}"]`).classList.add("active");
     });
   });
 
@@ -347,16 +354,24 @@ window.addEventListener("DOMContentLoaded", function () {
         tabsBtnOpen.classList.remove("active");
       });
     });
-    tabsBtn.addEventListener("click", function (event) {
+    tabsBtn.addEventListener("click", function authorOpen(event) {
       const path = event.currentTarget.dataset.path;
-
-      document.querySelectorAll(".tab-author").forEach(function (tabContent) {
-        tabContent.classList.remove("active");
-      });
-      document.querySelector(`[data-path="${path}"]`).classList.add("active");
-      document.querySelector(`[data-target="${path}"]`).classList.add("active");
+      let tabAuthor = document.querySelectorAll(".tab-author");
+      tabOpen(tabAuthor, path);
     });
   });
+
+  function tabOpen(block, attribute) {
+    block.forEach(function (tabContent) {
+      tabContent.classList.remove("active");
+    });
+    document
+      .querySelector(`[data-path="${attribute}"]`)
+      .classList.add("active");
+    document
+      .querySelector(`[data-target="${attribute}"]`)
+      .classList.add("active");
+  }
 
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.

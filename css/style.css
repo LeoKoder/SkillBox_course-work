@@ -1027,7 +1027,11 @@ input[type="search" i] {
   outline: none;
 }
 
-.language__icn.open::after {
+.language__icn.active {
+  display: block;
+}
+
+.language__icn.active::after {
   content: "";
   position: relative;
   display: block;
