@@ -1089,6 +1089,7 @@ input[type="search" i] {
 .catalog-author__content .link {
   font-weight: 600;
   line-height: 21.79px;
+  color: var(--decor-color);
 }
 
 .catalog-author__img {
@@ -1134,6 +1135,7 @@ input[type="search" i] {
   margin: 0;
   padding: 30px 0 32px 0;
   transition-duration: 0.5s;
+  border-radius: 0;
 }
 
 .accordion .accordion__section.ui-accordion-header .ui-accordion-header-icon {
@@ -1168,6 +1170,10 @@ input[type="search" i] {
 .accordion .ui-accordion-header-active {
   color: #000;
   border-bottom: 3px solid var(--decor-color);
+}
+
+.accordion .ui-accordion-header-active.ui-state-active {
+  border-top: 1px solid var(--decor-color);
 }
 
 .accordion .accordion__title {
@@ -1244,7 +1250,7 @@ input[type="search" i] {
 }
 
 .catalog-diapason__btn:hover {
-  border-bottom: 1px solid var(--decor-color);
+  /* border-bottom: 1px solid var(--decor-color); */
   color: var(--decor-color);
 }
 
@@ -1255,7 +1261,6 @@ input[type="search" i] {
 }
 
 .catalog-diapason__btn.active {
-  border-bottom: none;
   color: var(--active-color);
   background-color: #fff;
   outline: none;
@@ -1280,6 +1285,10 @@ input[type="search" i] {
   margin-bottom: 5px;
 }
 
+.accordion__cards-r > * {
+  font-family: "OpenSans";
+}
+
 .accordion__cards-r h4 {
   margin-top: 0;
   font-weight: 600;
@@ -1288,7 +1297,9 @@ input[type="search" i] {
 }
 
 .accordion__cards-r p {
+  width: 55%;
   margin: 0;
+  line-height: 21.79px;
 }
 
 .accordion__cards-r .link {
@@ -1296,6 +1307,7 @@ input[type="search" i] {
   font-size: 16px;
   line-height: 21.79px;
   color: var(--decor-color);
+  line-height: 21.79px;
 }
 
 /* Events */
@@ -1310,7 +1322,6 @@ input[type="search" i] {
 
 .events-cards {
   width: 100%;
-  height: 700px;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -1327,6 +1338,11 @@ input[type="search" i] {
   min-height: 700px;
   border: 1px solid #cacaca;
   margin-bottom: 50px;
+}
+
+.events-cards__item_invisible {
+  display: none;
+  transition-duration: 0.3s;
 }
 
 .events-cards__item:not(:nth-child(3)) {
@@ -1370,10 +1386,11 @@ input[type="search" i] {
   margin-bottom: 2px;
 }
 
-.events-cards__description {
+.events-cards__description p {
   margin: 0;
   font-size: 16px;
   line-height: 32px;
+  margin-bottom: 30px;
 }
 
 .events-cards__detailed {
@@ -1400,6 +1417,11 @@ input[type="search" i] {
 
 .events-cards__item_visibled {
   display: none;
+}
+
+.events-cards__item_invisible.active {
+  display: block;
+  transition-duration: 0.3s;
 }
 
 .events-cards__btn {
@@ -1594,6 +1616,7 @@ input[type="search" i] {
 .edition-category__el:checked + .edition-category__square::before {
   opacity: 1;
   transition-duration: 0.3s;
+  color: var(--hover-color);
 }
 
 .edition-category__el:focus + .edition-category__square::before {
@@ -1624,6 +1647,7 @@ input[type="search" i] {
   width: 80px;
   background: rgba(157, 92, 208, 0.5);
   transition-duration: 0.5s;
+  color: #fff;
 }
 
 .group-price__input::-webkit-outer-spin-button,
@@ -1633,7 +1657,6 @@ input[type="search" i] {
 }
 
 .group-price__input:hover {
-  outline: 2px solid var(--decor-color);
   background-color: var(--decor-color);
   transition-duration: 0.5s;
 }
@@ -2280,13 +2303,6 @@ input[type="tel"].form__input {
   .catalog-diapason__item:not(:nth-child(11)) {
     margin-bottom: 10px;
   }
-  .events-cards__description {
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .events-cards__block {
-    height: 225px;
-  }
   .group-price {
     width: auto;
   }
@@ -2359,9 +2375,6 @@ input[type="tel"].form__input {
   }
   .events-cards__date {
     margin-bottom: 10px;
-  }
-  .events-cards__description {
-    overflow: hidden;
   }
   .edition {
     margin-top: 87px;
@@ -2543,9 +2556,7 @@ input[type="tel"].form__input {
   .events-cards__item {
     min-height: 685px;
   }
-  .events-cards__block {
-    height: 315px;
-  }
+
   .edition {
     margin-bottom: 90px;
   }
@@ -2686,9 +2697,7 @@ input[type="tel"].form__input {
   .events-cards__date {
     margin-bottom: 5px;
   }
-  .events-cards__block {
-    height: 300px;
-  }
+
   .events-cards__detailed {
     bottom: 50px;
   }

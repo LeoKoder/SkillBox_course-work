@@ -9,6 +9,9 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/normolize.css" />
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+
     <!-- Jquery -->
     <link rel="stylesheet" href="css/jquery-ui.css" />
 
@@ -1543,16 +1546,17 @@
                     <h3 class="events-cards__subtitle">
                       Книжная гравюра в живом восприятии
                     </h3>
-                    <p class="events-cards__description">
-                      Один из ведущих флорентийских художников Кватроченто,
-                      основатель художественной династии, которую продолжили его
-                      брат Давид и сын Ридольфо. Глава художественной
-                      мастерской, где юный Микеланджело.
-                    </p>
+                    <div class="events-cards__description">
+                      <p>
+                        Один из ведущих флорентийских художников Кватроченто,
+                        основатель художественной династии, которую продолжили
+                        его брат Давид и сын Ридольфо.
+                      </p>
+                    </div>
 
-                    <button type="button" class="events-cards__detailed">
+                    <a href="/" class="events-cards__detailed">
                       Подробнее
-                    </button>
+                    </a>
                   </div>
                 </div>
               </li>
@@ -1573,17 +1577,17 @@
                     <h3 class="events-cards__subtitle">
                       «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
                     </h3>
-                    <p class="events-cards__description">
-                      Высокий уровень вовлечения представителей целевой
-                      аудитории является четким доказательством простого факта:
-                      постоянный количественный рост и сфера нашей активности
-                      представляет собой интересный эксперимент проверки новых
-                      принципов формирования...
-                    </p>
+                    <div class="events-cards__description">
+                      <p>
+                        Высокий уровень вовлечения представителей целевой
+                        аудитории является четким доказательством простого
+                        факта.
+                      </p>
+                    </div>
 
-                    <button type="button" class="events-cards__detailed">
+                    <a href="/" class="events-cards__detailed">
                       Подробнее
-                    </button>
+                    </a>
                   </div>
                 </div>
               </li>
@@ -1604,23 +1608,24 @@
                     <h3 class="events-cards__subtitle">
                       Выставка «Формация 2020»
                     </h3>
-                    <p class="events-cards__description">
-                      Идейные соображения высшего порядка, а также современная
-                      методология разработки играет важную роль в формировании
-                      глубокомысленных рассуждений. Также как перспективное
-                      планирование играет определяющее значение для новых
-                      принципов формирования материально-технической и кадровой
-                      базы.
-                    </p>
+                    <div class="events-cards__description">
+                      <p>
+                        Идейные соображения высшего порядка, а также современная
+                        методология разработки играет важную роль в формировании
+                        глубокомысленных рассуждений.
+                      </p>
+                    </div>
 
-                    <button type="button" class="events-cards__detailed">
+                    <a href="/" class="events-cards__detailed">
                       Подробнее
-                    </button>
+                    </a>
                   </div>
                 </div>
               </li>
               <!-- Карточка 4-->
-              <li class="events-cards__item swiper-slide">
+              <li
+                class="events-cards__item events-cards__item_invisible swiper-slide"
+              >
                 <img
                   class="events-cards__img"
                   src="img/events_img4.jpg"
@@ -1636,19 +1641,23 @@
                     <h3 class="events-cards__subtitle">
                       Выставка «Формация 2020»
                     </h3>
-                    <p class="events-cards__description">
-                      Внезапно, реплицированные с зарубежных источников,
-                      современные исследования представляют собой не...
-                    </p>
+                    <div class="events-cards__description">
+                      <p>
+                        Внезапно, реплицированные с зарубежных источников,
+                        современные исследования представляют собой не
+                      </p>
+                    </div>
 
-                    <button type="button" class="events-cards__detailed">
+                    <a href="/" class="events-cards__detailed">
                       Подробнее
-                    </button>
+                    </a>
                   </div>
                 </div>
               </li>
               <!-- Карточка 5-->
-              <li class="events-cards__item swiper-slide">
+              <li
+                class="events-cards__item events-cards__item_invisible swiper-slide"
+              >
                 <img
                   class="events-cards__img"
                   src="img/events_img5.jpg"
@@ -1664,22 +1673,26 @@
                     <h3 class="events-cards__subtitle">
                       Выставка «Формация 2020»
                     </h3>
-                    <p class="events-cards__description">
-                      Один из ведущих флорентийских художников Кватроченто,
-                      основатель художественной династии, которую продолжили его
-                      брат Давид и сын...
-                    </p>
+                    <div class="events-cards__description">
+                      <p>
+                        Один из ведущих флорентийских художников Кватроченто,
+                        основатель художественной династии, которую продолжили
+                        его брат Давид и сын
+                      </p>
+                    </div>
 
-                    <button type="button" class="events-cards__detailed">
+                    <a href="/" class="events-cards__detailed">
                       Подробнее
-                    </button>
+                    </a>
                   </div>
                 </div>
               </li>
             </div>
             <div class="events__pagination"></div>
           </ul>
-          <button class="events-cards__btn btn">Все события</button>
+          <button type="button" class="events-cards__btn btn">
+            Все события
+          </button>
         </div>
       </section>
       <!-- Edition -->
@@ -1709,66 +1722,50 @@
                 <div class="checkboxes">
                   <!-- Checkbox 1 -->
                   <!-- <option class="edition-category__option" value="Bestsellers"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox1"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="bestsellers"
-                      id="edition-category__checkbox1"
                     />
-                    <span class="edition-category__text">Бестселлеры</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Бестселлеры</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 2 -->
                   <!-- <option class="edition-category__option" value="Art"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox2"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="art"
-                      id="edition-category__checkbox2"
                     />
-                    <span class="edition-category__text">Искусство</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Искусство</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 3 -->
                   <!-- <option class="edition-category__option" value="Architecture"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox3"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="architecture"
-                      id="edition-category__checkbox3"
                     />
-                    <span class="edition-category__text">Архитектура</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Архитектура</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 4 -->
                   <!-- <option class="edition-category__option" value="Design"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox4"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="design"
-                      id="edition-category__checkbox4"
                     />
-                    <span class="edition-category__text">Дизайн</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Дизайн</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 5 -->
@@ -1783,90 +1780,70 @@
                       name="fasion"
                       id="edition-category__checkbox5"
                     />
-                    <span class="edition-category__text">Мода</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Мода</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 6 -->
                   <!-- <option class="edition-category__option" value="Kids"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox6"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="children"
-                      id="edition-category__checkbox6"
                     />
-                    <span class="edition-category__text">Детям</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Детям</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 7 -->
                   <!-- <option class="edition-category__option" value="Fiction"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox7"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="fiction"
-                      id="edition-category__checkbox7"
                     />
+                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">
                       Художественная литература
                     </span>
-                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 8 -->
                   <!-- <option class="edition-category__option" value="Publicism"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox8"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="journalism"
-                      id="edition-category__checkbox8"
                     />
-                    <span class="edition-category__text">Публицистика</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Публицистика</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 9 -->
                   <!-- <option class="edition-category__option" value="Guides"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox9"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="travel-guides"
-                      id="edition-category__checkbox9"
                     />
-                    <span class="edition-category__text">Путеводители</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Путеводители</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 10 -->
                   <!-- <option class="edition-category__option" value="Philosophy"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox10"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="philosophy"
-                      id="edition-category__checkbox10"
                     />
-                    <span class="edition-category__text">Философия</span>
                     <span class="edition-category__square"></span>
+                    <span class="edition-category__text">Философия</span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 11 -->
@@ -1874,33 +1851,25 @@
                 class="edition-category__option"
                 value="Educational-literature"
               > -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox11"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="educational-literature"
-                      id="edition-category__checkbox11"
                     />
+                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">
                       Учебная литература
                     </span>
-                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 12 -->
                   <!-- <option class="edition-category__option" value="newspapers"> -->
-                  <label
-                    class="edition-category__lbl"
-                    for="edition-category__checkbox12"
-                  >
+                  <label class="edition-category__lbl">
                     <input
                       class="edition-category__el"
                       type="checkbox"
                       name="magazines-newspappers"
-                      id="edition-category__checkbox12"
                     />
                     <span class="edition-category__square"></span>
                     <span class="edition-category__text">Журналы и газеты</span>

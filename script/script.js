@@ -113,11 +113,11 @@ window.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector(".events-cards__btn")
     .addEventListener("click", function () {
-      if (eventsCards.style.height <= "705px") {
-        eventsCards.style.height = "auto";
-      } else {
-        eventsCards.style.height = "705px";
-      }
+      document
+        .querySelectorAll(".events-cards__item_invisible")
+        .forEach((eventsEl) => {
+          eventsEl.classList.toggle("active");
+        });
     });
 
   // Swiper hero
