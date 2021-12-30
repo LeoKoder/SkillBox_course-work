@@ -485,11 +485,11 @@
           <!-- gallery left section -->
           <div class="gallery-filter gallery__left">
             <h2 class="gallery__title section__title">Галерея</h2>
-            <label class="gallery-filter__lbl" for="gallery-filter">
+            <span class="gallery-filter__lbl">
               Фильтровать по:
-            </label>
+            </span>
             <!-- custom select -->
-            <div class="custom-select" role="listbox" tabindex="0">
+            <div class="custom-select" role="list" tabindex="0">
               <div class="custom-select__container">
                 <div class="custom-select__option" role="listitem">
                   <input
@@ -966,35 +966,30 @@
             <div class="catalog-block__language">
               <button
                 tabindex="1"
-                role="button"
                 class="language__icn tabs__btn lg_icn1"
                 data-path="fr"
                 data-language="fr-author"
               ></button>
               <button
                 tabindex="2"
-                role="button"
                 class="language__icn tabs__btn lg_icn2"
                 data-path="de"
                 data-language="de-author"
               ></button>
               <button
                 tabindex="3"
-                role="button"
                 class="language__icn tabs__btn lg_icn3"
                 data-path="it"
                 data-language="it-author"
               ></button>
               <button
                 tabindex="4"
-                role="button"
                 class="language__icn tabs__btn lg_icn4 active"
                 data-path="ru"
                 data-language="ru-author"
               ></button>
               <button
                 tabindex="5"
-                role="button"
                 class="language__icn tabs__btn lg_icn5"
                 data-path="bn"
                 data-language="bn-author"
@@ -1527,10 +1522,10 @@
       <section class="events" id="events">
         <div class="container">
           <h2 class="events__title section__title">События</h2>
-          <ul class="events-cards events__slider">
+          <div class="events-cards events__slider">
             <div class="swiper-wrapper">
               <!-- Карточка 1-->
-              <li class="events-cards__item swiper-slide">
+              <div class="events-cards__item swiper-slide">
                 <img
                   class="events-cards__img"
                   src="img/events_img1.jpg"
@@ -1558,9 +1553,9 @@
                     </a>
                   </div>
                 </div>
-              </li>
+              </div>
               <!-- Карточка 2-->
-              <li class="events-cards__item swiper-slide">
+              <div class="events-cards__item swiper-slide">
                 <img
                   class="events-cards__img"
                   src="img/events_img2.jpg"
@@ -1587,9 +1582,9 @@
                     </a>
                   </div>
                 </div>
-              </li>
+              </div>
               <!-- Карточка 3-->
-              <li class="events-cards__item swiper-slide">
+              <div class="events-cards__item swiper-slide">
                 <img
                   class="events-cards__img"
                   src="img/events_img3.jpg"
@@ -1617,9 +1612,9 @@
                     </a>
                   </div>
                 </div>
-              </li>
+              </div>
               <!-- Карточка 4-->
-              <li
+              <div
                 class="events-cards__item events-cards__item_invisible swiper-slide"
               >
                 <img
@@ -1648,9 +1643,9 @@
                     </a>
                   </div>
                 </div>
-              </li>
+              </div>
               <!-- Карточка 5-->
-              <li
+              <div
                 class="events-cards__item events-cards__item_invisible swiper-slide"
               >
                 <img
@@ -1680,10 +1675,10 @@
                     </a>
                   </div>
                 </div>
-              </li>
+              </div>
             </div>
             <div class="events__pagination"></div>
-          </ul>
+          </div>
           <button type="button" class="events-cards__btn btn">
             Все события
           </button>
@@ -1703,7 +1698,10 @@
             <form>
               <div class="multiselect">
                 <div class="selectBox">
-                  <select class="edition-category__select" name="" id="">
+                  <select
+                    class="edition-category__select"
+                    name="category-edition"
+                  >
                     <option
                       value="title"
                       class="edition-category__option edition-category__subtitle"
@@ -2053,8 +2051,7 @@
             своевременного выполнения сверхзадачи. А ещё независимые государства
             смешаны с не уникальными данными до степени совершенной
             неузнаваемости, из-за чего возрастает их статус бесполезности.
-            Прежде всего, постоянное
-            <nobr>информационно-пропагандистское</nobr>
+            Прежде всего, постоянное информационно-пропагандистское
             <div class="projects__tooltip">
               i
               <div class="projects__popup">
