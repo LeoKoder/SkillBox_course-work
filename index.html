@@ -73,7 +73,7 @@
         <div class="container header-bottom__container">
           <nav class="header-bottom__nav">
             <ul class="header-bottom__list">
-              <li class="header-bottom__dropdown">
+              <li class="header-bottom__dropdown dropdown dropdown-content">
                 <button class="header-bottom__dropbtn">Реализм</button>
                 <div class="dropdown__content">
                   <!-- <div
@@ -82,7 +82,7 @@
                     data-simplebar-auto-hide="false"
                     data-simplebar-forceVisible="true"
                   > -->
-                  <div class="dropdown-content__block customScroll">
+                  <div class="dropdown-content__block customScroll drop1">
                     <button
                       type="button"
                       class="dropdown-content__btn drop1__bg1"
@@ -134,10 +134,10 @@
                   </div>
                 </div>
               </li>
-              <li class="header-bottom__dropdown">
+              <li class="header-bottom__dropdown dropdown dropdown-content">
                 <button class="header-bottom__dropbtn">Импрессионизм</button>
                 <div class="dropdown__content">
-                  <div class="dropdown-content__block customScroll">
+                  <div class="dropdown-content__block customScroll drop2">
                     <button
                       type="button"
                       class="dropdown-content__btn drop2__bg1"
@@ -189,12 +189,12 @@
                   </div>
                 </div>
               </li>
-              <li class="header-bottom__dropdown">
+              <li class="header-bottom__dropdown dropdown dropdown-content">
                 <button class="header-bottom__dropbtn">
                   Постимпрессионизм
                 </button>
                 <div class="dropdown__content">
-                  <div class="dropdown-content__block customScroll">
+                  <div class="dropdown-content__block customScroll drop3">
                     <button
                       type="button"
                       class="dropdown-content__btn drop3__bg1"
@@ -246,10 +246,10 @@
                   </div>
                 </div>
               </li>
-              <li class="header-bottom__dropdown">
+              <li class="header-bottom__dropdown dropdown dropdown-content">
                 <button class="header-bottom__dropbtn">Авангард</button>
                 <div class="dropdown__content">
-                  <div class="dropdown-content__block customScroll">
+                  <div class="dropdown-content__block customScroll drop4">
                     <button
                       type="button"
                       class="dropdown-content__btn drop4__bg1"
@@ -301,10 +301,10 @@
                   </div>
                 </div>
               </li>
-              <li class="header-bottom__dropdown">
+              <li class="header-bottom__dropdown dropdown dropdown-content">
                 <button class="header-bottom__dropbtn">Футуризм</button>
                 <div class="dropdown__content">
-                  <div class="dropdown-content__block customScroll">
+                  <div class="dropdown-content__block customScroll drop5">
                     <button
                       type="button"
                       class="dropdown-content__btn drop5__bg1"
@@ -361,11 +361,7 @@
           <!-- Поиск по сайту -->
           <form method="get" class="header-bottom__form">
             <button class="header-bottom__search"></button>
-            <input
-              class="search__input"
-              type="search"
-              placeholder="Поиск по сайту"
-            />
+            <input class="search" type="search" placeholder="Поиск по сайту" />
           </form>
         </div>
       </div>
@@ -374,7 +370,7 @@
     <main class="main">
       <h1 class="main__title">Blanchard - художественная галерея</h1>
       <!-- Hero -->
-      <section class="hero">
+      <section class="hero section">
         <!-- Swiper slider -->
         <div class="hero__slider">
           <div class="swiper-wrapper">
@@ -460,7 +456,7 @@
         </div>
       </section>
       <!-- About -->
-      <section class="about" id="about">
+      <section class="about section" id="about">
         <div class="container about__container">
           <h2 class="about__title section__title">О нас</h2>
           <p class="about__description">
@@ -480,7 +476,7 @@
         </div>
       </section>
       <!-- Gallery -->
-      <section class="gallery" id="gallery">
+      <section class="gallery section" id="gallery">
         <div class="container gallery__container">
           <!-- gallery left section -->
           <div class="gallery-filter gallery__left">
@@ -507,7 +503,7 @@
                 </div>
               </div>
 
-              <div class="custom-select_selected">Автор</div>
+              <div class="custom-select__title">Автор</div>
             </div>
             <!-- end custom select -->
             <!-- select -->
@@ -552,9 +548,9 @@
                 class="gallery-next gallery__arrows"
               ></button>
             </div>
-            <div class="gallery__slider_block">
+            <div class="gallery__sliderBlock">
               <!-- row 1-->
-              <div class="gallery__slider_top">
+              <div class="gallery__top">
                 <!-- slider container -->
                 <div class="swiper-wrapper">
                   <!-- Slide 1 -->
@@ -755,7 +751,7 @@
                 </div>
               </div>
               <!-- row 2-->
-              <div class="gallery__slider_bottom">
+              <div class="gallery__bottom">
                 <div class="swiper-wrapper">
                   <!-- Slide 16 -->
                   <div class="swiper-slide gallery__slide">
@@ -959,38 +955,38 @@
         </div>
       </section>
       <!-- Catalog -->
-      <section class="catalog" id="catalog">
+      <section class="catalog section" id="catalog">
         <div class="container">
-          <div class="catalog-block__title">
+          <div class="catalog__header">
             <h2 class="catalog__title section__title">Каталог</h2>
-            <div class="catalog-block__language">
+            <div class="catalog__language language tabs">
               <button
                 tabindex="1"
-                class="language__icn tabs__btn lg_icn1"
+                class="language__icn tabs__btn language__icn1"
                 data-path="fr"
                 data-language="fr-author"
               ></button>
               <button
                 tabindex="2"
-                class="language__icn tabs__btn lg_icn2"
+                class="language__icn tabs__btn language__icn2"
                 data-path="de"
                 data-language="de-author"
               ></button>
               <button
                 tabindex="3"
-                class="language__icn tabs__btn lg_icn3"
+                class="language__icn tabs__btn language__icn3"
                 data-path="it"
                 data-language="it-author"
               ></button>
               <button
                 tabindex="4"
-                class="language__icn tabs__btn lg_icn4 active"
+                class="language__icn tabs__btn language__icn4 active"
                 data-path="ru"
                 data-language="ru-author"
               ></button>
               <button
                 tabindex="5"
-                class="language__icn tabs__btn lg_icn5"
+                class="language__icn tabs__btn language__icn5"
                 data-path="bn"
                 data-language="bn-author"
               ></button>
@@ -1169,7 +1165,7 @@
                   <span class="accordion__icon"></span>
                 </div>
                 <div class="accordion__cards">
-                  <ul class="catalog-diapason__list">
+                  <ul class="catalog-diapason__list author">
                     <li class="catalog-diapason__item">
                       <button
                         type="button"
@@ -1519,7 +1515,7 @@
         </div>
       </section>
       <!-- Events -->
-      <section class="events" id="events">
+      <section class="events section" id="events">
         <div class="container">
           <h2 class="events__title section__title">События</h2>
           <div class="events-cards events__slider">
@@ -1679,13 +1675,13 @@
             </div>
             <div class="events__pagination"></div>
           </div>
-          <button type="button" class="events-cards__btn btn">
+          <button type="button" class="events-cards__all btn">
             Все события
           </button>
         </div>
       </section>
       <!-- Edition -->
-      <section class="edition" id="edition">
+      <section class="edition section" id="edition">
         <div class="container edition__container">
           <!-- Категории -->
           <div class="edition-category">
@@ -1873,7 +1869,11 @@
             <!-- </select> -->
             <!-- Цена -->
             <div class="edition-category__group-price">
-              <h3 class="edition-category__subtitle price__subtitle">Цена</h3>
+              <h3
+                class="edition-category__subtitle edition-category__group-title"
+              >
+                Цена
+              </h3>
               <div class="group-price">
                 <span class="group-price__el group-price__sing">От</span>
                 <input
@@ -1887,7 +1887,7 @@
                   type="number"
                   placeholder="25 000"
                 />
-                <span class="group-price__el group-price__sing">руб</span>
+                <span class="group-price__el group-price__sing">рублей</span>
               </div>
             </div>
           </div>
@@ -2042,7 +2042,7 @@
         </div>
       </section>
       <!-- Project -->
-      <section class="projects" id="projects">
+      <section class="projects section" id="projects">
         <div class="container projects__container">
           <h2 class="projects__title section__title">Проекты</h2>
           <div class="projects__description">
@@ -2174,7 +2174,7 @@
         </div>
       </section>
       <!-- Contacts -->
-      <section class="contacts" id="contacts">
+      <section class="contacts section" id="contacts">
         <div class="container">
           <h2 class="contacts__title section__title">Контакты</h2>
         </div>
@@ -2206,8 +2206,8 @@
             </div>
           </div>
 
-          <div class="contacts-maps__container">
-            <div id="map" class="contacts-maps"></div>
+          <div class="map">
+            <div id="map" class="map__content"></div>
           </div>
         </div>
       </section>
@@ -2219,7 +2219,7 @@
           <img src="img/logo.png" alt="Логотип" class="footer__logo" />
         </a>
         <div class="footer__group">
-          <a href="" class="social__link">
+          <a href="">
             <svg
               class="footer__social vk"
               width="46"
@@ -2234,7 +2234,7 @@
               />
             </svg>
           </a>
-          <a href="" class="social__link">
+          <a href="">
             <svg
               class="footer__social inst"
               width="46"
@@ -2269,7 +2269,7 @@
               </defs>
             </svg>
           </a>
-          <a href="" class="social__link">
+          <a href="">
             <svg
               class="footer__social fb"
               width="47"

@@ -1,8 +1,8 @@
 window.addEventListener("DOMContentLoaded", function () {
   var swiperHero = document.querySelector(".hero__slider");
 
-  var swiperGallery_1 = document.querySelector(".gallery__slider_top");
-  var swiperGallery_2 = document.querySelector(".gallery__slider_bottom");
+  var swiperGallery_1 = document.querySelector(".gallery__top");
+  var swiperGallery_2 = document.querySelector(".gallery__bottom");
 
   var swiperEdition = document.querySelector(".edition__slider");
 
@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // });
 
   // custom select
-  const selected = document.querySelector(".custom-select_selected");
+  const selected = document.querySelector(".custom-select__title");
   const optionsContainer = document.querySelector(".custom-select__container");
 
   const optionsList = document.querySelectorAll(".custom-select__option");
@@ -111,13 +111,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Скрытие/показ Все события
   document
-    .querySelector(".events-cards__btn")
+    .querySelector(".events-cards__all")
     .addEventListener("click", function () {
       document
         .querySelectorAll(".events-cards__item_invisible")
         .forEach((eventsEl) => {
           eventsEl.classList.toggle("active");
         });
+      this.style.display = "none";
     });
 
   // Swiper hero
