@@ -247,19 +247,25 @@ window.addEventListener("DOMContentLoaded", function () {
   function initSwiper4() {
     if ($(window).width() >= 319 && swiper4 === undefined) {
       swiper4 = new Swiper(swiperEdition, {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50,
         pagination: {
           el: ".edition__pagination",
           type: "fraction",
           clickable: true,
           slideToClickedSlide: true,
         },
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50,
+        cssMode: true,
         loop: true,
         navigation: {
           nextEl: ".edition-next",
           prevEl: ".edition-prev",
+        },
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+          pageUpDown: true,
         },
         breakpoints: {
           321: {
@@ -297,12 +303,11 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Swiper projects
   var swiper5 = new Swiper(swiperProjects, {
-    slidesPerView: "auto",
-    slidesPerGroup: 1,
     navigation: {
       nextEl: ".projects-next",
       prevEl: ".projects-prev",
     },
+    setWrapperSize: true,
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -315,8 +320,9 @@ window.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 50,
       },
       1024: {
-        slidesPerView: 2,
+        slidesPerView: 3,
         slidesPerGroup: 2,
+        spaceBetween: 50,
       },
     },
   });

@@ -184,6 +184,10 @@ input:focus,
   outline: 2px solid var(--active-color);
 }
 
+.projects__marker:active > svg path {
+  fill: #fff;
+}
+
 .section__title {
   font-weight: 400;
   font-size: var(--h2);
@@ -1522,6 +1526,10 @@ input[type="search" i] {
   margin-bottom: 16px;
 }
 
+.edition-category__select:focus {
+  outline: 0;
+}
+
 .edition-category__lbl {
   position: relative;
   padding-left: 24px;
@@ -1810,7 +1818,7 @@ input[type="search" i] {
   line-height: 16.34px;
   color: #fff;
   text-align: center;
-  padding: 5px 0;
+  padding: 8px 11px;
   position: absolute;
   z-index: 1;
 }
@@ -1818,7 +1826,7 @@ input[type="search" i] {
 .projects__tooltip .projects__popup::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 99%;
   left: 50%;
   border-width: 5px;
   border-style: solid;
@@ -1826,7 +1834,22 @@ input[type="search" i] {
 }
 
 .projects__marker {
+  width: 16px;
+  height: 16px;
   font-size: 14px;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+}
+
+.projects__marker:active {
+  outline: 0;
+}
+
+.projects__marker:focus {
+  border-radius: 50%;
+  background-color: var(--active-color);
+  border-color: var(--active-color);
 }
 
 .projects__tooltip:hover {
@@ -1871,19 +1894,18 @@ input[type="search" i] {
 
 .projects__block {
   width: 100%;
-  position: relative;
 }
 
 .projects__slider {
+  position: relative;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: 0 auto;
 }
 
 .projects__slider .swiper-slide.projects__slide {
   display: flex;
-  width: 450px !important;
   margin-right: 50px;
   align-items: center;
   justify-content: center;
