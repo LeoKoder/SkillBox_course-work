@@ -1904,6 +1904,10 @@ input[type="search" i] {
   margin: 0 auto;
 }
 
+.projects__slider .swiper-wrapper {
+  width: 1450px;
+}
+
 .projects__slider .swiper-slide.projects__slide {
   display: flex;
   margin-right: 50px;
