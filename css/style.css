@@ -1893,23 +1893,20 @@ input[type="search" i] {
 /* project__slider */
 
 .projects__block {
-  width: 100%;
+  width: 91%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .projects__slider {
-  position: relative;
   overflow: hidden;
   width: 100%;
   height: auto;
-  margin: 0 auto;
-}
-
-.projects__slider .swiper-wrapper {
-  width: 1450px;
 }
 
 .projects__slider .swiper-slide.projects__slide {
   display: flex;
+  width: 450px;
   margin-right: 50px;
   align-items: center;
   justify-content: center;
@@ -1919,12 +1916,12 @@ input[type="search" i] {
 }
 
 .projects__slider .projects-prev {
-  left: 0;
+  left: -75px;
   background-image: url("../img/arrowBlack_l.svg");
 }
 
 .projects__slider .projects-next {
-  right: 0;
+  right: -75px;
   background-image: url("../img/arrowBlack_r.svg");
 }
 
@@ -1937,7 +1934,9 @@ input[type="search" i] {
   border: none;
   border-radius: 50%;
   position: absolute;
-  top: 56%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
   z-index: 111;
 }
 
