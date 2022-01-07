@@ -184,7 +184,7 @@ input:focus,
   outline: 2px solid var(--active-color);
 }
 
-.projects__marker:active > svg path {
+.projects__marker:active > svg > path {
   fill: #fff;
 }
 
@@ -1539,6 +1539,19 @@ input[type="search" i] {
   margin-bottom: 14px;
 }
 
+.edition-category__lbl:hover .edition-category__square {
+  border-color: var(--hover-color);
+}
+
+.edition-category__lbl
+  .edition-category__el:checked
+  + .edition-category__square {
+  border-color: var(--hover-color);
+}
+.edition-category__el:checked + .edition-category__text {
+  color: var(--hover-color);
+}
+
 /*  */
 
 .multiselect {
@@ -1834,11 +1847,12 @@ input[type="search" i] {
 }
 
 .projects__marker {
-  width: 16px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   font-weight: 700;
   border: none;
+  line-height: 0;
   background-color: transparent;
 }
 
@@ -1858,6 +1872,8 @@ input[type="search" i] {
 }
 
 .projects__tooltip:active {
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--active-color);
   border-color: var(--active-color);
@@ -1913,6 +1929,10 @@ input[type="search" i] {
   height: 150px;
   text-align: center;
   border: 1px solid #cacaca;
+}
+
+.projects__slider .swiper-slide.projects__slide:active {
+  border-color: var(--decor-color);
 }
 
 .projects__slider .projects-prev {
@@ -2121,8 +2141,11 @@ input[type="tel"].form__input {
   position: absolute;
   width: 22px;
   height: 22px;
-  top: 20%;
-  left: 22%;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .telegram::after {
@@ -2131,10 +2154,13 @@ input[type="tel"].form__input {
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 26%;
-  left: 23%;
+  width: 21px;
+  height: 18px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .map {
@@ -2645,11 +2671,6 @@ input[type="tel"].form__input {
     height: 31px;
     top: 18%;
     left: 23%;
-  }
-  .telegram::after {
-    width: 30px;
-    height: 27px;
-    left: 20%;
   }
   .footer__social {
     width: 60px;
@@ -3320,9 +3341,5 @@ input[type="tel"].form__input {
     height: 29px;
     top: 12%;
     left: 21%;
-  }
-  .telegram::after {
-    top: 23%;
-    left: 11%;
   }
 }

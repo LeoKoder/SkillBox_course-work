@@ -253,11 +253,8 @@ window.addEventListener("DOMContentLoaded", function () {
           clickable: true,
           slideToClickedSlide: true,
         },
-        slidesPerView: 3,
-        slidesPerGroup: 3,
         spaceBetween: 50,
         cssMode: true,
-        loop: true,
         navigation: {
           nextEl: ".edition-next",
           prevEl: ".edition-prev",
@@ -278,12 +275,8 @@ window.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 34,
           },
           767: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-          1197: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerGroup: 2,
           },
         },
       });
