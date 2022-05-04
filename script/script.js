@@ -16,6 +16,23 @@ window.addEventListener("DOMContentLoaded", function () {
   //   searchEnabled: false,
   // });
 
+  // кнопка поиска
+  if (window.screen.width <= 1196) {
+    document
+      .querySelector(".js-searchShow")
+      .addEventListener("click", function (event) {
+        this.nextElementSibling.classList.toggle("show");
+        this.parentNode.classList.toggle("show");
+      });
+  }
+  // кнопка закрыть у поиска
+  document
+    .querySelector(".js-closeSearchMobile")
+    .addEventListener("click", function () {
+      this.previousElementSibling.classList.remove("show");
+      this.parentNode.classList.remove("show");
+    });
+
   // custom select
   const selected = document.querySelector(".custom-select__title");
   const optionsContainer = document.querySelector(".custom-select__container");
@@ -36,9 +53,8 @@ window.addEventListener("DOMContentLoaded", function () {
   // const choice2 = new Choices(element2, {
   //   searchEnabled: false,
   // });
-
   // burger
-  document.querySelector(".burger__btn").addEventListener("click", function () {
+  /* document.querySelector(".burger__btn").addEventListener("click", function () {
     document.querySelector(".header-top__nav").style.display = "block";
     document.querySelector(".header-top__container").style.alignItems =
       "flex-start";
@@ -51,9 +67,9 @@ window.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".burger__close").style.display = "block";
     document.querySelector(".burger__btn").style.display = "none";
   });
-
+*/
   // burger close
-  document
+  /*  document
     .querySelector(".burger__close")
     .addEventListener("click", function () {
       document.querySelector(".header-top__nav").style.display = "none";
@@ -68,7 +84,22 @@ window.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".burger__close").style.display = "none";
       document.querySelector(".burger__btn").style.display = "block";
     });
-
+*/
+  // burger
+  var toggles = $(".burger__btn");
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  }
+  function toggleHandler(toggle) {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      this.classList.contains("is-active") === true
+        ? this.classList.remove("is-active")
+        : this.classList.add("is-active");
+      $(".burger__content").toggleClass("active");
+    });
+  }
   // выпадающее меню
   document.addEventListener("click", (e) => {
     const isDropdownButton = e.target.matches(".header-bottom__dropbtn");

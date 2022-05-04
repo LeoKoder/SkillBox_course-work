@@ -24,17 +24,61 @@
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/normolize.css" />
   </head>
-
   <body>
     <!-- Header -->
     <header class="header">
+      <!-- burger menu -->
+      <div class="header-top__mobile burger">
+        <div class="burger__container">
+          <button class="burger__btn burger__close">
+            <span></span>
+          </button>
+          <!-- Поиск по сайту адаптив -->
+          <form class="header__form header-mobile__form">
+            <button
+              type="button"
+              class="js-searchShow header__search header-mobile__search"
+            ></button>
+            <input class="search" type="search" placeholder="Поиск по сайту" />
+            <button
+              type="button"
+              class="js-closeSearchMobile header-mobile__close"
+            ></button>
+          </form>
+        </div>
+        <div class="burger__content">
+          <div class="burger__container">
+            <!-- меню в бургере -->
+            <ul class="header-top__list">
+              <li class="header-top__item">
+                <a href="#about" class="header-top__link">О нас</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#gallery" class="header-top__link">Галерея</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#catalog" class="header-top__link">Каталог</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#events" class="header-top__link">События</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#edition" class="header-top__link">Издания</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#projects" class="header-top__link">Проекты</a>
+              </li>
+              <li class="header-top__item">
+                <a href="#contacts" class="header-top__link">Контакты</a>
+              </li>
+            </ul>
+            <a href="" class="header-top__mobile-log-in">Войти</a>
+          </div>
+        </div>
+      </div>
+
       <div class="header-top">
         <div class="container header-top__container">
-          <!-- burger menu -->
-          <div class="header-top__el burger">
-            <button class="burger__btn" type="button"></button>
-            <button class="burger__close" type="button"></button>
-          </div>
           <!-- logo -->
           <a href="#" class="header-top__el logo">
             <img src="img/logo.png" alt="Логотип" class="logo__img" />
@@ -359,8 +403,11 @@
             </ul>
           </nav>
           <!-- Поиск по сайту -->
-          <form method="get" class="header-bottom__form">
-            <button class="header-bottom__search"></button>
+          <form class="header__form header-bottom__form">
+            <button
+              type="button"
+              class="header__search js-searchShow header-bottom__search"
+            ></button>
             <input class="search" type="search" placeholder="Поиск по сайту" />
           </form>
         </div>
@@ -1716,8 +1763,8 @@
                       type="checkbox"
                       name="bestsellers"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Бестселлеры</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 2 -->
@@ -1728,8 +1775,8 @@
                       type="checkbox"
                       name="art"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Искусство</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 3 -->
@@ -1740,8 +1787,8 @@
                       type="checkbox"
                       name="architecture"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Архитектура</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 4 -->
@@ -1752,8 +1799,8 @@
                       type="checkbox"
                       name="design"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Дизайн</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 5 -->
@@ -1768,8 +1815,8 @@
                       name="fasion"
                       id="edition-category__checkbox5"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Мода</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 6 -->
@@ -1780,8 +1827,8 @@
                       type="checkbox"
                       name="children"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Детям</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 7 -->
@@ -1792,10 +1839,10 @@
                       type="checkbox"
                       name="fiction"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">
                       Художественная литература
                     </span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 8 -->
@@ -1806,8 +1853,8 @@
                       type="checkbox"
                       name="journalism"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Публицистика</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 9 -->
@@ -1818,8 +1865,8 @@
                       type="checkbox"
                       name="travel-guides"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Путеводители</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 10 -->
@@ -1830,8 +1877,8 @@
                       type="checkbox"
                       name="philosophy"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Философия</span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 11 -->
@@ -1845,10 +1892,10 @@
                       type="checkbox"
                       name="educational-literature"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">
                       Учебная литература
                     </span>
+                    <span class="edition-category__square"></span>
                   </label>
                   <!-- </option> -->
                   <!-- Checkbox 12 -->
@@ -1859,8 +1906,8 @@
                       type="checkbox"
                       name="magazines-newspappers"
                     />
-                    <span class="edition-category__square"></span>
                     <span class="edition-category__text">Журналы и газеты</span>
+                    <span class="edition-category__square"></span>
                   </label>
                 </div>
               </div>
@@ -2052,7 +2099,7 @@
             смешаны с не уникальными данными до степени совершенной
             неузнаваемости, из-за чего возрастает их статус бесполезности.
             Прежде всего, постоянное информационно-пропагандистское
-            <div class="projects__tooltip" role="tooltip" tabindex="1">
+            <div class="projects__tooltip" role="tooltip" tabindex="0">
               <button type="button" class="projects__marker">
                 <svg
                   width="2"
@@ -2067,7 +2114,7 @@
                   />
                 </svg>
               </button>
-              <div class="projects__popup">
+              <div role="tooltip" class="projects__popup">
                 Пример современных тенденций - современная методология
                 разработки
               </div>
@@ -2090,7 +2137,7 @@
                   />
                 </svg>
               </button>
-              <div class="projects__popup">
+              <div role="tooltip" class="projects__popup">
                 Принято, граждане, наблюдать, как сделанные на базе аналитики
                 выводы вызывают у вас эмоции
               </div>
@@ -2111,7 +2158,9 @@
                   />
                 </svg>
               </button>
-              <div class="projects__popup">В стремлении повысить качество</div>
+              <div role="tooltip" class="projects__popup">
+                В стремлении повысить качество
+              </div>
             </div>
             предпосылок. Банальные, но неопровержимые выводы, а также
             представители современных социальных резервов призывают нас к новым
