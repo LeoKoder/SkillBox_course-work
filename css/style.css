@@ -56,7 +56,9 @@ body {
 img {
   width: 100%;
 }
-
+p {
+	margin: 0;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -90,6 +92,10 @@ button:hover::before {
 .container {
   max-width: var(--container);
   margin: 0 auto;
+}
+
+.section {
+	margin-bottom: 80px;
 }
 .burger {
   display: none;
@@ -145,7 +151,7 @@ button:hover::before {
   height: 0;
   font-size: 0;
 }
-.about, .gallery, .catalog, .events, .edition, .projects, .contacts {
+.gallery, .catalog, .events, .edition, .projects, .contacts {
   display: none;
 }
 .footer {
@@ -199,8 +205,9 @@ input:focus,
 .section__title {
   font-weight: 400;
   font-size: var(--h2);
+	line-height: 65.37px;
   color: #333;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 /* Header */
 
@@ -587,7 +594,6 @@ input:focus,
 /* Hero */
 .hero {
   min-height: 700px;
-  margin-bottom: 87px;
   margin-top: -71px;
   position: relative;
   width: 100%;
@@ -631,7 +637,6 @@ input:focus,
 }
 
 .hero__description {
-  margin-top: 0;
   margin-bottom: 95px;
   font-weight: 700;
   color: #fff;
@@ -698,10 +703,6 @@ input:focus,
 
 .about {
   margin-bottom: 70px;
-}
-
-.about__title {
-  margin-bottom: 20px;
 }
 
 .about__description {
@@ -2408,7 +2409,8 @@ input[type="tel"].form__input {
   }
   /* hero */
   .about__description {
-    width: 100%;
+    width: 99%;
+		letter-spacing: 0.04px;
   }
   .catalog {
     margin-bottom: 90px;
@@ -2722,7 +2724,6 @@ input[type="tel"].form__input {
   }
   /* hero */
   .hero {
-    margin-bottom: 90px;
     margin-top: 0;
 		min-height: auto;
 		height: 668px;
@@ -2749,6 +2750,11 @@ input[type="tel"].form__input {
     font-size: 19px;
     padding: 1.3em 0;
   }
+	/* о нас */
+	  .about__description {
+    width: 100%;
+  }
+	/* галлерея */
   .gallery {
     height: 840px;
   }
@@ -3137,9 +3143,6 @@ input[type="tel"].form__input {
     padding: 10px 0;
     font-size: 12px;
   }
-  .hero {
-    margin-bottom: 8px;
-  }
   .hero__content {
     left: 2%;
     top: 10%;
@@ -3168,7 +3171,6 @@ input[type="tel"].form__input {
     margin-bottom: 43px;
   }
   .about__title {
-    font-size: 29px;
     margin-bottom: 12px;
   }
   .about__description {
@@ -3315,6 +3317,15 @@ input[type="tel"].form__input {
 /* 320 -> 290 */
 
 @media (max-width: 321px) {
+	:root {
+		--h2: 28px;
+	}
+	.section {
+		margin-bottom: 50px;
+	}
+	.section__title {
+		line-height: 38.13px;
+	}
   .header {
     height: 45px;
   }
@@ -3398,7 +3409,6 @@ input[type="tel"].form__input {
   }
   .hero {
 		height: 310px;
-    margin-bottom: 53px;
   }
 	.hero__container {
 		width: 90%;
