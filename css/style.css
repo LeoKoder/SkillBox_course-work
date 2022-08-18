@@ -151,7 +151,7 @@ button:hover::before {
   height: 0;
   font-size: 0;
 }
-.gallery, .catalog, .events, .edition, .projects, .contacts {
+.catalog, .events, .edition, .projects, .contacts {
   display: none;
 }
 .footer {
@@ -734,7 +734,6 @@ input:focus,
 
 .gallery__title {
   color: #fff;
-  margin-bottom: 25px;
 }
 
 .gallery-filter__lbl {
