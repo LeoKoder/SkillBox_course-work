@@ -151,12 +151,7 @@ button:hover::before {
   height: 0;
   font-size: 0;
 }
-.catalog, .events, .edition, .projects, .contacts {
-  display: none;
-}
-.footer {
-  display: none;
-}
+
 /* общие параметры слайдеров */
 
 /* Ограничивающая оболочка */
