@@ -907,8 +907,12 @@ input:focus,
   border-radius: 50%;
   outline: none;
   margin-top: 0px;
-  margin-right: 22px;
   left: 4px;
+}
+
+.gallery__navigation .gallery-prev.gallery__arrows,
+.edition__navigation .edition-prev.edition__arrows {
+  margin-right: 22px;
 }
 
 .gallery__navigation .gallery__arrows:focus::after,
@@ -993,17 +997,14 @@ input:focus,
 
 /* Catalog */
 
-.catalog {
-  margin-bottom: 88px;
-}
-
 .catalog__header {
   display: flex;
-  margin-bottom: 22px;
+  margin-bottom: 12px;
 }
 
 .catalog__title {
   margin-right: 40px;
+	margin-bottom: 0;
 }
 
 .catalog__language {
@@ -1037,10 +1038,10 @@ input:focus,
   content: "";
   position: relative;
   display: block;
-  bottom: 13px;
+  bottom: 14px;
   right: 18px;
-  width: 66px;
-  height: 66px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   border: 2px solid #9d5cd0;
 }
@@ -1318,10 +1319,6 @@ input:focus,
   margin-bottom: 80px;
 }
 
-.events__title {
-  margin-bottom: 22px;
-}
-
 .events-cards {
   width: 100%;
   overflow: hidden;
@@ -1340,7 +1337,7 @@ input:focus,
   flex: 0 1 31.2%;
   min-height: 700px;
   border: 1px solid #cacaca;
-  margin-bottom: 50px;
+  margin-bottom: 57px;
 }
 
 .events-cards__item_invisible {
@@ -1360,7 +1357,7 @@ input:focus,
 .events-cards__content {
   display: flex;
   flex-direction: column;
-  padding: 8px 45px 46px 50px;
+  padding: 10px 16px 46px 50px;
   width: 100%;
 }
 
@@ -1369,7 +1366,7 @@ input:focus,
   width: 100%;
   text-align: right;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 16.34px;
   margin-bottom: 5px;
   font-weight: 700;
   color: #999;
@@ -1386,11 +1383,12 @@ input:focus,
   margin: 0;
   font-size: 24px;
   line-height: 32px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .events-cards__description {
   margin: 0;
+	max-width: 400px;
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 30px;
@@ -1400,10 +1398,10 @@ input:focus,
 
 .events-cards__detailed {
   position: absolute;
-  bottom: 47px;
+  bottom: 41px;
   padding: 0;
   width: 90px;
-  height: 28px;
+  height: 22px;
   border: none;
   background-color: #fff;
   color: var(--decor-color);
@@ -1486,7 +1484,7 @@ input:focus,
 
 .edition {
   margin-bottom: 67px;
-  padding-top: 85px;
+  padding-top: 80px;
   padding-bottom: 85px;
   background-repeat: no-repeat;
   background-image: url("../img/edition__bg.jpg");
@@ -1503,9 +1501,8 @@ input:focus,
 }
 
 .edition-category__title {
-  font-size: 48px;
-  margin-bottom: 27px;
   color: #fff;
+	margin-bottom: 20px;
 }
 
 .edition-category__subtitle {
@@ -1521,7 +1518,6 @@ input:focus,
   border: none;
   color: #fff;
   appearance: none;
-  margin-bottom: 16px;
 }
 
 .edition-category__select:focus {
@@ -1534,7 +1530,7 @@ input:focus,
 }
 
 .edition-category__lbl:not(:last-child) {
-  margin-bottom: 14px;
+  margin-bottom: 13.6px;
 }
 
 .edition-category__text:hover ~ .edition-category__square {
@@ -1553,11 +1549,12 @@ input:focus,
 
 .multiselect {
   width: 67%;
-  margin-bottom: 35px;
+  margin-bottom: 41px;
 }
 
 .selectBox {
   position: relative;
+	margin-bottom: 14px;
 }
 
 .selectBox select {
@@ -1738,12 +1735,13 @@ input:focus,
 
 .edition__img {
   width: 350px;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 }
 
 .edition__content {
   display: flex;
   justify-content: space-between;
+	margin-bottom: 16px;
   min-width: 0;
   color: #fff;
 }
@@ -1752,8 +1750,8 @@ input:focus,
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  line-height: 23px;
-  margin-bottom: 13px;
+  line-height: 21.79px;
+	letter-spacing: -.3px;
 }
 
 .edition__name {
@@ -1763,6 +1761,7 @@ input:focus,
 
 .edition__price {
   font-style: italic;
+	margin-right: -7px;
 }
 
 .edition__btn {
@@ -1771,7 +1770,7 @@ input:focus,
   font-size: 16px;
   font-weight: normal;
   font-weight: 700;
-  width: 120px;
+  width: 118px;
   height: 40px;
   background-color: rgba(0, 0, 0, 0);
   border: 2px solid var(--decor-color);
@@ -1779,27 +1778,19 @@ input:focus,
 }
 
 /* Project */
-
-.projects {
-  margin-bottom: 86px;
-}
-
 .projects__container {
   display: flex;
   flex-direction: column;
 }
 
-.projects__title {
-  margin-bottom: 21px;
-}
-
 .projects__description {
   font-weight: 400;
-  word-break: break-word;
-  width: 66%;
+	max-width: 1080px;
+  width: 100%;
   height: auto;
   line-height: 32px;
   margin-bottom: 23px;
+	letter-spacing: -0.1px;
 }
 
 .projects__tooltip {
@@ -1809,6 +1800,7 @@ input:focus,
   height: 16px;
   line-height: 16px;
   text-align: center;
+	margin: 0 3px -3px 3px;
   color: #000;
   background-color: #fff;
   border-radius: 50%;
@@ -1847,7 +1839,7 @@ input:focus,
 .projects__marker {
   position: absolute;
   z-index: 2;
-  left: 0;
+  left: -1px;
   top: -1px;
   width: 15px;
   height: 15px;
@@ -1987,7 +1979,6 @@ input:focus,
 
 .projects__img {
   width: auto;
-  height: 63px;
   filter: grayscale(1);
 }
 
@@ -2000,10 +1991,7 @@ input:focus,
 
 .contacts {
   overflow: hidden;
-}
-
-.contacts__title {
-  margin-bottom: 20px;
+	margin-bottom: 0;
 }
 
 .contacts__container {
@@ -2204,6 +2192,10 @@ input[type="tel"].form__input {
   height: 45px;
 }
 
+.footer__group a:not(:last-child) {
+	margin-right: 20px;
+}
+
 .footer__group a:focus {
   outline: 0;
   outline-offset: 0;
@@ -2252,6 +2244,9 @@ input[type="tel"].form__input {
   position: relative;
   order: 0;
   transition-duration: 0.3s;
+  padding: 3px 14px;
+  cursor: pointer;
+	line-height: 32px;
 }
 
 .custom-select__title:hover,
@@ -2299,10 +2294,6 @@ input[type="tel"].form__input {
   padding: 9px 19px;
   cursor: pointer;
   transition-duration: 0.3s;
-}
-.custom-select__title {
-  padding: 12px 14px;
-  cursor: pointer;
 }
 
 .custom-select label {
@@ -2405,9 +2396,6 @@ input[type="tel"].form__input {
   .about__description {
     width: 99%;
 		letter-spacing: 0.04px;
-  }
-  .catalog {
-    margin-bottom: 90px;
   }
   .gallery-filter {
     width: 30%;
@@ -2923,9 +2911,6 @@ input[type="tel"].form__input {
   .accordion .accordion__cards.ui-accordion-content {
     padding: 0;
   }
-  .catalog {
-    margin-bottom: 75px;
-  }
   .events-cards__item {
     flex-basis: 47%;
   }
@@ -3265,9 +3250,6 @@ input[type="tel"].form__input {
   .checkboxes {
     height: 243px;
   }
-  .projects {
-    margin-bottom: 53px;
-  }
   .contacts__container {
     padding-top: 110px;
     flex-direction: column-reverse;
@@ -3485,9 +3467,6 @@ input[type="tel"].form__input {
   .tab-content.active {
     display: none;
   }
-  .catalog {
-    margin-bottom: 53px;
-  }
   .catalog-author__img {
     margin-bottom: 23px;
   }
@@ -3499,9 +3478,6 @@ input[type="tel"].form__input {
   }
   .events-cards__item {
     flex-basis: 100%;
-  }
-  .events__title {
-    margin-bottom: 15px;
   }
   .events-cards__content {
     padding-left: 27px;
@@ -3591,9 +3567,6 @@ input[type="tel"].form__input {
   }
   .edition__btn {
     width: 130px;
-  }
-  .projects__title {
-    margin-bottom: 15px;
   }
   .projects__description {
     font-size: 15px;
