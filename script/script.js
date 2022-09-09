@@ -305,7 +305,12 @@ window.addEventListener("DOMContentLoaded", function () {
             slidesPerGroup: 2,
             spaceBetween: 34,
           },
-          767: {
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+						spaceBetween: 49,
+          },
+          1367: {
             slidesPerView: 3,
             slidesPerGroup: 2,
           },
@@ -343,10 +348,10 @@ window.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 2,
         spaceBetween: 50,
       },
-      1024: {
-        slidesPerView: 3,
+			1367: {
+				slidesPerView: 3,
         slidesPerGroup: 2,
-        spaceBetween: 50,
+				spaceBetween: 50,
       },
     },
   });
@@ -406,23 +411,23 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-  ymaps.ready(init);
+  /*ymaps.ready(init);
 
-  function init() {
+  function init() {*/
     // Создание карты.
-    var myMap = new ymaps.Map("map", {
+    /*var myMap = new ymaps.Map("map", {*/
       // Координаты центра карты.
       // Порядок по умолчанию: «широта, долгота».
       // Чтобы не определять координаты центра карты вручную,
       // воспользуйтесь инструментом Определение координат.
-      center: [55.75736198732715, 37.60850385455312],
-      controls: [],
+     /* center: [55.75736198732715, 37.60850385455312],
+      controls: [],*/
       // Уровень масштабирования. Допустимые значения:
       // от 0 (весь мир) до 19.
-      zoom: 16,
-    });
+      /*zoom: 16,*/
+    /*});*/
     // Создание метки произвольного цвета.
-    var myPlacemark = new ymaps.Placemark(
+    /*var myPlacemark = new ymaps.Placemark(
       [55.75823317538601, 37.601068771307105],
       {},
       {
@@ -451,7 +456,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myPlacemark);
-  }
+  }*/
 
   // валидация поля телефон
   var phone = document.querySelector("input[type='tel']");
