@@ -141,16 +141,19 @@ window.addEventListener("DOMContentLoaded", function () {
   //
 
   // Скрытие/показ Все события
-  document
-    .querySelector(".events-cards__all")
-    .addEventListener("click", function () {
-      document
-        .querySelectorAll(".events-cards__item_invisible")
-        .forEach((eventsEl) => {
-          eventsEl.classList.toggle("active");
-        });
-      this.style.display = "none";
-    });
+	var eventBlock = document.querySelector(".events-cards__list");
+	var eventElem = eventBlock.querySelectorAll(".events-cards__item");
+	var index;
+  document.querySelector(".events-cards__all").addEventListener("click", function () {
+		if (document.width >= 1023) {
+			index = 3;
+		} else {
+			index = 2;
+		}
+    for (;index <= eventElem.length; index++) {
+    	eventElem[index].classList.toggle('show');
+  	}
+  });
 
   // Swiper hero
   var swiper1 = new Swiper(swiperHero, {});
