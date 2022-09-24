@@ -3303,9 +3303,6 @@ input[type="tel"].form__input {
   .container {
     margin: 0 15px;
   }
-  .section__title {
-    font-size: 8.6vw;
-  }
   .burger__container {
     margin: 0 15px;
     width: auto;
@@ -3491,6 +3488,9 @@ input[type="tel"].form__input {
   .footer__container {
     flex-wrap: wrap;
   }
+	.projects__tooltip .projects__popup {
+		left: -226px;
+	}
 }
 
 /* 320 -> 290 */
@@ -3605,11 +3605,12 @@ input[type="tel"].form__input {
 		margin: 0 auto 0 auto;
     font-size: 30px;
     line-height: 36.5px;
+		letter-spacing: 1.2px;
   }
   .hero__description {
     text-align: center;
     width: 95%;
-    line-height: 17px;
+    line-height: 16px;
 		font-weight: 400;
     font-size: 12px;
     margin: 0 auto 30px auto;
@@ -3631,11 +3632,18 @@ input[type="tel"].form__input {
     padding: 1.1em 0;
     margin: 0 auto;
   }
+	.about {
+		margin-bottom: 42px;
+	}
+	.about__description {
+    width: 100%;
+	}
   .choices {
     width: 100%;
   }
   .gallery {
-    height: 60em;
+    height: 854px;
+		padding-top: 50px;
   }
   .gallery-filter__description {
     width: 90%;
@@ -3646,6 +3654,42 @@ input[type="tel"].form__input {
     left: 43%;
     bottom: -28px;
   }
+	.gallery-filter__lbl {
+		margin-left: 0;
+	}
+	.gallery__title {
+    margin-bottom: 18px;
+}
+.custom-select {
+    width: 100%;
+}
+.gallery__right {
+	padding-top: 0;
+}
+.gallery-filter {
+    margin-bottom: 40px;
+}
+.gallery__navigation .swiper-pagination-fraction {
+    margin-right: 5px;
+}
+.gallery__navigation {
+	margin-bottom: 0;
+}
+.gallery__navigation .gallery__pagination.swiper-pagination-fraction {
+    width: 42px;
+}
+.gallery-filter__description {
+	bottom: 41px;
+}
+.language__icn.active::after {
+    width: 40px;
+    height: 40px;
+    bottom: 7px;
+    right: 12px;
+}
+.catalog-diapason__item {
+    width: 100%;
+}
   .accordion .accordion__section.ui-accordion-header {
     height: 75px;
     padding-left: 0;
@@ -3658,15 +3702,21 @@ input[type="tel"].form__input {
     width: 25px;
     height: 25px;
   }
+	.accordion .accordion__cards.ui-accordion-content {
+		padding: 25px 0 27px 0;
+	}
   .catalog-diapason {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
   }
-  .catalog-diapason__list {
-    margin-top: 20px;
-  }
+	.catalog-diapason__btn {
+		letter-spacing: 0.3px;
+	}
   .catalog-diapason__item:not(:last-child) {
     margin-bottom: 16px;
   }
+	.catalog-diapason__item:last-child {
+		margin-bottom: 0;
+	}
   .tab-content.active {
     display: none;
   }
@@ -3674,8 +3724,14 @@ input[type="tel"].form__input {
     margin-bottom: 23px;
   }
   .catalog-author__title {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
   }
+	.catalog-author__date {
+    margin-left: 0;
+}
+.catalog-author__description {
+	width: 99%;
+}
   .events {
     margin-bottom: 45px;
   }
@@ -3687,6 +3743,7 @@ input[type="tel"].form__input {
   }
   .events__slider .swiper-wrapper {
     max-height: 698px;
+		margin-bottom: 10px;
   }
   .events__slider .swiper-pagination-bullet {
     width: 11px;
@@ -3702,8 +3759,11 @@ input[type="tel"].form__input {
     padding-top: 55px;
   }
   .edition-category__title {
-    margin-bottom: 25px;
+    margin-bottom: 8px;
   }
+	.edition-category form {
+    padding-left: 0;
+}
   .edition-category__subtitle {
     padding: 10px 0;
     pointer-events: visible;
@@ -3789,6 +3849,7 @@ input[type="tel"].form__input {
     height: 40%;
   }
   .checkboxes {
+		display: none;
     height: auto;
   }
   .multiselect {
@@ -3841,4 +3902,38 @@ input[type="tel"].form__input {
     top: 12%;
     left: 21%;
   }
+	.events-cards__content {
+    padding: 7px 10px 46px 28px;
+}
+.events-cards__date {
+	letter-spacing: -.2px;
+}
+.events-cards__subtitle {
+    margin-bottom: 37px;
+}
+.events-cards__detailed {
+	bottom: 56px;
+	left: 28px;
+}
+.selectBox select {
+	padding: 10px 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.overSelect::before {
+	content: '';
+	background: url('../img/select.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 11px;
+    width: 15px;
+    right: -3px;
+    top: 14px;
+    transition: all 0.4s;
+}
+.edition-category__select.active + .overSelect::before {
+	transform: rotate(180deg);
+	transition: all 0.4s;
+}
 }

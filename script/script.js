@@ -126,9 +126,9 @@ window.addEventListener("DOMContentLoaded", function () {
   //custom checkbox
   if ($(window).width() <= 320) {
     var expanded = false;
+		var checkboxes = document.querySelector(".checkboxes");
 
     document.querySelector(".selectBox").addEventListener("click", function () {
-      var checkboxes = document.querySelector(".checkboxes");
       if (!expanded) {
         checkboxes.style.display = "block";
         expanded = true;
@@ -136,7 +136,13 @@ window.addEventListener("DOMContentLoaded", function () {
         checkboxes.style.display = "none";
         expanded = false;
       }
+			document.querySelector('.edition-category__select').classList.toggle('active')
     });
+    document.querySelectorAll('.edition-category__lbl > input[type="checkbox"]').forEach(function(input) {
+			input.addEventListener('change', function(e) {
+				console.log(e.target)
+			})
+		})
   }
   //
 
@@ -256,6 +262,8 @@ window.addEventListener("DOMContentLoaded", function () {
           320: {
             slidesPerView: 1,
             slidesPerGroup: 1,
+						spaceBetween: 0,
+						setWrapperSize: true,
           },
           550: {
             slidesPerView: 2,
