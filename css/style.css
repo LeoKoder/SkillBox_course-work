@@ -1872,6 +1872,7 @@ input:focus,
 .projects__link {
   font-weight: 600;
   color: var(--decor-color);
+	white-space: nowrap;
 }
 
 .projects__link:hover {
@@ -3046,7 +3047,6 @@ input[type="tel"].form__input {
     background-image: url("../img/edition_bg_768.jpg");
     background-size: cover;
     padding-bottom: 75px;
-    margin-bottom: 85px;
   }
   .edition__right {
     width: 100%;
@@ -3262,6 +3262,35 @@ input[type="tel"].form__input {
 .edition-category__el:checked + .edition-category__square::before  {
 	background-color: #C283F3;
 	opacity: 1;
+}
+.edition-category__group-price {
+    padding-left: 0;
+}
+.multiselect {
+    margin-bottom: 25px;
+}
+.edition-category__subtitle {
+    margin-bottom: 14px;
+}
+.edition__navigation .swiper-pagination-fraction {
+	margin-right: 12px;
+}
+.edition__img {
+    width: 288px;
+    margin-bottom: 13px;
+}
+.projects__description {
+	letter-spacing: 0;
+	width: 99%;
+}
+.projects__tooltip {
+	margin: 0 1px -3px 0;
+}
+.projects__slider .projects-prev {
+    left: -30px;
+}
+.projects__slider .projects-next {
+    right: -30px;
 }
 }
 
@@ -3690,7 +3719,6 @@ input[type="tel"].form__input {
   }
   .edition {
     padding-bottom: 0;
-    margin-bottom: 52px;
   }
   .edition-category__select {
     max-height: none;

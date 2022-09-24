@@ -311,7 +311,7 @@ window.addEventListener("DOMContentLoaded", function () {
           768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
-						spaceBetween: 49,
+						spaceBetween: 38,
           },
           1367: {
             slidesPerView: 3,
