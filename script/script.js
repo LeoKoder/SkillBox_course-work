@@ -309,7 +309,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Swiper edition
   function initSwiper4() {
-    if ($(window).width() >= 319 && swiper4 === undefined) {
+    if ($(window).width() >= 321 && swiper4 === undefined) {
       swiper4 = new Swiper(swiperEdition, {
         pagination: {
           el: ".edition__pagination",

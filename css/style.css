@@ -3780,6 +3780,9 @@ input[type="tel"].form__input {
   .edition {
     padding-bottom: 0;
   }
+	.edition-category {
+		margin-bottom: 49px;
+	}
   .edition-category__select {
     max-height: none;
   }
@@ -3800,13 +3803,15 @@ input[type="tel"].form__input {
   }
   .edition__slider .swiper-slide.edition__slide {
     width: 130px;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
+		padding: 0;
   }
-  .edition__slide:not(:nth-child(even)) {
+	  .edition__slide:not(:nth-child(even)) {
     margin-right: 30px;
   }
   .edition__img {
     margin-bottom: 10px;
+		width: 100%;
   }
   .edition__content {
     flex-direction: column;
@@ -3814,7 +3819,8 @@ input[type="tel"].form__input {
   }
   .edition__subtitle {
     white-space: nowrap;
-    font-size: 13px;
+    font-size: 12px;
+		letter-spacing: 0;
     line-height: 16px;
     margin-bottom: 5px;
     text-overflow: ellipsis;
@@ -3830,13 +3836,20 @@ input[type="tel"].form__input {
   .edition__btn {
     width: 130px;
   }
+	.edition__btn {
+		font-size: 12px;
+	}
+	/* project */
   .projects__description {
     font-size: 15px;
     margin-bottom: 16px;
+		width: 100%;
+		letter-spacing: 0.5px;
   }
   .projects__subtitle {
     font-size: 19px;
     margin-bottom: 15px;
+		letter-spacing: -0.6px;
   }
   .projects__slider {
     padding: 0 45px;
@@ -3844,6 +3857,10 @@ input[type="tel"].form__input {
   .projects__slider .swiper-slide.projects__slide {
     height: 65px;
   }
+	.projects__slider .projects-next, 
+	.projects__slider .projects-prev {
+    right: -14px;
+}
   .projects__img {
     width: 65%;
     height: 40%;
@@ -3853,11 +3870,17 @@ input[type="tel"].form__input {
     height: auto;
   }
   .multiselect {
-    margin-bottom: 45px;
+		margin-bottom: 60px;
   }
+	.contacts {
+		margin-bottom: 30px;
+	}
   .contacts__container {
     padding-top: 57px;
   }
+	.contacts-form {
+		margin-bottom: 0;
+	}
   .contacts-form__container {
     width: 290px;
     margin-left: 15px;
@@ -3865,8 +3888,11 @@ input[type="tel"].form__input {
   }
   .contacts__subtitle {
     font-size: 18px;
-    margin-bottom: 17px;
-  }
+    margin-bottom: 19px;
+  }	
+	.contacts__subtitle_socielGroup {
+		margin-bottom: 13px;
+	}
   .form__btn {
     font-size: 13px;
     width: 44%;
@@ -3875,6 +3901,25 @@ input[type="tel"].form__input {
   .form {
     margin-bottom: 25px;
   }
+	.contacts-form__container input[type="tel"].form__input {
+		margin-bottom: 20px;
+	}
+	.contacts__title {
+		margin-bottom: 7px;
+	}
+	.contacts-form {
+		padding-top: 13px;
+	}
+	.contacts-form__block {
+		margin: 0;
+	}
+	.contacts-form__name {
+		letter-spacing: 0.7px;
+	}
+	.contacts-form__address {
+		letter-spacing: 0.6px;
+	}
+	/* подвал */
   .footer {
     padding-top: 20px;
   }
@@ -3899,9 +3944,12 @@ input[type="tel"].form__input {
   .whatsapp::after {
     width: 29px;
     height: 29px;
-    top: 12%;
-    left: 21%;
+    top: 6%;
+    left: 6%;
   }
+	.telegram::after {
+    right: 8px;
+	}
 	.events-cards__content {
     padding: 7px 10px 46px 28px;
 }
@@ -3978,6 +4026,7 @@ input[type="tel"].form__input {
 	margin-top: 7px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	flex-direction: column;
+	margin-bottom: -49px;
 }
 
 .multiselect .edition-category__select {
@@ -3991,5 +4040,9 @@ input[type="tel"].form__input {
 .multiselect__select .edition-category__text {
 	margin-right: auto;
 	line-height: 21.79px;
+}
+.social {
+	width: 50px;
+	height: 50px;
 }
 }
