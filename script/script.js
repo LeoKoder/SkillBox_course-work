@@ -138,13 +138,35 @@ window.addEventListener("DOMContentLoaded", function () {
       }
 			document.querySelector('.edition-category__select').classList.toggle('active')
     });
-    document.querySelectorAll('.edition-category__lbl > input[type="checkbox"]').forEach(function(input) {
-			input.addEventListener('change', function(e) {
-				console.log(e.target)
+
+		// добавление checkbox вне селекта для мобилок
+		var multiselectBlock = this.document.querySelector('.multiselect__select');
+		var checkboxes = this.document.querySelector('.checkboxes');
+		var checkboxElem = checkboxes.querySelectorAll('.edition-category__lbl > input[type="checkbox"]');
+		var multiselectElementCount = 0;
+    checkboxElem.forEach(function(input) {
+			input.addEventListener('click', function(e) {
+				var labelEdition = e.target.parentNode;
+				var closeEdition = document.createElement('span');
+				closeEdition.classList.add('edition-category__close', 'active');
+				if (e.target.parentNode.parentNode.contains(checkboxes)) {
+				document.querySelector('.multiselect__select').classList.add('show');
+				
+				multiselectBlock.append(labelEdition);
+				labelEdition.append(closeEdition);
+				multiselectElementCount++;
+			} else {
+				var multiselectElement = e.target.parentNode
+				multiselectElement.lastElementChild.remove();
+				checkboxes.append(multiselectElement);
+				multiselectElementCount--;
+				if (multiselectElementCount === 0) {
+				multiselectBlock.classList.remove('show');
+				}
+			};
 			})
 		})
   }
-  //
 
   // Скрытие/показ Все события
 	var eventBlock = document.querySelector(".events-cards__list");
