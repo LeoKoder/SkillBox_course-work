@@ -1,20 +1,10 @@
 window.addEventListener("DOMContentLoaded", function () {
   var swiperHero = document.querySelector(".hero__slider");
-
   var swiperGallery_1 = document.querySelector(".gallery__top");
   var swiperGallery_2 = document.querySelector(".gallery__bottom");
-
   var swiperEdition = document.querySelector(".edition__slider");
-
   var swiperProjects = document.querySelector(".projects__slider");
-
   var eventsCards = document.querySelector(".events-cards");
-
-  // select
-  // const element1 = document.querySelector(".gallery-filter__select");
-  // const choice1 = new Choices(element1, {
-  //   searchEnabled: false,
-  // });
 
   // кнопка поиска
   if (window.screen.width <= 1196) {
@@ -25,6 +15,7 @@ window.addEventListener("DOMContentLoaded", function () {
         this.parentNode.classList.toggle("show");
       });
   }
+
   // кнопка закрыть у поиска
   document
     .querySelector(".js-closeSearchMobile")
@@ -36,9 +27,7 @@ window.addEventListener("DOMContentLoaded", function () {
   // custom select
   const selected = document.querySelector(".custom-select__title");
   const optionsContainer = document.querySelector(".custom-select__container");
-
   const optionsList = document.querySelectorAll(".custom-select__option");
-
   selected.addEventListener("click", () => {
     optionsContainer.classList.toggle("active");
   });
@@ -49,42 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
       optionsContainer.classList.remove("active");
     });
   });
-  // const element2 = document.querySelector(".edition-category__select");
-  // const choice2 = new Choices(element2, {
-  //   searchEnabled: false,
-  // });
-  // burger
-  /* document.querySelector(".burger__btn").addEventListener("click", function () {
-    document.querySelector(".header-top__nav").style.display = "block";
-    document.querySelector(".header-top__container").style.alignItems =
-      "flex-start";
-    document.querySelector(".header").classList.add("header__position");
-    document.querySelector(".logo__link").classList.add("burger__show");
-    document
-      .querySelector(".header-bottom__search")
-      .classList.add("burger__show");
-    document.querySelector(".header-top__log-in").style.display = "block";
-    document.querySelector(".burger__close").style.display = "block";
-    document.querySelector(".burger__btn").style.display = "none";
-  });
-*/
-  // burger close
-  /*  document
-    .querySelector(".burger__close")
-    .addEventListener("click", function () {
-      document.querySelector(".header-top__nav").style.display = "none";
-      document.querySelector(".header-top__container").style.alignItems =
-        "center";
-      document.querySelector(".header").classList.remove("header__position");
-      document.querySelector(".logo__link").classList.remove("burger__show");
-      document
-        .querySelector(".header-bottom__search")
-        .classList.remove("burger__show");
-      document.querySelector(".header-top__log-in").style.display = "none";
-      document.querySelector(".burger__close").style.display = "none";
-      document.querySelector(".burger__btn").style.display = "block";
-    });
-*/
+
   // burger
   var toggles = $(".burger__btn");
   for (var i = toggles.length - 1; i >= 0; i--) {
@@ -100,6 +54,7 @@ window.addEventListener("DOMContentLoaded", function () {
       $(".burger__content").toggleClass("active");
     });
   }
+
   // выпадающее меню
   document.addEventListener("click", (e) => {
     const isDropdownButton = e.target.matches(".header-bottom__dropbtn");
@@ -108,7 +63,6 @@ window.addEventListener("DOMContentLoaded", function () {
       e.target.closest(".header-bottom__dropdown") != null
     )
       return;
-
     let currentDropdown;
     if (isDropdownButton) {
       currentDropdown = e.target.closest(".header-bottom__dropdown");
@@ -127,7 +81,6 @@ window.addEventListener("DOMContentLoaded", function () {
   if ($(window).width() <= 320) {
     var expanded = false;
 		var checkboxes = document.querySelector(".checkboxes");
-
     document.querySelector(".selectBox").addEventListener("click", function () {
       if (!expanded) {
         checkboxes.style.display = "block";
@@ -172,7 +125,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	var eventBlock = document.querySelector(".events-cards__list");
 	var eventElem = eventBlock.querySelectorAll(".events-cards__item");
 	var index;
-  document.querySelector(".events-cards__all").addEventListener("click", function () {
+  document.querySelector(".js-eventAll").addEventListener("click", function () {
 		if (document.width >= 1023) {
 			index = 3;
 		} else {
@@ -267,7 +220,6 @@ window.addEventListener("DOMContentLoaded", function () {
   // Swiper events
   var swiper4,
     swiper6 = undefined;
-
   function initSwiper6() {
     if ($(window).width() <= 767 && swiper6 === undefined) {
       swiper6 = new Swiper(eventsCards, {
@@ -300,9 +252,7 @@ window.addEventListener("DOMContentLoaded", function () {
       $(".swiper-slide").removeAttr("style");
     }
   }
-
   initSwiper6();
-
   $(window).resize(function () {
     initSwiper6();
   });
@@ -356,9 +306,7 @@ window.addEventListener("DOMContentLoaded", function () {
       $(".swiper-slide").removeAttr("style");
     }
   }
-
   initSwiper4();
-
   $(window).resize(function () {
     initSwiper4();
   });
@@ -397,26 +345,21 @@ window.addEventListener("DOMContentLoaded", function () {
       });
       const path = event.currentTarget.dataset.path;
       const lang = event.currentTarget.dataset.language;
-
       let tabContent = document.querySelectorAll(".tab-content");
       tabOpen(tabContent, path);
       let tabAuthor = document.querySelectorAll(".author__btn");
       let tabPhoto = document.querySelectorAll(".tab-author");
-
       tabAuthor.forEach(function (author) {
         author.classList.remove("active");
       });
       document.querySelector(`[data-author="${lang}"]`).classList.add("active");
-
       tabPhoto.forEach(function (photo) {
         photo.classList.remove("active");
       });
       document.querySelector(`[data-photo="${lang}"]`).classList.add("active");
     });
   });
-
   $(".accordion").accordion();
-
   document.querySelectorAll(".author__btn").forEach(function (tabsBtn) {
     tabsBtn.addEventListener("click", function (e) {
       document.querySelectorAll(".author__btn").forEach(function (tabsBtnOpen) {
@@ -429,7 +372,6 @@ window.addEventListener("DOMContentLoaded", function () {
       tabOpen(tabAuthor, path);
     });
   });
-
   function tabOpen(block, attribute) {
     block.forEach(function (tabContent) {
       tabContent.classList.remove("active");
@@ -444,23 +386,23 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Функция ymaps.ready() будет вызвана, когда
   // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-  /*ymaps.ready(init);
+  ymaps.ready(init);
 
-  function init() {*/
+  function init() {
     // Создание карты.
-    /*var myMap = new ymaps.Map("map", {*/
+    var myMap = new ymaps.Map("map", {
       // Координаты центра карты.
       // Порядок по умолчанию: «широта, долгота».
       // Чтобы не определять координаты центра карты вручную,
       // воспользуйтесь инструментом Определение координат.
-     /* center: [55.75736198732715, 37.60850385455312],
-      controls: [],*/
+      center: [55.75736198732715, 37.60850385455312],
+      controls: [],
       // Уровень масштабирования. Допустимые значения:
       // от 0 (весь мир) до 19.
-      /*zoom: 16,*/
-    /*});*/
+      zoom: 16,
+    });
     // Создание метки произвольного цвета.
-    /*var myPlacemark = new ymaps.Placemark(
+    var myPlacemark = new ymaps.Placemark(
       [55.75823317538601, 37.601068771307105],
       {},
       {
@@ -469,7 +411,6 @@ window.addEventListener("DOMContentLoaded", function () {
         iconImageSize: [20, 20],
       }
     );
-
     myMap.controls.add("geolocationControl", {
       size: "small",
       float: "right",
@@ -478,7 +419,6 @@ window.addEventListener("DOMContentLoaded", function () {
         right: "20px",
       },
     });
-
     myMap.controls.add("zoomControl", {
       size: "small",
       float: "right",
@@ -489,7 +429,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myPlacemark);
-  }*/
+  }
 
   // валидация поля телефон
   var phone = document.querySelector("input[type='tel']");
