@@ -5,6 +5,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var swiperEdition = document.querySelector(".edition__slider");
   var swiperProjects = document.querySelector(".projects__slider");
   var eventsCards = document.querySelector(".events-cards");
+  var swiper4, swiper6 = undefined;
 
   // кнопка поиска
   if (window.screen.width <= 1196) {
@@ -138,7 +139,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Swiper hero
   var swiper1 = new Swiper(swiperHero, {});
-
   // Swiper gallery top
   var swiper2 = new Swiper(swiperGallery_1, {
     setWrapperSize: true,
@@ -218,8 +218,6 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 
   // Swiper events
-  var swiper4,
-    swiper6 = undefined;
   function initSwiper6() {
     if ($(window).width() <= 767 && swiper6 === undefined) {
       swiper6 = new Swiper(eventsCards, {
@@ -256,7 +254,7 @@ window.addEventListener("DOMContentLoaded", function () {
   $(window).resize(function () {
     initSwiper6();
   });
-
+	initSwiper4();
   // Swiper edition
   function initSwiper4() {
     if ($(window).width() >= 321 && swiper4 === undefined) {
@@ -267,6 +265,9 @@ window.addEventListener("DOMContentLoaded", function () {
           clickable: true,
           slideToClickedSlide: true,
         },
+				mousewheel: {
+    			invert: false,
+  			},
         spaceBetween: 50,
         cssMode: true,
         navigation: {
@@ -299,6 +300,9 @@ window.addEventListener("DOMContentLoaded", function () {
           },
         },
       });
+			/*let pageSlider = document.querySelector('.edition__slide');
+			swiper4.addEventListener('mouseleave', () => pageSlider.mousewheel.disable());
+			swiper4.addEventListener('mouseenter', () => pageSlider.mousewheel.disable());*/
     } else if ($(window).width() < 321 && swiper4 !== undefined) {
       swiper4.destroy();
       swiper4 = undefined;
@@ -306,7 +310,6 @@ window.addEventListener("DOMContentLoaded", function () {
       $(".swiper-slide").removeAttr("style");
     }
   }
-  initSwiper4();
   $(window).resize(function () {
     initSwiper4();
   });
