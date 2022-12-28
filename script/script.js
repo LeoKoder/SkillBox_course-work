@@ -5,7 +5,8 @@ window.addEventListener("DOMContentLoaded", function () {
   var swiperEdition = document.querySelector(".edition__slider");
   var swiperProjects = document.querySelector(".projects__slider");
   var eventsCards = document.querySelector(".events-cards");
-  var swiper4, swiper6 = undefined;
+  var swiper4,
+    swiper6 = undefined;
 
   // кнопка поиска
   if (window.screen.width <= 1196) {
@@ -81,7 +82,7 @@ window.addEventListener("DOMContentLoaded", function () {
   //custom checkbox
   if ($(window).width() <= 320) {
     var expanded = false;
-		var checkboxes = document.querySelector(".checkboxes");
+    var checkboxes = document.querySelector(".checkboxes");
     document.querySelector(".selectBox").addEventListener("click", function () {
       if (!expanded) {
         checkboxes.style.display = "block";
@@ -90,51 +91,55 @@ window.addEventListener("DOMContentLoaded", function () {
         checkboxes.style.display = "none";
         expanded = false;
       }
-			document.querySelector('.edition-category__select').classList.toggle('active')
+      document
+        .querySelector(".edition-category__select")
+        .classList.toggle("active");
     });
 
-		// добавление checkbox вне селекта для мобилок
-		var multiselectBlock = this.document.querySelector('.multiselect__select');
-		var checkboxes = this.document.querySelector('.checkboxes');
-		var checkboxElem = checkboxes.querySelectorAll('.edition-category__lbl > input[type="checkbox"]');
-		var multiselectElementCount = 0;
-    checkboxElem.forEach(function(input) {
-			input.addEventListener('click', function(e) {
-				var labelEdition = e.target.parentNode;
-				var closeEdition = document.createElement('span');
-				closeEdition.classList.add('edition-category__close', 'active');
-				if (e.target.parentNode.parentNode.contains(checkboxes)) {
-				document.querySelector('.multiselect__select').classList.add('show');
-				
-				multiselectBlock.append(labelEdition);
-				labelEdition.append(closeEdition);
-				multiselectElementCount++;
-			} else {
-				var multiselectElement = e.target.parentNode
-				multiselectElement.lastElementChild.remove();
-				checkboxes.append(multiselectElement);
-				multiselectElementCount--;
-				if (multiselectElementCount === 0) {
-				multiselectBlock.classList.remove('show');
-				}
-			};
-			})
-		})
+    // добавление checkbox вне селекта для мобилок
+    var multiselectBlock = this.document.querySelector(".multiselect__select");
+    var checkboxes = this.document.querySelector(".checkboxes");
+    var checkboxElem = checkboxes.querySelectorAll(
+      '.edition-category__lbl > input[type="checkbox"]'
+    );
+    var multiselectElementCount = 0;
+    checkboxElem.forEach(function (input) {
+      input.addEventListener("click", function (e) {
+        var labelEdition = e.target.parentNode;
+        var closeEdition = document.createElement("span");
+        closeEdition.classList.add("edition-category__close", "active");
+        if (e.target.parentNode.parentNode.contains(checkboxes)) {
+          document.querySelector(".multiselect__select").classList.add("show");
+
+          multiselectBlock.append(labelEdition);
+          labelEdition.append(closeEdition);
+          multiselectElementCount++;
+        } else {
+          var multiselectElement = e.target.parentNode;
+          multiselectElement.lastElementChild.remove();
+          checkboxes.append(multiselectElement);
+          multiselectElementCount--;
+          if (multiselectElementCount === 0) {
+            multiselectBlock.classList.remove("show");
+          }
+        }
+      });
+    });
   }
 
   // Скрытие/показ Все события
-	var eventBlock = document.querySelector(".events-cards__list");
-	var eventElem = eventBlock.querySelectorAll(".events-cards__item");
-	var index;
+  var eventBlock = document.querySelector(".events-cards__list");
+  var eventElem = eventBlock.querySelectorAll(".events-cards__item");
+  var index;
   document.querySelector(".js-eventAll").addEventListener("click", function () {
-		if (document.width >= 1023) {
-			index = 3;
-		} else {
-			index = 2;
-		}
-    for (;index <= eventElem.length; index++) {
-    	eventElem[index].classList.toggle('show');
-  	}
+    if (document.width >= 1023) {
+      index = 3;
+    } else {
+      index = 2;
+    }
+    for (; index <= eventElem.length; index++) {
+      eventElem[index].classList.toggle("show");
+    }
   });
 
   // Swiper hero
@@ -234,8 +239,8 @@ window.addEventListener("DOMContentLoaded", function () {
           320: {
             slidesPerView: 1,
             slidesPerGroup: 1,
-						spaceBetween: 0,
-						setWrapperSize: true,
+            spaceBetween: 0,
+            setWrapperSize: true,
           },
           550: {
             slidesPerView: 2,
@@ -254,7 +259,7 @@ window.addEventListener("DOMContentLoaded", function () {
   $(window).resize(function () {
     initSwiper6();
   });
-	initSwiper4();
+  initSwiper4();
   // Swiper edition
   function initSwiper4() {
     if ($(window).width() >= 321 && swiper4 === undefined) {
@@ -265,9 +270,9 @@ window.addEventListener("DOMContentLoaded", function () {
           clickable: true,
           slideToClickedSlide: true,
         },
-				mousewheel: {
-    			invert: false,
-  			},
+        mousewheel: {
+          invert: false,
+        },
         spaceBetween: 50,
         cssMode: true,
         navigation: {
@@ -292,7 +297,7 @@ window.addEventListener("DOMContentLoaded", function () {
           768: {
             slidesPerView: 2,
             slidesPerGroup: 2,
-						spaceBetween: 38,
+            spaceBetween: 38,
           },
           1367: {
             slidesPerView: 3,
@@ -300,7 +305,7 @@ window.addEventListener("DOMContentLoaded", function () {
           },
         },
       });
-			/*let pageSlider = document.querySelector('.edition__slide');
+      /*let pageSlider = document.querySelector('.edition__slide');
 			swiper4.addEventListener('mouseleave', () => pageSlider.mousewheel.disable());
 			swiper4.addEventListener('mouseenter', () => pageSlider.mousewheel.disable());*/
     } else if ($(window).width() < 321 && swiper4 !== undefined) {
@@ -332,10 +337,10 @@ window.addEventListener("DOMContentLoaded", function () {
         slidesPerGroup: 2,
         spaceBetween: 50,
       },
-			1367: {
-				slidesPerView: 3,
+      1367: {
+        slidesPerView: 3,
         slidesPerGroup: 2,
-				spaceBetween: 50,
+        spaceBetween: 50,
       },
     },
   });
@@ -434,11 +439,34 @@ window.addEventListener("DOMContentLoaded", function () {
     myMap.geoObjects.add(myPlacemark);
   }
 
+  // маска формы
+  var selector = document.querySelector("input[type='tel']");
+  var im = new Inputmask("+7 (999) 999-99-99");
+
+  im.mask(selector);
+
+  new JustValidate(".form", {
+    rules: {
+      name: {
+        required: true,
+        minLength: 2,
+        maxLength: 10,
+      },
+      tel: {
+        required: true,
+        function: (name, value) => {
+          const phone = selector.inputmask.unmaskedvalue();
+          return Number(phone) && phone.length === 10;
+        },
+      },
+    },
+  });
+
   // валидация поля телефон
-  var phone = document.querySelector("input[type='tel']");
+  var name = document.querySelector(".form__name");
   var validate = document.querySelector(".form__validate");
-  phone.addEventListener("input", function () {
-    if (!phone.value.replace(/[^0-9\.]/g, "")) {
+  name.addEventListener("input", function () {
+    if (name.value.replace(/\D*/g, "")) {
       validate.style.opacity = 1;
     } else {
       validate.style.opacity = 0;

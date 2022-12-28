@@ -2173,9 +2173,22 @@
               </div>
               <h3 class="contacts__subtitle">Заказать обратный звонок</h3>
               <form class="form">
-                <input class="form__input" type="text" placeholder="Имя*" />
                 <span class="form__validate">Недопустимый формат</span>
-                <input class="form__input" type="tel" placeholder="Телефон*" />
+                <input
+                  name="Имя"
+                  class="form__input form__name"
+                  type="text"
+                  placeholder="Имя*"
+                  data-validate-field="name"
+                />
+                <input
+                  name="Телефон"
+                  class="form__input"
+                  type="tel"
+                  placeholder="Телефон*"
+                  data-validate-field="tel"
+                  data-validate="phone"
+                />
                 <button class="form__btn btn" type="submit">Заказать</button>
               </form>
               <h3 class="contacts__subtitle contacts__subtitle_socielGroup">
@@ -2287,5 +2300,9 @@
     <script src="libs/simplebar.min.js"></script>
     <!-- Select -->
     <script src="libs/choices.min.js"></script>
+    <!-- Validate -->
+    <script src="libs/just-validate.min.js"></script>
+    <!-- Mask -->
+    <script src="libs/inputmask.min.js"></script>
   </body>
 </html>

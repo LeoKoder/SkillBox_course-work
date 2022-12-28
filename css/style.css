@@ -1966,7 +1966,7 @@ input:focus,
 }
 
 .form__input:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 21px;
 }
 
 input[type="tel"].form__input {
