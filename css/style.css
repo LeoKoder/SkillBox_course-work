@@ -789,7 +789,7 @@ input:focus,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 300px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -854,8 +854,8 @@ input:focus,
   display: block;
   left: 0;
   top: 0;
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 2px solid var(--hover-color);
 }
@@ -1371,8 +1371,8 @@ input:focus,
   display: block;
   left: -6px;
   top: -6px;
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
   border-radius: 100px;
   border: 2px solid var(--hover-color);
 }
@@ -1645,7 +1645,7 @@ input:focus,
 }
 
 .edition__img {
-  width: 350px;
+  max-width: 350px;
   margin-bottom: 21px;
 }
 
@@ -2395,8 +2395,16 @@ input[type="tel"].form__input {
   }
 
   .contacts-form__container {
-    width: 335px;
+    width: 70%;
     margin-left: 4%;
+  }
+
+  .projects__tooltip .projects__popup {
+    left: -153px;
+  }
+
+  .projects__tooltip .projects__popup::after {
+    left: 58%;
   }
 }
 
@@ -2755,6 +2763,8 @@ input[type="tel"].form__input {
   .gallery__wrap {
     width: 100%;
     height: 89%;
+    max-height: 100%;
+    max-height: 280px;
   }
 
   .gallery-filter__description {
@@ -3327,8 +3337,8 @@ input[type="tel"].form__input {
   .language__icn.active::after {
     width: 60px;
     height: 60px;
-    bottom: 10px;
-    right: 16px;
+    bottom: 8px;
+    right: 13px;
   }
 
   .catalog__description {
@@ -3411,7 +3421,7 @@ input[type="tel"].form__input {
   }
 
   .edition__img {
-    width: 288px;
+    max-width: 288px;
     margin-bottom: 13px;
   }
 
@@ -3579,12 +3589,27 @@ input[type="tel"].form__input {
     height: 33px;
   }
 
+  .language__icn.active::after {
+    width: 46px;
+    height: 46px;
+    bottom: 8px;
+    right: 12px;
+  }
+
   .catalog-diapason__list {
     height: auto;
   }
 
+  .catalog-diapason__item {
+    width: 100%;
+  }
+
   .gallery__bottom {
     display: none;
+  }
+
+  .gallery__navigation .gallery__pagination.swiper-pagination-fraction {
+    width: 55px;
   }
 
   .events__slider .swiper-wrapper {
@@ -3679,6 +3704,14 @@ input[type="tel"].form__input {
 
   .projects__tooltip .projects__popup {
     left: -226px;
+  }
+
+  .footer {
+    max-height: 100%;
+  }
+
+  .footer__container {
+    flex-direction: column-reverse;
   }
 }
 
@@ -4109,10 +4142,7 @@ input[type="tel"].form__input {
   }
 
   .edition__btn {
-    width: 130px;
-  }
-
-  .edition__btn {
+    max-width: 130px;
     font-size: 12px;
   }
 
@@ -4170,14 +4200,14 @@ input[type="tel"].form__input {
   }
 
   .contacts-form__container {
-    width: 290px;
-    margin-left: 15px;
-    margin-right: 15px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .contacts__subtitle {
     font-size: 18px;
-    margin-bottom: 19px;
+    margin-bottom: 6px;
   }
 
   .contacts__subtitle_socielGroup {
