@@ -1445,7 +1445,7 @@ input:focus,
 }
 
 .edition-category__lbl:not(:last-child) {
-  margin-bottom: 13.6px;
+  margin-bottom: 14px;
 }
 
 .edition-category__text:hover ~ .edition-category__square {
@@ -1620,7 +1620,7 @@ input:focus,
 
 .edition__right {
   width: 72%;
-  padding-top: 30px;
+  padding-top: 35px;
   position: relative;
 }
 
@@ -1646,6 +1646,7 @@ input:focus,
 
 .edition__img {
   max-width: 350px;
+  height: 390px;
   margin-bottom: 21px;
 }
 
@@ -1692,6 +1693,10 @@ input:focus,
 .projects__container {
   display: flex;
   flex-direction: column;
+}
+
+.projects__title {
+  margin-bottom: 12px;
 }
 
 .projects__description {
@@ -1932,6 +1937,10 @@ input:focus,
   font-weight: 400;
   margin: 0;
   font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.contacts__subtitle_socielGroup {
   margin-bottom: 17px;
 }
 
