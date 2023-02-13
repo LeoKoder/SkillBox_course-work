@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var swiperGallery_2 = document.querySelector(".gallery__bottom");
   var swiperEdition = document.querySelector(".edition__slider");
   var swiperProjects = document.querySelector(".projects__slider");
-  var eventsCards = document.querySelector(".events-cards");
+  var eventsCards = document.querySelector(".events__slider");
   var swiper4,
     swiper6 = undefined;
 
