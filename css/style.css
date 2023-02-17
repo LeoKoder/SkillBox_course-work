@@ -2357,6 +2357,7 @@ input[type="tel"].form__input {
   /* header-bottom */
   .header-bottom__dropdown:not(:last-child) {
     margin-right: 40px;
+<<<<<<< HEAD
   }
 
   .header-bottom__dropbtn {
@@ -2372,6 +2373,23 @@ input[type="tel"].form__input {
     margin-top: -69px;
   }
 
+=======
+  }
+
+  .header-bottom__dropbtn {
+    font-size: 16px;
+  }
+
+  .header__form {
+    width: 20%;
+  }
+
+  /* Hero */
+  .hero {
+    margin-top: -69px;
+  }
+
+>>>>>>> 70a3ccdc155b0f561fe7ee401d53862b1951669e
   .hero__content {
     width: 66%;
   }
@@ -3615,6 +3633,7 @@ input[type="tel"].form__input {
     min-height: 430px;
   }
 
+<<<<<<< HEAD
   .hero__btn {
     padding-left: 0;
     padding-right: 0;
@@ -3624,6 +3643,8 @@ input[type="tel"].form__input {
   }
 
   /* about */
+=======
+>>>>>>> 70a3ccdc155b0f561fe7ee401d53862b1951669e
   .about {
     margin-bottom: 43px;
   }
@@ -4374,7 +4395,11 @@ input[type="tel"].form__input {
   /* подвал */
   .footer {
     padding-top: 20px;
+<<<<<<< HEAD
     padding-bottom: 22px;
+=======
+    margin-bottom: 22px;
+>>>>>>> 70a3ccdc155b0f561fe7ee401d53862b1951669e
   }
 
   .footer__container {
@@ -4387,6 +4412,13 @@ input[type="tel"].form__input {
     height: 23px;
   }
 
+<<<<<<< HEAD
+=======
+  .footer__group {
+    margin-bottom: 20px;
+  }
+
+>>>>>>> 70a3ccdc155b0f561fe7ee401d53862b1951669e
   .footer__group a {
     width: 50px;
     height: 50px;
