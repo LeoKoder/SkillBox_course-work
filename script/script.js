@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", function () {
   var swiperGallery_2 = document.querySelector(".gallery__bottom");
   var swiperEdition = document.querySelector(".edition__slider");
   var swiperProjects = document.querySelector(".projects__slider");
-  var eventsCards = document.querySelector(".events-cards");
+  var eventsCards = document.querySelector(".events__slider");
   var swiper4,
     swiper6 = undefined;
 
@@ -350,7 +350,10 @@ window.addEventListener("DOMContentLoaded", function () {
     tabsBtn.addEventListener("click", function (event) {
       document.querySelectorAll(".tabs__btn").forEach(function (tabsBtnOpen) {
         tabsBtnOpen.classList.remove("active");
+        tabsBtnOpen.setAttribute("aria-selected", false);
+        tabsBtnOpen.setAttribute("tabindex", -1);
       });
+
       const path = event.currentTarget.dataset.path;
       const lang = event.currentTarget.dataset.language;
       let tabContent = document.querySelectorAll(".tab-content");
@@ -367,6 +370,8 @@ window.addEventListener("DOMContentLoaded", function () {
       document.querySelector(`[data-photo="${lang}"]`).classList.add("active");
     });
   });
+
+  //accordion
   $(".accordion").accordion();
   document.querySelectorAll(".author__btn").forEach(function (tabsBtn) {
     tabsBtn.addEventListener("click", function (e) {
@@ -387,6 +392,12 @@ window.addEventListener("DOMContentLoaded", function () {
     document
       .querySelector(`[data-path="${attribute}"]`)
       .classList.add("active");
+    document
+      .querySelector(`[data-path="${attribute}"]`)
+      .setAttribute("aria-selected", true);
+    document
+      .querySelector(`[data-path="${attribute}"]`)
+      .setAttribute("tabindex", 0);
     document
       .querySelector(`[data-target="${attribute}"]`)
       .classList.add("active");

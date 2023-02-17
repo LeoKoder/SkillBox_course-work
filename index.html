@@ -975,40 +975,69 @@
         <div class="container">
           <div class="catalog__header">
             <h2 class="catalog__title section__title">Каталог</h2>
-            <div class="catalog__language language tabs">
+            <div
+              class="catalog__language language tabs"
+              role="tablist"
+              aria-label="Country Tabs"
+            >
               <button
+                type="button"
                 class="language__icn tabs__btn language__icn1"
-                tabindex="1"
+                tabindex="-1"
                 data-path="fr"
                 data-language="fr-author"
+                role="tab"
+                aria-selected="false"
+                aria-controls="autthorLang-1"
               ></button>
               <button
+                type="button"
                 class="language__icn tabs__btn language__icn2"
-                tabindex="2"
+                tabindex="-1"
                 data-path="de"
                 data-language="de-author"
+                role="tab"
+                aria-selected="false"
+                aria-controls="autthorLang-2"
               ></button>
               <button
+                type="button"
                 class="language__icn tabs__btn language__icn3"
-                tabindex="3"
+                tabindex="-1"
                 data-path="it"
                 data-language="it-author"
+                role="tab"
+                aria-selected="false"
+                aria-controls="autthorLang-3"
               ></button>
               <button
+                type="button"
                 class="language__icn tabs__btn language__icn4 active"
-                tabindex="4"
+                tabindex="-1"
                 data-path="ru"
                 data-language="ru-author"
+                role="tab"
+                aria-selected="true"
+                aria-controls="autthorLang-4"
               ></button>
               <button
+                type="button"
                 class="language__icn tabs__btn language__icn5"
-                tabindex="5"
+                tabindex="-1"
                 data-path="bn"
                 data-language="bn-author"
+                role="tab"
+                aria-selected="false"
+                aria-controls="autthorLang-5"
               ></button>
             </div>
           </div>
-          <div class="tab-content" data-target="fr">
+          <div
+            id="authorLang-1"
+            class="tab-content"
+            data-target="fr"
+            role="tabpanel"
+          >
             <p class="catalog__description">
               Actionnaires des plus grandes entreprises qui représentent un
               brillant Un exemple de culture politique de type européen
@@ -1019,7 +1048,12 @@
               aspirent à être fonctionnellement Éléments indépendants.
             </p>
           </div>
-          <div class="tab-content" data-target="de">
+          <div
+            id="authorLang-2"
+            class="tab-content"
+            data-target="de"
+            role="tabpanel"
+          >
             <p class="catalog__description">
               Aktionäre der größten Unternehmen, die eine helle vertreten Ein
               Beispiel für eine kontinentaleuropäische Art politischer Kultur,
@@ -1030,7 +1064,12 @@
               Unabhängige Elemente.
             </p>
           </div>
-          <div class="tab-content" data-target="it">
+          <div
+            id="authorLang-3"
+            class="tab-content"
+            data-target="it"
+            role="tabpanel"
+          >
             <p class="catalog__description">
               Azionisti delle più grandi aziende che rappresentano un brillante
               Un esempio di un tipo di cultura politica dell'Europa
@@ -1041,7 +1080,12 @@
               funzionalmente Elementi indipendenti
             </p>
           </div>
-          <div class="tab-content active" data-target="ru">
+          <div
+            id="authorLang-4"
+            class="tab-content active"
+            data-target="ru"
+            role="tabpanel"
+          >
             <p class="catalog__description">
               Акционеры крупнейших компаний, которые представляют собой яркий
               пример континентально-европейского типа политической культуры,
@@ -1052,7 +1096,12 @@
               независимые элементы.
             </p>
           </div>
-          <div class="tab-content" data-target="bn">
+          <div
+            id="authorLang-5"
+            class="tab-content"
+            data-target="bn"
+            role="tabpanel"
+          >
             <p class="catalog__description">
               Actionnaires des plus grandes entreprises qui représentent un
               brillant Un exemple de culture politique de type européen
@@ -1699,7 +1748,11 @@
                       type="checkbox"
                       name="bestsellers"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Бестселлеры</span>
                   </label>
                   <!-- Checkbox 2 -->
@@ -1709,7 +1762,11 @@
                       type="checkbox"
                       name="art"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Искусство</span>
                   </label>
                   <!-- Checkbox 3 -->
@@ -1719,7 +1776,11 @@
                       type="checkbox"
                       name="architecture"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Архитектура</span>
                   </label>
                   <!-- Checkbox 4 -->
@@ -1729,7 +1790,11 @@
                       type="checkbox"
                       name="design"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Дизайн</span>
                   </label>
                   <!-- Checkbox 5 -->
@@ -1743,7 +1808,11 @@
                       name="fasion"
                       id="edition-category__checkbox5"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Мода</span>
                   </label>
                   <!-- Checkbox 6 -->
@@ -1753,7 +1822,11 @@
                       type="checkbox"
                       name="children"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Детям</span>
                   </label>
                   <!-- Checkbox 7 -->
@@ -1763,7 +1836,11 @@
                       type="checkbox"
                       name="fiction"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">
                       Художественная литература
                     </span>
@@ -1775,7 +1852,11 @@
                       type="checkbox"
                       name="journalism"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Публицистика</span>
                   </label>
                   <!-- Checkbox 9 -->
@@ -1785,7 +1866,11 @@
                       type="checkbox"
                       name="travel-guides"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Путеводители</span>
                   </label>
                   <!-- Checkbox 10 -->
@@ -1795,7 +1880,11 @@
                       type="checkbox"
                       name="philosophy"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Философия</span>
                   </label>
                   <!-- Checkbox 11 -->
@@ -1805,7 +1894,11 @@
                       type="checkbox"
                       name="educational-literature"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">
                       Учебная литература
                     </span>
@@ -1817,7 +1910,11 @@
                       type="checkbox"
                       name="magazines-newspappers"
                     />
-                    <span class="edition-category__square"></span>
+                    <span
+                      class="edition-category__square"
+                      role="checkbox"
+                      aria-checked="false"
+                    ></span>
                     <span class="edition-category__text">Журналы и газеты</span>
                   </label>
                 </div>
@@ -2195,10 +2292,10 @@
                 Связаться в один клик
               </h3>
               <div class="contacts__social-group">
-                <a href="">
+                <a href="/">
                   <span class="social whatsapp"></span>
                 </a>
-                <a href="">
+                <a href="/">
                   <span class="social telegram"></span>
                 </a>
               </div>
