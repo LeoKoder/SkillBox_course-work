@@ -1258,6 +1258,10 @@ input:focus,
   align-items: stretch;
 }
 
+.events__pagination {
+  display: none;
+}
+
 .events-cards__item {
   position: relative;
   flex: 0 1 31.2%;
@@ -1536,6 +1540,7 @@ input:focus,
 .edition-category__el {
   opacity: 0;
   width: 0;
+  height: 0;
 }
 
 .edition-category__square {
@@ -3136,13 +3141,20 @@ input[type="tel"].form__input {
     width: 25px;
   }
 
+  /* hero */
+
+  .hero {
+    margin-bottom: 89px;
+  }
+
   .hero__content {
     left: 6%;
   }
 
+  /* галерея */
+
   .gallery {
-    height: auto;
-    padding-bottom: 24%;
+    padding-bottom: 24.1%;
   }
 
   .gallery__container {
@@ -3184,8 +3196,9 @@ input[type="tel"].form__input {
     bottom: 71px;
   }
 
-  .catalog__language {
-    width: 450px;
+  /* каталог */
+  .language__icn:not(:last-child) {
+    margin-right: 54px;
   }
 
   .catalog-author {
@@ -3208,6 +3221,7 @@ input[type="tel"].form__input {
     padding: 0;
   }
 
+  /* события */
   .events-cards__item {
     flex-basis: 47%;
   }
@@ -3462,17 +3476,22 @@ input[type="tel"].form__input {
     width: 42%;
   }
 
+  .gallery {
+    padding-bottom: 23.6%;
+  }
+
   .gallery-filter {
     margin-bottom: 30px;
   }
 
   .gallery-filter__description {
-    width: 84%;
+    width: 85%;
+    bottom: 69px;
   }
 
   /* catalog */
   .catalog {
-    margin-bottom: 70px;
+    margin-bottom: 77px;
   }
 
   .catalog__title {
@@ -3484,7 +3503,7 @@ input[type="tel"].form__input {
   }
 
   .catalog__header {
-    margin-bottom: 13px;
+    margin-bottom: 20px;
   }
 
   .language__icn.active::after {
@@ -3498,25 +3517,36 @@ input[type="tel"].form__input {
     margin-bottom: 20px;
   }
 
+  .catalog-diapason {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-bottom: 45px;
+  }
+
   .accordion .accordion__cards.ui-accordion-content {
-    padding: 34px 0 16px 1px;
+    padding: 30px 0 17px 0;
   }
 
   .catalog-diapason__item {
-    width: 38%;
+    width: 39%;
   }
 
   .accordion .accordion__section.ui-accordion-header {
-    padding-bottom: 34px;
+    padding-bottom: 33px;
   }
 
-  .catalog-diapason {
-    margin-bottom: 50px;
+  .catalog-diapason__list {
+    width: 95%;
   }
 
   .catalog-author__img {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
+  }
+
+  .catalog-author__date {
+    margin-left: 0;
+    margin-bottom: 8px;
   }
 
   .catalog-author__title {
@@ -3528,8 +3558,24 @@ input[type="tel"].form__input {
   }
 
   /* Edition */
+  .edition {
+    padding-top: 92px;
+  }
+
+  .edition-category form {
+    padding-left: 0;
+  }
+
   .edition-category__title {
-    margin-bottom: 24px;
+    margin-bottom: 30px;
+  }
+
+  .checkboxes label {
+    align-items: flex-start;
+  }
+
+  .edition-category__text {
+    line-height: 25px;
   }
 
   .selectBox {
@@ -3540,8 +3586,12 @@ input[type="tel"].form__input {
     height: 163px;
   }
 
-  .checkboxes label {
-    align-items: flex-start;
+  .edition-category {
+    margin-bottom: 48px;
+  }
+
+  .edition-category__select {
+    margin-bottom: 19px;
   }
 
   .edition-category__lbl {
@@ -3550,15 +3600,11 @@ input[type="tel"].form__input {
   }
 
   .edition-category__lbl:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .edition-category__text {
-    line-height: 32px;
+    margin-bottom: 6px;
   }
 
   .edition-category__square {
-    transform: translateY(4px);
+    transform: translateY(7px);
   }
 
   .edition-category__el:checked + .edition-category__square::before {
@@ -3568,6 +3614,10 @@ input[type="tel"].form__input {
 
   .edition-category__group-price {
     padding-left: 0;
+  }
+
+  .edition__content {
+    padding: 0 4px 0 0;
   }
 
   .multiselect {
@@ -3589,11 +3639,12 @@ input[type="tel"].form__input {
 
   /* Projects */
   .projects__title {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   .projects__description {
     letter-spacing: 0;
+    margin-bottom: 26px;
     width: 99%;
   }
 
@@ -3612,6 +3663,11 @@ input[type="tel"].form__input {
   /* Contacts */
   .contacts-form__container {
     width: 87%;
+  }
+
+  .contacts-form {
+    padding-left: 48px;
+    padding-top: 122px;
   }
 
   /* footer */
@@ -3818,12 +3874,6 @@ input[type="tel"].form__input {
 
   .events-cards__item:not(:nth-child(even)) {
     margin-right: 0;
-  }
-
-  .events-cards__item:nth-child(n + 3) {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
   }
 
   .events-cards__content {

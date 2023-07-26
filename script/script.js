@@ -224,7 +224,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Swiper events
   function initSwiper6() {
-    if ($(window).width() <= 767 && swiper6 === undefined) {
+    if ($(window).width() <= 766 && swiper6 === undefined) {
       swiper6 = new Swiper(eventsCards, {
         slidesPerView: 2,
         slidesPerGroup: 2,
@@ -248,7 +248,7 @@ window.addEventListener("DOMContentLoaded", function () {
           },
         },
       });
-    } else if ($(window).width() > 768 && swiper6 !== undefined) {
+    } else if ($(window).width() > 767 && swiper6 !== undefined) {
       swiper6.destroy();
       swiper6 = undefined;
       $(".swiper-wrapper").removeAttr("style");
