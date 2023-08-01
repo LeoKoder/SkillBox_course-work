@@ -144,6 +144,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Swiper hero
   var swiper1 = new Swiper(swiperHero, {});
+
   // Swiper gallery top
   var swiper2 = new Swiper(swiperGallery_1, {
     setWrapperSize: true,
